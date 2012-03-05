@@ -109,7 +109,10 @@ Nie odpowiadam za jakiekolwiek szkody wynikające z jego użytkowania
 
 Jeśli znalazłeś błąd lub masz pomysł jak rozbudować moduł - zapraszam na moją stronę www.jbator.pl
 
-6) Chcesz pomóc w rozwoju modułu - zapoznaj się z poniższymi złotymi zasadami zanim zaczniesz przesyłać swoje Pull Requesty:
+6) Chcesz pomóc w rozwoju modułu?
+---------------------------------
+
+Zapoznaj się z poniższymi złotymi zasadami zanim zaczniesz przesyłać swoje Pull Requesty:
 
 ### Zasady:
 
