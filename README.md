@@ -158,7 +158,7 @@ Following coding standards is one of the easiest way for everybody to understand
 
 * Every class method or member definition should explicitly declare its visibility using the `private`, `protected` or `public` keywords.
 
-* In a function body, return statements should have a blank line prior to it to increase readability.
+* In a function body, return statements should have a blank line prior to it to increase readability:
 
     <?php
     function makeCoffee()
@@ -225,13 +225,13 @@ Following coding standards is one of the easiest way for everybody to understand
 Ideally `@...` lines are vertically lined up (using spaces):
     
     <?php
-        /**
-         * Notifies all listeners of a given event.
-         *
-         * @param  sfEvent  $event  A sfEvent instance
-         *
-         * @return sfEvent          The sfEvent instance
-         */
-        public function notify(sfEvent $event)`
+    /**
+     * Notifies all listeners of a given event.
+     *
+     * @param  sfEvent  $event  A sfEvent instance
+     *
+     * @return sfEvent          The sfEvent instance
+     */
+    public function notify(sfEvent $event)`
 
 
