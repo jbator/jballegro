@@ -8,7 +8,7 @@ Strona domowa autora: www.jbator.pl
 Instrukcja obsługi modułu:
 
 
-1. Instalacja:
+1) Instalacja:
 --------------
 
 Skopiować zawartość folderów na serwer:
@@ -35,7 +35,7 @@ Sama instalacja modułu bez wpisywania danych konfiguracyjnych powinna przejść
 W późniejszej wersji modułu możne znajdzie się porcjowanie danych dzięki instalator poradzi sobie z instalacją.
 
 
-2. Konfiguracja:
+2) Konfiguracja:
 ----------------
 
 Należy przejść do zakładki moduły, dalej rozwinąć zakładkę pozostałe moduły i wybrać konfigurację modułu Jballegro.
@@ -49,7 +49,7 @@ w miejscu w kodzie w którym ma się pojawiać opis aukcji
 * koszty transportu - dane te będą używane domyślnie w każdej aukcji  
 
 
-3. Jak wystawiać produkty na allegro:
+3) Jak wystawiać produkty na allegro:
 -------------------------------------
 
 ### A:
@@ -76,7 +76,7 @@ należy wybrać produkt.
 5) Dalsze kroki występują tak samo jak w pkt. A (pkt 4 i dalej)
 
 
-4. Uruchomienie sprawdzania stanów i automatycznej aktualizacji aukcji
+4) Uruchomienie sprawdzania stanów i automatycznej aktualizacji aukcji
 ----------------------------------------------------------------------
 
 Możliwe jest uruchomienie skryptu, który będzie sprawdzał stan produktów w sklepie i jeśli będzie wynosił 0, aukcja zostanie automatycznie
@@ -95,7 +95,7 @@ Do wywoływania url'a za pomocą cron'a służą komendy wget lub lynx, np aby w
 (www.example.com - ten adres należy zastąpić swoim adresem sklepu:)
 
 
-5. Info
+5) Info
 -------
 
 Moduł to na razie wersja rozwojowa więc możliwe są błędy. 
