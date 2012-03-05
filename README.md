@@ -149,7 +149,6 @@ Following coding standards is one of the easiest way for everybody to understand
     Good: `function makeCoffee()`
     Bad: `function MakeCoffee()`
     Bad: `function make_coffee()`
-    An exception regarding the latter: use underscores for helper functions name (only for symfony 1.0 stuff).
 
 * Use underscores for option/argument/parameter names.
 
