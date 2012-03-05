@@ -1,17 +1,22 @@
 Jballegro 0.5 dla Prestashop 1.4
-www.jbator.pl
+================================
+
+Moduł integracji Prestashop z api allegro
+
+Strona domowa autora: www.jbator.pl
 
 Instrukcja obsługi modułu:
 
 
 1. Instalacja:
+--------------
 
 Skopiować zawartość folderów na serwer:
-a) zawartość folderu admin skopiować do swojego folderu gdzie znajduje się panel administracyjny 
+### a) zawartość folderu admin skopiować do swojego folderu gdzie znajduje się panel administracyjny 
 (nadpisać plik AdminProducts.php lub jeśli mamy wprowadzone jakieś zmiany dodać odpowiednie modyfikacje)
-b) skopiować folder classes do główego katalogu gdzie mamy zainstalowany sklep
+### b) skopiować folder classes do główego katalogu gdzie mamy zainstalowany sklep
 (nadpisać jeden plik AdminTab.php)
-c) skopiować folder modułu (modules)
+### c) skopiować folder modułu (modules)
 
 Kroki a i b są opcjonalne - dodają ikonkę allegro na liście produktów w katalogu i pozwalają na 
 tworzenie aukcji bezpośrednio z listy produktów (Działa tylko w przypadku Prestashop 1.4!!!).
@@ -31,21 +36,23 @@ W późniejszej wersji modułu możne znajdzie się porcjowanie danych dzięki i
 
 
 2. Konfiguracja:
+----------------
 
 Należy przejść do zakładki moduły, dalej rozwinąć zakładkę pozostałe moduły i wybrać konfigurację modułu Jballegro.
 Moduł jest podzielony na 3 sekcje - konfiguracja, formularz aukcji allegro oraz lista aukcji allegro.
 W formularzu konfiguracyjnym (należy rozwinąć poprzez kliknięcie na +) trzeba wpisać swoje dane konfiguracyjne allegro tj.
 login i hasło allegro, klucz webapi allegro oraz numer id allegro (numeru szukaj w koncie allegro) 
 oraz pozostałe dane:
-- identyfikator kraju czyli kod Polski - w trybie testowym 228 lub 1 w przypadku normalego trybu pracy
-- kod szablonu - jesli posiadasz szablon, mozesz wkleić jego kod pamiętając o umieszczeniu specjalnego znacznika {{allegro}}
+* identyfikator kraju czyli kod Polski - w trybie testowym 228 lub 1 w przypadku normalego trybu pracy
+* kod szablonu - jesli posiadasz szablon, mozesz wkleić jego kod pamiętając o umieszczeniu specjalnego znacznika {{allegro}}
 w miejscu w kodzie w którym ma się pojawiać opis aukcji
-- koszty transportu - dane te będą używane domyślnie w każdej aukcji  
+* koszty transportu - dane te będą używane domyślnie w każdej aukcji  
 
 
 3. Jak wystawiać produkty na allegro:
+-------------------------------------
 
-A:
+### A:
 1) Można kliknąć ikonkę allegro przy produkcie na liście w katalogu produktów (ikonka obok ikonek edycji, usuwania i duplikacji).
 2) Po kliknięciu nastąpi przekierowanie do modułu jballegro, który jest odpowiedzialny za wystawianie przedmiotów.
 3) W module jest dostępny formularz wystawiania aukcji podobny do tego standardowego formularza z allegro. 
@@ -59,7 +66,7 @@ zapisana odpowiednia informacja - historia aukcji.
 7) Lista aukcji znajduje się na samym dole strony modułu jballegro - jest widoczna informacja o
 produkcie, cenie, ilosci, numerze aukcji - bezpośredni link do aukcji.
 
-B: 
+### B: 
 1) Produkty można też dodawać bezpośrednio ze strony modułu jballegro:
 Moduł znajduje się w zakładce Moduły / Pozostałe moduły / Jballegro -> konfiguracja.
 2) Na stronie konfiguracji można ustawić wszyskie dane dotyczące web-api allegro, dodać nową aukcję oraz przeglądać listę produktów które zostały wystawione.
@@ -70,23 +77,27 @@ należy wybrać produkt.
 
 
 4. Uruchomienie sprawdzania stanów i automatycznej aktualizacji aukcji
+----------------------------------------------------------------------
 
 Możliwe jest uruchomienie skryptu, który będzie sprawdzał stan produktów w sklepie i jeśli będzie wynosił 0, aukcja zostanie automatycznie
 zakończona. 
 Moduł również posiada skrypt, który sprawdza stan aukcji na allegro i odpowienio aktualizuje stan magazynowy w sklepie.
 Aby powyższe funkcje zadziałały, należy uruchomić 2 zadania CRON na swoim hostingu:
 
-- aktualizacja stanów i sprawdzanie stanu akukcji - wywołanie np. co pół godziny url'a: http://www.example.com/modules/jballegro/cron.php?checkallegro=1
-- sprawdzanie stanu w sklepie i kończenie aukcji - wywołanie np. co 5 minut: http://www.example.com/modules/jballegro/cron.php?checkaqty=1
+* aktualizacja stanów i sprawdzanie stanu akukcji - wywołanie np. co pół godziny url'a: http://www.example.com/modules/jballegro/cron.php?checkallegro=1
+* sprawdzanie stanu w sklepie i kończenie aukcji - wywołanie np. co 5 minut: http://www.example.com/modules/jballegro/cron.php?checkaqty=1
 
 Do wywoływania url'a za pomocą cron'a służą komendy wget lub lynx, np aby wykonać powyższe zadania należy dla crona zdefiniować:
-*/30	*	*	*	*	/usr/bin/lynx --dump http://www.example.com/modules/jballegro/cron.php?checkallegro=1
-*/5	*	*	*	*	/usr/bin/wget http://www.example.com/modules/jballegro/cron.php?checkaqty=1
+
+    */30	*	*	*	*	/usr/bin/lynx --dump http://www.example.com/modules/jballegro/cron.php?checkallegro=1
+    */5	*	*	*	*	/usr/bin/wget http://www.example.com/modules/jballegro/cron.php?checkaqty=1
 
 (www.example.com - ten adres należy zastąpić swoim adresem sklepu:)
 
 
 5. Info
+-------
+
 Moduł to na razie wersja rozwojowa więc możliwe są błędy. 
 Nie odpowiadam za jakiekolwiek szkody wynikające z jego użytkowania 
 - używasz go na własną odpowiedzialność.
