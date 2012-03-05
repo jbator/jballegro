@@ -84,13 +84,18 @@ zakończona.
 Moduł również posiada skrypt, który sprawdza stan aukcji na allegro i odpowienio aktualizuje stan magazynowy w sklepie.
 Aby powyższe funkcje zadziałały, należy uruchomić 2 zadania CRON na swoim hostingu:
 
-* aktualizacja stanów i sprawdzanie stanu akukcji - wywołanie np. co pół godziny url'a: http://www.example.com/modules/jballegro/cron.php?checkallegro=1
-* sprawdzanie stanu w sklepie i kończenie aukcji - wywołanie np. co 5 minut: http://www.example.com/modules/jballegro/cron.php?checkaqty=1
+* aktualizacja stanów i sprawdzanie stanu akukcji - wywołanie np. co pół godziny url'a: 
+
+    http://www.example.com/modules/jballegro/cron.php?checkallegro=1
+
+* sprawdzanie stanu w sklepie i kończenie aukcji - wywołanie np. co 5 minut: 
+
+    http://www.example.com/modules/jballegro/cron.php?checkaqty=1
 
 Do wywoływania url'a za pomocą cron'a służą komendy wget lub lynx, np aby wykonać powyższe zadania należy dla crona zdefiniować:
 
     */30	*	*	*	*	/usr/bin/lynx --dump http://www.example.com/modules/jballegro/cron.php?checkallegro=1
-    */5	*	*	*	*	/usr/bin/wget http://www.example.com/modules/jballegro/cron.php?checkaqty=1
+    */5         *	*	*	*	/usr/bin/wget http://www.example.com/modules/jballegro/cron.php?checkaqty=1
 
 (www.example.com - ten adres należy zastąpić swoim adresem sklepu:)
 
