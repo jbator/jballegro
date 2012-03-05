@@ -1,0 +1,48 @@
+/* 
+    Document   : admin
+    Created on : 2011-11-08, 22:47:13
+    Author     : jbator.pl
+*/
+
+#allegro-form {
+}
+
+#allegro-form th, #loadProduct th {
+  width: 300px;
+  text-align: right;
+  padding: 3px 5px 3px 0;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+#allegro-form td .inputForm {
+  width: 450px;
+}
+
+#product_autocomplete_input {
+  width: 550px;
+}
+
+#toggler {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#auction-list {
+  font-size: 11px;
+  width: 100%;
+}
+
+#allegro-form td.help, #allegro-form th.help {
+  color: gray;
+  font-size: 11px;
+}
+
+label span.help {
+  display: block;
+  font-weight: normal;
+  color: gray;
+  font-size: 10px;
+  padding: 5px 0 0 0;
+  font-family: arial;
+}
