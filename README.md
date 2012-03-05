@@ -118,6 +118,7 @@ Jeśli znalazłeś błąd lub masz pomysł jak rozbudować moduł - zapraszam na
 * Nigdy nie wymuszaj zapisu pliku binarnego do repozytorium
 * Używaj CamelCase dla zmiennych, nazwy klas rozpoczynaj dużą literą, nazwy metod oraz zmiennych rozpoczynaj małą literą
 * Zalecany edytor: NetBeans 7.1.1
+* Komituj tylko jeśli jesteś w 100% pewien że twój kod nic nie zepsuje i moduł będzie działał
 
 ### W miarę możliwości stosuj się do standardów kodowania:
 
