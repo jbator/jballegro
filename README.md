@@ -53,27 +53,27 @@ w miejscu w kodzie w którym ma się pojawiać opis aukcji
 -------------------------------------
 
 ### A:
-1) Można kliknąć ikonkę allegro przy produkcie na liście w katalogu produktów (ikonka obok ikonek edycji, usuwania i duplikacji).
-2) Po kliknięciu nastąpi przekierowanie do modułu jballegro, który jest odpowiedzialny za wystawianie przedmiotów.
-3) W module jest dostępny formularz wystawiania aukcji podobny do tego standardowego formularza z allegro. 
+* Można kliknąć ikonkę allegro przy produkcie na liście w katalogu produktów (ikonka obok ikonek edycji, usuwania i duplikacji).
+* Po kliknięciu nastąpi przekierowanie do modułu jballegro, który jest odpowiedzialny za wystawianie przedmiotów.
+* W module jest dostępny formularz wystawiania aukcji podobny do tego standardowego formularza z allegro. 
 Większość pól zostanie automatycznie uzupełniona na podstawie danych produktów ze sklepu: tytuł aukcji - nazwa produktu, opis produktu (jeśli jest),
 oraz cena produktu. 
-4) Inne dane takie jak koszty dostawy, opcje wysyłki zależą odpowiednio od konfiguracji modułu jballego oraz konfiguracji 
+* Inne dane takie jak koszty dostawy, opcje wysyłki zależą odpowiednio od konfiguracji modułu jballego oraz konfiguracji 
 samego sklepu - można je edytować w formularzu akucji albo w odpowienich miejscach sklepu (będą automatycznie wczytywane w kolejnych aukcjach)
-5) Samemu należy wybrać w formularzu kategorię i województwo. Należy też pamietać że tytuł aukcji nie może przekraczać 50 znaków.
-6) Po wypełnieniu należy kliknąć przycisk Utwórz aukcję - jeśli wszystko było podane poprawnie aukcja zostanie utworzona a w bazie zostanie 
+* Samemu należy wybrać w formularzu kategorię i województwo. Należy też pamietać że tytuł aukcji nie może przekraczać 50 znaków.
+* Po wypełnieniu należy kliknąć przycisk Utwórz aukcję - jeśli wszystko było podane poprawnie aukcja zostanie utworzona a w bazie zostanie 
 zapisana odpowiednia informacja - historia aukcji. 
-7) Lista aukcji znajduje się na samym dole strony modułu jballegro - jest widoczna informacja o
+* Lista aukcji znajduje się na samym dole strony modułu jballegro - jest widoczna informacja o
 produkcie, cenie, ilosci, numerze aukcji - bezpośredni link do aukcji.
 
 ### B: 
-1) Produkty można też dodawać bezpośrednio ze strony modułu jballegro:
+* Produkty można też dodawać bezpośrednio ze strony modułu jballegro:
 Moduł znajduje się w zakładce Moduły / Pozostałe moduły / Jballegro -> konfiguracja.
-2) Na stronie konfiguracji można ustawić wszyskie dane dotyczące web-api allegro, dodać nową aukcję oraz przeglądać listę produktów które zostały wystawione.
-3) W formularzu dodawania aukcji w pierwszym polu należy wpisywać nazwę produktu lub numer lub Id - działa tutaj autopodpowiadanie gdzie 
+* Na stronie konfiguracji można ustawić wszyskie dane dotyczące web-api allegro, dodać nową aukcję oraz przeglądać listę produktów które zostały wystawione.
+* W formularzu dodawania aukcji w pierwszym polu należy wpisywać nazwę produktu lub numer lub Id - działa tutaj autopodpowiadanie gdzie 
 należy wybrać produkt. 
-4) Po wybraniu dane produktu powinny być automatycznie załadowane do formularza.
-5) Dalsze kroki występują tak samo jak w pkt. A (pkt 4 i dalej)
+* Po wybraniu dane produktu powinny być automatycznie załadowane do formularza.
+* Dalsze kroki występują tak samo jak w pkt. A (pkt 4 i dalej)
 
 
 4) Uruchomienie sprawdzania stanów i automatycznej aktualizacji aukcji
