@@ -160,7 +160,7 @@ Following coding standards is one of the easiest way for everybody to understand
 
 * In a function body, return statements should have a blank line prior to it to increase readability.
 
-    <?php
+    `<?php
     function makeCoffee()
     {
         if (isSleeping() !== false && hasEnoughCaffeineForToday() !== false)
@@ -175,50 +175,50 @@ Following coding standards is one of the easiest way for everybody to understand
         }
 
         return null;
-    }
+    }`
 
 * All one line comments should be on their own lines and in this format:
 
-    <?php
-    // space first, with no full stop needed
+    `<?php
+    // space first, with no full stop needed`
 
 * Avoid evaluating variables within strings, instead opt for concatenation:
 
-    <?php
+    `<?php
     $string = 'something';
     $newString = "$string is awesome!";  // bad, not awesome
     $newString = $string.' is awesome!'; // better
-    $newString = sprintf('%s is awesome', $string); // for exception messages and strings with a lot of substitutions
+    $newString = sprintf('%s is awesome', $string); // for exception messages and strings with a lot of substitutions`
 
 * Use lowercase PHP native typed constants: `false`, `true` and `null`. The same http://www.tiffanyjewellers.us/ tiffany jewellersgoes for `array()`. At the opposite, always use uppercase strings for user defined constants, like `define('MY_CONSTANT', 'foo/bar')`. Better, try to always use class constants:
 
-    <?php
+    `<?php
     class sfCoffee
     {
         const HAZ_SUGAR = true;
     }
-    var_dump(sfCoffee::HAZ_SUGAR);
+    var_dump(sfCoffee::HAZ_SUGAR);`
 
 * To check if a variable is `null` or not, don't use the `is_null()` native PHP function:
 
-    <?php
+    `<?php
     if ($coffee !== null)
     {
         echo 'I can haz coffee';
-    }
+    }`
 
 * When comparing a variable to a string, put the string first and use type testing when applicable:
 
-    <?php
-    if ($variable === 1)
+    `<?php
+    if ($variable === 1)`
 
 * Use PHP type hinting in functions and method signatures:
 
-    <?php
+    `<?php
     public function notify(sfEvent $event)
     {
         // ...
-    }
+    }`
 
 * All function and class methods should have their phpdoc own block:
 
@@ -226,7 +226,7 @@ Following coding standards is one of the easiest way for everybody to understand
 `@param` lines state the type and the variable name. If the variable can have multiple types, then the `mixed` type must be used.
 Ideally `@...` lines are vertically lined up (using spaces):
     
-    <?php
+    `<?php
     /**
      * Notifies all listeners of a given event.
      *
@@ -234,6 +234,6 @@ Ideally `@...` lines are vertically lined up (using spaces):
      *
      * @return sfEvent          The sfEvent instance
      */
-    public function notify(sfEvent $event)
+    public function notify(sfEvent $event)`
 
 
