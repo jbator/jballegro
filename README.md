@@ -108,3 +108,123 @@ Nie odpowiadam za jakiekolwiek szkody wynikające z jego użytkowania
 - używasz go na własną odpowiedzialność.
 
 Jeśli znalazłeś błąd lub masz pomysł jak rozbudować moduł - zapraszam na moją stronę www.jbator.pl
+
+6) Chcesz pomóc w rozwoju modułu - zapoznaj się z poniższymi złotymi zasadami zanim zaczniesz przesyłać swoje Pull Requesty:
+
+### Zasady:
+
+* Dopisuj komentarze przy każdej klasie, metodzie oraz w miejscach gdzie uważasz, że komentarz może pomóc zrozumieć twój kod
+* DRY - Don't Repeat Yourself
+* Nigdy nie wymuszaj zapisu pliku binarnego do repozytorium
+* Używaj CamelCase dla zmiennych, nazwy klas rozpoczynaj dużą literą, nazwy metod oraz zmiennych rozpoczynaj małą literą
+* Zalecany edytor: NetBeans 7.1.1
+
+### W miarę możliwości stosuj się do standardów kodowania:
+
+Following coding standards is one of the easiest way for everybody to understand everybody's code.
+
+Here's the golden rule: ''Imitate the existing symfony code''.
+
+Never use tabulations in the code. Indentation is done by steps of 4 spaces:
+<?php
+class sfFoo
+{
+    public function bar()
+    {
+        sfCoffee::make();
+    }
+}
+
+Don't put spaces after an opening parenthesis and before a closing one.
+<?php
+if ($myVar == getRequestValue($name))    // correct
+if ( $myVar == getRequestValue($name) )  // incorrect
+
+Use `camelCase`, not underscores, for variable, function and method names:
+
+    Good: `function makeCoffee()`
+    Bad: `function MakeCoffee()`
+    Bad: `function make_coffee()`
+    An exception regarding the latter: use underscores for helper functions name (only for symfony 1.0 stuff).
+
+Use underscores for option/argument/parameter names.
+
+Braces always go on their own line.
+
+Use braces for indicating control structure body regardless of number of statements it contains.
+
+Symfony is written in php5, so every class method or member definition should explicitly declare its visibility using the `private`, `protected` or `public` keywords.
+
+Don't end library files with the usual `?>` closing tag. This is because it is not really needed, and because it can create problems in the output if you ever have white space after this tag.
+
+In a function body, return statements should have a blank line prior to it to increase readability.
+<?php
+function makeCoffee()
+{
+    if (isSleeping() !== false && hasEnoughCaffeineForToday() !== false)
+    {
+        canMakeCoffee();
+ 
+        return 1;
+    }
+    else
+    {
+        cantMakeCoffee();
+    }
+ 
+    return null;
+}
+
+All one line comments should be on their own lines and in this format:
+<?php
+// space first, with no full stop needed
+
+Avoid evaluating variables within strings, instead opt for concatenation:
+<?php
+$string = 'something';
+$newString = "$string is awesome!";  // bad, not awesome
+$newString = $string.' is awesome!'; // better
+$newString = sprintf('%s is awesome', $string); // for exception messages and strings with a lot of substitutions
+
+Use lowercase PHP native typed constants: `false`, `true` and `null`. The same http://www.tiffanyjewellers.us/ tiffany jewellersgoes for `array()`. At the opposite, always use uppercase strings for user defined constants, like `define('MY_CONSTANT', 'foo/bar')`. Better, try to always use class constants:
+<?php
+class sfCoffee
+{
+    const HAZ_SUGAR = true;
+}
+var_dump(sfCoffee::HAZ_SUGAR);
+
+To check if a variable is `null` or not, don't use the `is_null()` native PHP function:
+<?php
+if ($coffee !== null)
+{
+    echo 'I can haz coffee';
+}
+
+When comparing a variable to a string, put the string first and use type testing when applicable:
+<?php
+if ($variable === 1)
+
+Use PHP type hinting in functions and method signatures:
+<?php
+public function notify(sfEvent $event)
+{
+    // ...
+}
+
+All function and class methods should have their phpdoc own block:
+
+    All `@...` statements do not end with a dot.
+    `@param` lines state the type and the variable name. If the variable can have multiple types, then the `mixed` type must be used.
+    Ideally `@...` lines are vertically lined up (using spaces):
+    <?php
+    /**
+     * Notifies all listeners of a given event.
+     *
+     * @param  sfEvent  $event  A sfEvent instance
+     *
+     * @return sfEvent          The sfEvent instance
+     */
+    public function notify(sfEvent $event)
+
+
