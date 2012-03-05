@@ -160,22 +160,20 @@ Following coding standards is one of the easiest way for everybody to understand
 
 * In a function body, return statements should have a blank line prior to it to increase readability.
 
-    `<?php
+    <?php
     function makeCoffee()
     {
         if (isSleeping() !== false && hasEnoughCaffeineForToday() !== false)
         {
             canMakeCoffee();
-
             return 1;
         }
         else
         {
             cantMakeCoffee();
         }
-
         return null;
-    }`
+    }
 
 * All one line comments should be on their own lines and in this format:
 
@@ -226,14 +224,14 @@ Following coding standards is one of the easiest way for everybody to understand
 `@param` lines state the type and the variable name. If the variable can have multiple types, then the `mixed` type must be used.
 Ideally `@...` lines are vertically lined up (using spaces):
     
-    `<?php
-    /**
-     * Notifies all listeners of a given event.
-     *
-     * @param  sfEvent  $event  A sfEvent instance
-     *
-     * @return sfEvent          The sfEvent instance
-     */
-    public function notify(sfEvent $event)`
+    <?php
+        /**
+         * Notifies all listeners of a given event.
+         *
+         * @param  sfEvent  $event  A sfEvent instance
+         *
+         * @return sfEvent          The sfEvent instance
+         */
+        public function notify(sfEvent $event)`
 
 
