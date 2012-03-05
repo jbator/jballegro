@@ -12,11 +12,11 @@ Instrukcja obsługi modułu:
 --------------
 
 Skopiować zawartość folderów na serwer:
-### a) zawartość folderu admin skopiować do swojego folderu gdzie znajduje się panel administracyjny 
+### a) zawartość folderu admin (znajduje się w katalogu lib) skopiować do swojego folderu gdzie znajduje się panel administracyjny 
 (nadpisać plik AdminProducts.php lub jeśli mamy wprowadzone jakieś zmiany dodać odpowiednie modyfikacje)
-### b) skopiować folder classes do główego katalogu gdzie mamy zainstalowany sklep
+### b) skopiować folder classes (znajduje się w katalogu lib) do główego katalogu gdzie mamy zainstalowany sklep
 (nadpisać jeden plik AdminTab.php)
-### c) skopiować folder modułu (modules)
+### c) skopiować folder modułu do modułów sklepu
 
 Kroki a i b są opcjonalne - dodają ikonkę allegro na liście produktów w katalogu i pozwalają na 
 tworzenie aukcji bezpośrednio z listy produktów (Działa tylko w przypadku Prestashop 1.4!!!).
@@ -29,7 +29,7 @@ skryptów PHP to znaczy ograniczają użycie pamięci do 64MB i czas maksymalneg
 
 Moduł po instalacji podczas pierwszego uruchomienia z poprawną konfiguracją próbuje pobrać z Api Allegro dostępne kategorie i dane dotyczące 
 formularzy - jendakże na przykład w przypadku nazwa.pl nie jest w stanie tego zrobić w 30 sekund ponieważ danych jest zbyt dużo.
-Dlatego trzeba te dane ręcznie zaimportować poprzez PhpMyAdmin bezpośrednio do bazy sklepu z przygotowanego pliku sql "jballegro.sql".
+Dlatego trzeba te dane ręcznie zaimportować poprzez PhpMyAdmin bezpośrednio do bazy sklepu z przygotowanego pliku sql "jballegro.sql" (znajduje się w folderze data).
 Sama instalacja modułu bez wpisywania danych konfiguracyjnych powinna przejść bezproblemowo (dodaje się struktura tabel ale bez zawartości).
 
 W późniejszej wersji modułu możne znajdzie się porcjowanie danych dzięki instalator poradzi sobie z instalacją.
