@@ -105,16 +105,17 @@ class Jb extends Module {
 
     if (count($result) > 0) {
       $hid = $result[0]['id'];
+      $aid = (float) $result[0]['allegro_id'];
       try {
         $this->initAllegro();
-        $this->allegro->finishItem(number_format($result[0]['allegro_id'], 0, '.', ''));
+        $this->allegro->finishItem($aid);
         $query = 'UPDATE ' . _DB_PREFIX_ . 'allegro SET status = 0 WHERE id = ' . $hid . ';';
         Db::getInstance()->Execute($query);
         $msg = 'Aukcja ' . $id . ' została zakończona';
         return array('status' => 'success', 'msg' => $msg);
       }
       catch (SoapFault $e) {
-        $msg = 'Wystąpił błąd: ' . $e->faultstring;
+        $msg = 'Wystąpił błąd ('.$aid.'):' . $e->faultstring;
         return array('status' => 'fail', 'msg' => $msg);
       }
     }
@@ -130,7 +131,8 @@ class Jb extends Module {
     foreach ($result as $row) {
       if ($row['quantity'] == 0) {
         try {
-          $this->allegro->finishItem(number_format($row['allegro_id'], 0, '.', ''));
+          $aid = (float) $row['allegro_id'];
+          $this->allegro->finishItem($aid);
 
           $query = 'UPDATE ' . _DB_PREFIX_ . 'allegro SET status = 0, date_upd = NOW() WHERE id = ' . $row['id'] . ';';
           Db::getInstance()->Execute($query);
@@ -160,12 +162,13 @@ class Jb extends Module {
     foreach ($result as $row) {
       try {
         // pobranie informacji z allegro o danej aukcji
-        $data = $this->allegro->getMyAccountData('sell', array($row['allegro_id']));
+        $aid = (float) $row['allegro_id'];
+        $data = $this->allegro->getMyAccountData('sell', array($aid));
         $closed = false;
         if (!$data) {
           // sprawdz czy sprzedane
-          $data = $this->allegro->getMyAccountData('sold', array($row['allegro_id']));
-          if (!$data) $data = $this->allegro->getMyAccountData('not_sold', array($row['allegro_id']));
+          $data = $this->allegro->getMyAccountData('sold', array($aid));
+          if (!$data) $data = $this->allegro->getMyAccountData('not_sold', array($aid));
           $closed = true;
         }
         //echo 'cl ' . $closed . '<br />';
@@ -199,7 +202,7 @@ class Jb extends Module {
 
               if ($current_q <= 0) {
                 // gdy liczba na stanie = 0 to zakoncz aukcje allegro
-                $this->allegro->finishItem(number_format($row['allegro_id'], 0, '.', ''));
+                $this->allegro->finishItem($aid);
                 $this->writeLog('Zamkniecie aukcji ' . $row['id'] . '-' . $row['allegro_id'] . '-' . $row['id_product']);
               }
             }
