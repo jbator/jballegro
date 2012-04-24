@@ -77,7 +77,7 @@ class Jballegro extends Module {
     $this->aprzes10 = htmlentities(Configuration::get('JB_APRZES10'), ENT_QUOTES, 'UTF-8');
 
     $this->provision = htmlentities(Configuration::get('JB_APROVISION'), ENT_QUOTES, 'UTF-8');
-
+    $this->province = htmlentities(Configuration::get('JB_PROVINCE'), ENT_QUOTES, 'UTF-8');
     if (!Tools::isSubmit('submitConf'))
       $this->initAllegro();
   }
@@ -98,6 +98,7 @@ class Jballegro extends Module {
         return true;
       }
       catch (SoapFault $fault) {
+          die($fault->faultstring);
         $this->webapierror = $fault->faultstring;
         return false;
       }
@@ -132,6 +133,7 @@ class Jballegro extends Module {
     $fieldCount = Db::getInstance()->ExecuteS('SELECT count(*) as n FROM ' . _DB_PREFIX_ . 'allegro_field;');
     if ($fieldCount[0]['n'] == 0) {
       $fields = Allegrowebapi::objectToArray($this->allegro->getSellFormFieldsExt());
+      //die('<pre>'.print_r($fields, true).'</pre>');
       foreach ($fields['sell-form-fields'] as $field) {
 
         $query = 'INSERT INTO ' . _DB_PREFIX_ . 'allegro_field VALUES (
@@ -144,8 +146,8 @@ class Jballegro extends Module {
           ' . $field['sell-form-opt'] . ',
           ' . $field['sell-form-pos'] . ',
           ' . $field['sell-form-length'] . ',
-          ' . $field['sell-min-value'] . ',
-          ' . $field['sell-max-value'] . ',
+          \''. $field['sell-min-value'] . '\',
+          \''. $field['sell-max-value'] . '\',
           \'' . addslashes($field['sell-form-desc']) . '\',
           \'' . $field['sell-form-opts-values'] . '\',
           \'' . '' . '\',

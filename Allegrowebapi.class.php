@@ -30,7 +30,7 @@ class Allegrowebapi {
 
     $this->countryCode = $countryCode;
 
-    $this->client = new SoapClient('http://webapi.allegro.pl/uploader.php?wsdl');
+    $this->client = new SoapClient('https://webapi.allegro.pl/uploader.php?wsdl');
   }
 
   /**
@@ -119,7 +119,8 @@ class Allegrowebapi {
    *
    * @param bool $Encode
    */
-  public function login($Encode=false) {
+  public function login($Encode=false) 
+  {
     $version = $this->QuerySysStatus(1);
     $this->local_version = $version['ver-key'];
 
