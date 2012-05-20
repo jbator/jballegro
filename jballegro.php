@@ -51,7 +51,7 @@ class Jballegro extends Module
 
         $this->name = 'jballegro';
         $this->tab = '';
-        $this->version = 0.5;
+        $this->version = 0.6;
         $this->author = 'jbator.pl';
         $this->need_instance = 0;
         $this->error = false;
