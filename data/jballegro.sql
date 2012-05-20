@@ -43281,7 +43281,3 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21592, 'Austria', 79622, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Karyntia|Kitzbuhel|Tyrol|Zell am See - Kaprun|Ziemia Salzburska|Zillertal|Pozostałe', '0|1|2|3|4|5|6|7', '', 16071, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (21593, 'Bułgaria', 79631, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Słoneczny Brzeg|Złote Piaski|Pozostałe', '0|1|2|3', '', 16072, '0|1|2|3', 0, '0', '', 0),
 (21594, 'Włochy', 79673, 4, 2, 0, 8, 0, 2, 0, 10, ' -- Wybierz -- |Kalabria|Livigno|Madonna Di Campiglio|Południowy Tyrol|Sardynia|Sycylia|Val Di Fassa|Val Di Fiemme|Val Di Sole|Pozostałe', '0|1|2|3|4|5|6|7|8|9|10', '', 16073, '0|1|2|3|4|5|6|7|8|9|10', 0, '0', '', 0);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
