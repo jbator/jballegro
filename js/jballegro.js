@@ -25,4 +25,23 @@ function loadProductData(id,url)
   });
 }
 
-
+function loadProductStateSelect(id)
+{
+    $.ajax({
+    url: '/modules/jballegro/ajax.php',
+    data: 'getstateselect=' + id,
+    type: "POST",
+    success: function(data) 
+    {
+      if (data != '')
+      {
+        $('#state-row td').html(data);
+        $('#state-row').show();
+      }
+      else {
+          $('#state-row td').html('');
+           $('#state-row').hide();
+      }
+    }
+  });
+}

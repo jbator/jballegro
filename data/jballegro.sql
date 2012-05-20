@@ -1,35 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 3.4.5
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Czas wygenerowania: 02 May 2012, 12:13
--- Wersja serwera: 5.5.16
--- Wersja PHP: 5.3.8
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT=0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
---
--- Struktura tabeli dla  `ps_allegro_cat`
---
-
-DROP TABLE IF EXISTS `ps_allegro_cat`;
-CREATE TABLE IF NOT EXISTS `ps_allegro_cat` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `parent` int(11) NOT NULL,
-  `position` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `parent` (`parent`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Zrzut danych tabeli `ps_allegro_cat`
---
-
 INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (1, 'Muzyka i Instrumenty', 0, 15),
 (2, 'Komputery', 0, 12),
@@ -113,7 +81,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (269, 'Pozostałe', 1536, 8),
 (276, 'Pozostałe', 1383, 6),
 (279, 'Płyty winylowe', 1, 1),
-(280, 'Drum''n''Bass', 279, 6),
+(280, 'Drum\\''n\\''Bass', 279, 6),
 (281, 'Rap, Hip-Hop', 279, 16),
 (284, 'Ambient, Nowe brzmienia', 279, 0),
 (286, 'Klasyka, Opera', 279, 10),
@@ -269,17 +237,17 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (1329, 'Pozostałe', 1328, 6),
 (1333, 'Akcesoria i części serwisowe', 348, 0),
 (1361, 'Ballada, Poezja śpiewana', 175, 1),
-(1362, 'Blues, Rhythm''n''Blues', 175, 2),
+(1362, 'Blues, Rhythm\\''n\\''Blues', 175, 2),
 (1364, 'Ethno, Folk, World music', 175, 7),
 (1370, 'Ballada, Poezja śpiewana', 194, 0),
-(1371, 'Blues, Rhythm''n''Blues', 194, 1),
+(1371, 'Blues, Rhythm\\''n\\''Blues', 194, 1),
 (1373, 'Ethno, Folk, World music', 194, 4),
 (1378, 'Składanki', 194, 16),
 (1383, 'Instrumenty', 1, 2),
 (1387, 'Instrumenty klawiszowe i MIDI', 1383, 2),
 (1390, 'Instrumenty perkusyjne', 1383, 3),
 (1410, 'Ballada, Poezja śpiewana', 279, 1),
-(1411, 'Blues, Rhythm''n''Blues', 279, 2),
+(1411, 'Blues, Rhythm\\''n\\''Blues', 279, 2),
 (1413, 'Reggae, Ska', 279, 17),
 (1419, 'Składanki', 279, 21),
 (1420, 'Soul, Funk', 279, 22),
@@ -495,7 +463,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (3919, 'Sport i Turystyka', 0, 21),
 (3922, 'Turystyka', 3919, 11),
 (3923, 'Kolekcje', 3919, 12),
-(3964, 'Pozostałe', 3922, 9),
+(3964, 'Pozostałe', 3922, 12),
 (3965, 'Pozostałe', 3923, 13),
 (3966, 'Autografy', 3923, 1),
 (3968, 'Gadżety kolekcjonerskie', 3923, 3),
@@ -985,7 +953,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (5171, 'Wysokotonowe', 1322, 13),
 (5172, 'Zestawy głośnikowe', 1322, 14),
 (5173, 'Pozostałe', 1322, 17),
-(5174, '6x9''''', 1322, 11),
+(5174, '6x9\\''\\''', 1322, 11),
 (5185, 'CD', 712, 0),
 (5186, 'CD/MP3', 712, 1),
 (5187, 'MiniDisc', 712, 3),
@@ -1086,7 +1054,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (5567, 'Procesory, Efekty, Preampy', 5564, 6),
 (5584, 'Rock', 194, 14),
 (5585, 'Pop', 194, 11),
-(5587, 'Rock''n''roll', 194, 15),
+(5587, 'Rock\\''n\\''roll', 194, 15),
 (5588, 'Muzyka elektroniczna', 194, 9),
 (5589, 'Kolędy', 194, 7),
 (5590, 'Dla dzieci', 194, 3),
@@ -1100,7 +1068,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (5602, 'Rock', 175, 22),
 (5603, 'Pop', 175, 19),
 (5604, 'House', 175, 8),
-(5605, 'Rock''n''roll', 175, 23),
+(5605, 'Rock\\''n\\''roll', 175, 23),
 (5606, 'Muzyka elektroniczna', 175, 13),
 (5607, 'Kolędy', 175, 10),
 (5608, 'Dla dzieci', 175, 6),
@@ -1112,7 +1080,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (5620, 'Rock', 279, 18),
 (5621, 'Pop', 279, 15),
 (5622, 'House', 279, 8),
-(5623, 'Rock''n''roll', 279, 19),
+(5623, 'Rock\\''n\\''roll', 279, 19),
 (5624, 'Muzyka elektroniczna', 279, 13),
 (5625, 'Kolędy', 279, 11),
 (5626, 'Dla dzieci', 279, 5),
@@ -1142,7 +1110,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (5947, 'Sega (inne)', 5914, 11),
 (5948, 'Sony PlayStation 2 (PS2)', 5914, 12),
 (5949, 'Sony PlayStation (PSX)', 5914, 14),
-(5950, '''Gierki'' elektroniczne', 5914, 17),
+(5950, '\\''Gierki\\'' elektroniczne', 5914, 17),
 (5951, 'Automaty do gier', 5914, 19),
 (5953, 'Pozostałe', 5914, 20),
 (6042, 'Pozostałe', 5951, 8),
@@ -1671,9 +1639,9 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (10330, 'do 1945', 10327, 0),
 (10331, 'po 1945', 10327, 1),
 (10332, 'do 1945', 10328, 0),
-(10333, 'po 1945', 10328, 1),
-(10334, 'Wielkopolska (Grosspolen)', 10234, 8);
+(10333, 'po 1945', 10328, 1);
 INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(10334, 'Wielkopolska (Grosspolen)', 10234, 8),
 (10335, 'Leszczyńskie', 10334, 0),
 (10336, 'Poznańskie', 10334, 1),
 (10337, 'do 1945', 10335, 0),
@@ -2424,7 +2392,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (13384, 'Komplety', 13381, 0),
 (13385, 'Koszulki', 13381, 1),
 (13386, 'Spodenki', 13381, 2),
-(13387, 'Pozostałe', 13372, 8),
+(13387, 'Pozostałe', 13372, 9),
 (13388, 'Akcesoria sędziowskie', 13372, 1),
 (13389, 'Literatura', 13372, 3),
 (13390, 'Obuwie', 13372, 4),
@@ -2445,7 +2413,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (13406, 'Opaski i nakolanniki', 13375, 1),
 (13407, 'Piłki', 13375, 2),
 (13408, 'Sporty towarzyskie i rekreacja', 3919, 6),
-(13409, 'Pozostałe', 13408, 11),
+(13409, 'Pozostałe', 13408, 12),
 (13410, 'Bilard', 13408, 0),
 (13411, 'Pozostałe', 13410, 8),
 (13412, 'Bile', 13410, 1),
@@ -2462,25 +2430,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (13423, 'Pozostałe', 13422, 5),
 (13424, 'Kije', 13422, 0),
 (13425, 'Piłki', 13422, 2),
-(13426, 'Góry, wspinaczka', 13408, 4),
-(13427, 'Pozostałe', 13426, 4),
-(13428, 'Literatura i mapy', 13426, 0),
-(13429, 'Obuwie', 13426, 1),
-(13430, 'Odzież', 13426, 2),
-(13431, 'Sprzęt wspinaczkowy', 13426, 3),
-(13432, 'Pozostałe', 13430, 7),
-(13433, 'Czapki', 13430, 1),
-(13434, 'Koszulki', 13430, 2),
-(13435, 'Kurtki', 13430, 3),
-(13436, 'Skarpety', 13430, 5),
-(13437, 'Spodnie', 13430, 6),
-(13438, 'Pozostałe', 13431, 9),
-(13439, 'Kaski', 13431, 2),
-(13440, 'Karabinki', 13431, 1),
-(13441, 'Liny i linki', 13431, 4),
-(13442, 'Magnezja i woreczki', 13431, 5),
-(13443, 'Raki i czekany', 13431, 6),
-(13444, 'Uprzęże', 13431, 7),
 (13445, 'Jogging, bieganie', 13408, 5),
 (13446, 'Pozostałe', 13445, 3),
 (13447, 'Odzież', 13445, 1),
@@ -2491,7 +2440,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (13452, 'Koszulki', 13447, 1),
 (13453, 'Skarpety', 13447, 2),
 (13454, 'Spodnie i spodenki', 13447, 3),
-(13455, 'Wędkarstwo', 13408, 9),
+(13455, 'Wędkarstwo', 13408, 10),
 (13456, 'Pozostałe', 13455, 16),
 (13457, 'Sprzęt elektroniczny', 13455, 11),
 (13458, 'Haczyki i kotwiczki', 13455, 1),
@@ -2671,35 +2620,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (13658, 'Obuwie', 13652, 1),
 (13659, 'Spodenki', 13652, 2),
 (13660, 'Spódniczki', 13652, 3),
-(13661, 'Sporty pozostałe', 3919, 4),
-(13662, 'Pozostałe', 13661, 5),
-(13663, 'Jeździectwo', 13661, 0),
-(13664, 'Lotnictwo', 13661, 1),
-(13665, 'Paralotniarstwo', 13661, 2),
-(13667, 'Pozostałe', 13663, 5),
-(13668, 'Akcesoria', 13663, 0),
-(13669, 'Literatura', 13663, 2),
-(13670, 'Odzież i obuwie', 13663, 3),
-(13671, 'Pozostałe', 13668, 7),
-(13672, 'Kiełzna i wędzidła', 13668, 1),
-(13673, 'Ogłowia', 13668, 3),
-(13674, 'Siodła i osprzęt', 13668, 6),
-(13675, 'Pozostałe', 13670, 8),
-(13676, 'Bryczesy', 13670, 0),
-(13677, 'Buty', 13670, 1),
-(13678, 'Czapsy', 13670, 2),
-(13679, 'Kamizelki', 13670, 3),
-(13680, 'Koszulki i koszule', 13670, 4),
-(13681, 'Kurtki', 13670, 5),
-(13682, 'Toczki i kaski', 13670, 7),
-(13683, 'Pozostałe', 13664, 2),
-(13684, 'Literatura', 13664, 0),
-(13685, 'Odzież i obuwie', 13664, 1),
-(13686, 'Pozostałe', 13665, 4),
-(13687, 'Literatura', 13665, 0),
-(13688, 'Paralotnie i spadochrony', 13665, 1),
-(13689, 'Sprzęt pomiarowy', 13665, 2),
-(13690, 'Uprzęże', 13665, 3),
 (13712, 'Szaliki', 3923, 11),
 (13713, 'Pozostałe', 13712, 3),
 (13714, 'Kluby polskie', 13712, 0),
@@ -2908,8 +2828,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (14736, 'Deski', 13642, 0),
 (14737, 'Bluzy', 13391, 0),
 (14742, 'Torby i wózki', 13422, 4),
-(14743, 'Chwyty', 13431, 0),
-(14744, 'Kości, haki, śruby', 13431, 3),
 (14791, 'Faxmodemy', 4418, 2),
 (14792, 'ADSL', 4418, 0),
 (14793, 'Inne xDSL', 4418, 1),
@@ -3048,7 +2966,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16011, 'Pokarmy', 1118, 10),
 (16021, 'Doniczki i pojemniki', 1532, 4),
 (16022, 'Rośliny pokojowe', 776, 9),
-(16024, 'Żonglerka', 13408, 10),
+(16024, 'Żonglerka', 13408, 11),
 (16025, 'Pozostałe', 16024, 7),
 (16026, 'Diabola', 16024, 0),
 (16027, 'Kije, Sticki', 16024, 2),
@@ -3071,18 +2989,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16044, 'Dla dzieci', 13619, 1),
 (16045, 'Allround', 13621, 0),
 (16046, 'Race', 13621, 1),
-(16053, 'Pozostałe', 13429, 3),
-(16054, 'Wspinaczkowe', 13429, 1),
-(16055, 'Wysokogórskie', 13429, 2),
-(16056, 'Trekkingowe', 13429, 0),
-(16057, 'Rękawice', 13430, 4),
-(16058, 'Bluzy, polary', 13430, 0),
-(16059, 'Sprzęt speleologiczny', 13431, 8),
-(16060, 'Pozostałe', 13428, 4),
-(16061, 'Albumy', 13428, 0),
-(16062, 'Książki', 13428, 1),
-(16063, 'Przewodniki', 13428, 3),
-(16064, 'Mapy', 13428, 2),
 (16066, 'Bielizna', 13616, 0),
 (16067, 'Kombinezony', 13616, 3),
 (16068, 'Męskie', 13624, 0),
@@ -3110,7 +3016,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16090, 'Dla dorosłych', 13614, 0),
 (16091, 'Dla dzieci', 13614, 1),
 (16168, 'Nowe brzmienia', 175, 17),
-(16169, 'Downtempo, Trip-hop, D''n''B, Breaks', 16168, 0),
+(16169, 'Downtempo, Trip-hop, D\\''n\\''B, Breaks', 16168, 0),
 (16170, 'IDM, Experimental, Post-techno', 16168, 1),
 (16171, 'Pozostałe', 16168, 2),
 (16172, 'Minimal, Detroit, Niekomercyjne', 184, 0),
@@ -3289,12 +3195,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16518, 'Odzież', 16513, 3),
 (16519, 'Trapezy', 16513, 4),
 (16520, 'Wiązania', 16513, 5),
-(16521, 'Spadochroniarstwo', 13661, 3),
-(16522, 'Pozostałe', 16521, 4),
-(16523, 'Automaty', 16521, 0),
-(16524, 'Czasze', 16521, 1),
-(16525, 'Kaski', 16521, 2),
-(16526, 'Pokrowce', 16521, 3),
 (16527, 'Nordic Walking', 13408, 6),
 (16528, 'Kije', 16527, 0),
 (16529, 'Pozostałe', 16527, 1),
@@ -3324,8 +3224,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16554, 'do 1945', 16553, 0),
 (16555, 'po 1945', 16553, 1),
 (16556, 'do 1960', 16552, 0),
-(16557, 'po 1960', 16552, 1);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(16557, 'po 1960', 16552, 1),
 (16558, 'WP na Wschodzie 1943 - 1945', 12091, 5),
 (16559, 'Oryginalne', 12173, 0),
 (16560, 'Repliki i rekonstrukcje historyczne', 12173, 1),
@@ -3390,7 +3289,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16745, 'Sprzęt geodezyjny', 16699, 2),
 (16746, 'Maszyny i sprzęt budowlany', 16699, 0),
 (16748, 'Materiały budowlane', 16699, 1),
-(16749, 'Pozostałe', 16748, 7),
+(16749, 'Pozostałe', 16748, 7);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (16750, 'Chemia budowlana', 16748, 0),
 (16751, 'Pozostałe', 16750, 5),
 (16752, 'Impregnaty i żywice', 16750, 1),
@@ -3943,7 +3843,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (18001, 'Ceramiczne', 17999, 0),
 (18002, 'Szklane', 17999, 1),
 (18003, 'Metalowe i inne', 17999, 2),
-(18004, 'Taniec', 13408, 8),
+(18004, 'Taniec', 13408, 9),
 (18005, 'Pozostałe', 18004, 3),
 (18006, 'Filmy i książki', 18004, 0),
 (18007, 'Obuwie', 18004, 1),
@@ -4199,7 +4099,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (18269, 'W126 (1980-1993)', 12737, 1),
 (18270, 'W126 (1980-1992)', 12739, 0),
 (18271, 'W140 (1992-1998)', 12739, 1),
-(18272, 'W215 (1999-)', 12739, 2),
+(18272, 'W215 (1999-2006)', 12739, 2),
 (18273, 'W208 (1997-2002)', 12740, 0),
 (18274, 'W209 (2002-)', 12740, 1),
 (18275, 'CLS-klasa', 4041, 38),
@@ -4836,8 +4736,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (19022, 'Felgi z oponami', 4069, 1),
 (19024, 'Pozostałe', 4070, 4),
 (19025, 'Kierunkowskazy', 4070, 0),
-(19026, 'Lampy tylne', 4070, 1);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(19026, 'Lampy tylne', 4070, 1),
 (19027, 'Reflektory', 4070, 2),
 (19028, 'Żarówki', 4070, 3),
 (19029, 'Układ elektryczny, zapłon', 158, 5),
@@ -4902,7 +4801,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (19088, 'Układ hamulcowy', 9014, 7),
 (19089, 'Silniki i osprzęt', 9014, 5),
 (19090, 'Układ elektryczny', 9014, 6),
-(19091, 'Oświetlenie', 9014, 4),
+(19091, 'Oświetlenie', 9014, 4);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (19092, 'Koła, felgi, opony', 9014, 3),
 (19093, 'Filtry', 9014, 2),
 (19094, 'Elementy nadwozia', 9014, 1),
@@ -6313,8 +6213,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (21612, 'Pow. radziejowski', 20963, 14),
 (21613, 'Pow. rypiński', 20963, 15),
 (21614, 'Pow. sępoleński', 20963, 16),
-(21615, 'Pow. bocheński', 20805, 3);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(21615, 'Pow. bocheński', 20805, 3),
 (21616, 'Pow. brzeski', 20805, 4),
 (21617, 'Pow. chrzanowski', 20805, 5),
 (21618, 'Pow. dąbrowski', 20805, 6),
@@ -6372,7 +6271,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (21678, 'Pow. olkuski', 20841, 14),
 (21679, 'Pow. oświęcimski', 20841, 15),
 (21680, 'Pow. aleksandrowski', 20981, 4),
-(21681, 'Pow. proszowicki', 20841, 16),
+(21681, 'Pow. proszowicki', 20841, 16);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (21682, 'Pow. suski', 20841, 17),
 (21683, 'Pow. tarnowski', 20841, 18),
 (21684, 'Pow. tatrzański', 20841, 19),
@@ -7668,8 +7568,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (23066, 'Pow. ostrołęcki', 20950, 19),
 (23067, 'Pow. proszowicki', 20859, 16),
 (23068, 'Pow. suski', 20859, 17),
-(23069, 'Pow. tarnowski', 20859, 18);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(23069, 'Pow. tarnowski', 20859, 18),
 (23070, 'Pow. ostrowski', 20950, 20),
 (23071, 'Pow. tatrzański', 20859, 19),
 (23072, 'Pow. wadowicki', 20859, 20),
@@ -7726,7 +7625,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (23127, 'Pow. myślenicki', 20913, 11),
 (23128, 'Pow. nowosądecki', 20913, 12),
 (23129, 'Pow. nowotarski', 20913, 13),
-(23130, 'Pow. olkuski', 20913, 14),
+(23130, 'Pow. olkuski', 20913, 14);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (23131, 'Pow. oświęcimski', 20913, 15),
 (23132, 'Pow. białobrzeski', 20968, 5),
 (23133, 'Pow. ciechanowski', 20968, 6),
@@ -9033,8 +8933,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (24528, 'Pow. ostródzki', 20939, 17),
 (24529, 'Sosnowiec', 20955, 14),
 (24530, 'Pow. stargardzki', 20887, 17),
-(24531, 'Pow. piski', 20939, 18);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(24531, 'Pow. piski', 20939, 18),
 (24532, 'Tychy', 20955, 16),
 (24533, 'Pow. szczecinecki', 20887, 18),
 (24534, 'Pow. szczycieński', 20939, 19),
@@ -9091,7 +8990,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (24591, 'Pow. częstochowski', 20973, 23),
 (24592, 'Pow. gliwicki', 20973, 24),
 (24593, 'Pow. kłobucki', 20973, 25),
-(24594, 'Pow. lubliniecki', 20973, 26),
+(24594, 'Pow. lubliniecki', 20973, 26);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (24595, 'Pow. mikołowski', 20973, 27),
 (24596, 'Pow. myszkowski', 20973, 28),
 (24598, 'Pow. pszczyński', 20973, 29),
@@ -10442,8 +10342,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (26342, 'Bavaria', 26189, 2),
 (26343, 'Katalogi', 26193, 0),
 (26344, 'Monografie', 26193, 1),
-(26345, 'Anglia', 26187, 0);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(26345, 'Anglia', 26187, 0),
 (26346, 'Austria i Czechy', 26187, 1),
 (26347, 'Bavaria', 26187, 2),
 (26348, 'Francja', 26187, 4),
@@ -10504,7 +10403,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (26419, 'Pow. krośnieński', 21024, 10),
 (26785, 'Elektryczne', 1536, 0),
 (26786, 'Pneumatyczne', 1536, 1),
-(26787, 'Ręczne', 1536, 2),
+(26787, 'Ręczne', 1536, 2);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (26788, 'Spalinowe', 1536, 3),
 (26789, 'Przyrządy miernicze', 1536, 4),
 (26790, 'Spawanie i zgrzewanie', 1536, 5),
@@ -11685,16 +11585,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (45592, 'Panasonic', 14241, 1),
 (45593, 'Sony', 14241, 6),
 (45594, '250 mm', 1322, 6),
-(45611, 'Gadżety', 13663, 1),
-(45612, 'Powozy i sanie', 13663, 4),
-(45613, 'Rękawiczki', 13670, 6),
-(45614, 'Derki', 13668, 0),
-(45615, 'Ochraniacze i owijki', 13668, 2),
-(45616, 'Pielęgnacja i kosmetyka', 13668, 4),
-(45617, 'Praca z koniem', 13668, 5),
-(45618, 'Siodła', 13674, 1),
-(45619, 'Czapraki', 13674, 0),
-(45620, 'Pozostałe', 13674, 2),
 (45626, 'Gainery', 19655, 1),
 (45627, 'Narzędzia', 16419, 0),
 (45628, 'Oleje i smary', 16419, 1),
@@ -11868,7 +11758,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (46083, 'XG', 4038, 20),
 (46084, 'Spark', 12399, 24),
 (46085, 'Captiva', 12399, 6),
-(46086, 'Cee''d', 8642, 2),
+(46086, 'Cee\\''d', 8642, 2),
 (46087, 'Grand Vitara', 4053, 2),
 (46088, 'I (1997-2002)', 12631, 0),
 (46089, 'II (2002- )', 12631, 1),
@@ -11986,10 +11876,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (46850, 'Części i akcesoria', 26025, 6),
 (46851, 'Pozostałe', 26025, 7),
 (46853, 'Kinkiety', 26025, 0),
-(46995, 'Sporty z psami', 13661, 4),
-(46996, 'Pozostałe', 46995, 2),
-(46997, 'Pojazdy', 46995, 0),
-(46998, 'Sprzęt i akcesoria', 46995, 1),
 (47003, 'Puchary i statuetki', 3923, 10),
 (47009, 'KE970', 10539, 11),
 (47017, 'W200i', 5044, 14),
@@ -12030,8 +11916,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (47483, 'Najazdowe', 47477, 0),
 (47484, 'Pozostałe', 5314, 4),
 (47485, 'Fontanny i pompy', 5314, 1),
-(47486, 'Rzeźby i figury', 5314, 2);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(47486, 'Rzeźby i figury', 5314, 2),
 (47487, 'Wiklina ogrodowa', 5314, 3),
 (47488, 'Nawozy i preparaty', 1532, 11),
 (47489, 'Nawozy', 47488, 0),
@@ -12108,7 +11993,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (47933, 'Kalendarze listkowe', 316, 8),
 (47934, 'Breloki', 316, 2),
 (47935, 'Długopisy i pióra', 316, 3),
-(47936, 'Pamiątki PRL-u', 6, 7),
+(47936, 'Pamiątki PRL-u', 6, 7);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (47937, 'Trafika', 6, 11),
 (47938, 'Artykuły drogeryjne', 47936, 0),
 (47939, 'Bibeloty', 47936, 1),
@@ -13100,7 +12986,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (52411, 'Przejściówki', 351, 10),
 (52412, 'iPhone', 19321, 2),
 (52426, 'Benq-Siemens', 50999, 1),
-(52550, '4x6''''', 1322, 9),
+(52550, '4x6\\''\\''', 1322, 9),
 (52553, 'Audison', 714, 1),
 (52554, 'Crunch', 714, 6),
 (52555, 'Helix', 714, 10),
@@ -13133,7 +13019,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (52733, 'Przetworniki', 16211, 0),
 (52734, 'Dance', 5611, 0),
 (52735, 'House', 5611, 1),
-(52736, 'R''n''B, Soul', 5611, 5),
+(52736, 'R\\''n\\''B, Soul', 5611, 5),
 (52737, 'Metal', 175, 11),
 (52738, 'Polski', 52737, 0),
 (52739, 'Zagraniczny', 52737, 1),
@@ -13151,7 +13037,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (52751, 'Polski', 193, 0),
 (52752, 'Zagraniczne', 325, 1),
 (52753, 'Polskie', 325, 0),
-(52754, 'Pudełka, okładki, case''y', 12825, 0),
+(52754, 'Pudełka, okładki, case\\''y', 12825, 0),
 (52755, 'Konserwacja nośników', 12825, 3),
 (52890, 'Lupy', 19286, 2),
 (52892, 'Wanny ultradźwiękowe', 19286, 5),
@@ -13641,8 +13527,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (59456, 'Stolarzowice', 24942, 6),
 (59457, 'Stroszek', 24942, 7),
 (59458, 'Sucha Góra', 24942, 8),
-(59459, 'Szombierki', 24942, 9);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(59459, 'Szombierki', 24942, 9),
 (59460, 'Pozostałe', 27399, 15),
 (59461, 'Błeszno', 27399, 0),
 (59462, 'Dźbów', 27399, 1),
@@ -13726,7 +13611,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (59540, 'Rokosowo', 27564, 4),
 (59541, 'Pozostałe', 24144, 25),
 (59542, 'Bezrzecze', 24144, 0),
-(59543, 'Bukowo', 24144, 2),
+(59543, 'Bukowo', 24144, 2);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (59544, 'Dąbie', 24144, 4),
 (59545, 'Drzetowo', 24144, 5),
 (59546, 'Grabowo', 24144, 7),
@@ -15260,8 +15146,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (61117, 'Bransoletki', 61114, 0),
 (61118, 'Na nogę', 61117, 0),
 (61119, 'Na rękę', 61117, 1),
-(61120, 'Broszki', 61114, 1);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(61120, 'Broszki', 61114, 1),
 (61121, 'Kolczyki', 61114, 3),
 (61122, 'Klipsy', 61114, 2),
 (61123, 'Komplety', 61114, 10),
@@ -15347,7 +15232,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (61216, 'Wejherowo', 22778, 2),
 (61217, 'Pozostałe', 23710, 3),
 (61218, 'Reda', 23710, 0),
-(61219, 'Rumia', 23710, 1),
+(61219, 'Rumia', 23710, 1);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (61220, 'Wejherowo', 23710, 2),
 (61221, 'Pozostałe', 26979, 11),
 (61222, 'Cieplice Śląskie-Zdrój', 26979, 0),
@@ -16842,8 +16728,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (66888, 'Douszne', 66887, 0),
 (66889, 'Dokanałowe', 66887, 1),
 (66890, 'Nauszne', 66887, 2),
-(66891, 'AKG', 66888, 0);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(66891, 'AKG', 66888, 0),
 (66892, 'Creative', 66888, 1),
 (66893, 'Koss', 66888, 3),
 (66894, 'Panasonic', 66888, 4),
@@ -16929,7 +16814,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (67101, 'Pokrowce', 67095, 2),
 (67102, 'Uchwyty', 67095, 3),
 (67103, 'Ładowarki, zasilacze', 67095, 1),
-(67104, 'Pozostałe', 67095, 4),
+(67104, 'Pozostałe', 67095, 4);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (67107, 'Becker', 67094, 0),
 (67108, 'Blaupunkt', 67094, 1),
 (67109, 'Garmin', 67094, 5),
@@ -16938,13 +16824,13 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (67112, 'Manta', 67094, 8),
 (67113, 'Medion', 67094, 9),
 (67114, 'Mio', 67094, 10),
-(67115, 'NavRoad', 67094, 12),
-(67116, 'Navigon', 67094, 11),
-(67117, 'Nokia', 67094, 13),
-(67118, 'Sony', 67094, 16),
-(67119, 'TomTom', 67094, 17),
-(67120, 'Fabryczne', 67094, 18),
-(67121, 'Inni producenci', 67094, 19),
+(67115, 'NavRoad', 67094, 13),
+(67116, 'Navigon', 67094, 12),
+(67117, 'Nokia', 67094, 14),
+(67118, 'Sony', 67094, 17),
+(67119, 'TomTom', 67094, 18),
+(67120, 'Fabryczne', 67094, 19),
+(67121, 'Inni producenci', 67094, 20),
 (67122, 'Audi', 67120, 0),
 (67123, 'BMW', 67120, 1),
 (67124, 'Mercedes', 67120, 3),
@@ -17696,36 +17582,21 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (75994, 'Biustonosze', 75993, 1),
 (75995, 'Biustonosze - dodatki', 75993, 2),
 (75996, 'Body', 75993, 3),
-(75997, 'Figi', 75993, 4),
-(75998, 'Gorsety', 75993, 5),
-(75999, 'Halki i koszulki', 75993, 6),
+(75998, 'Gorsety', 75993, 4),
+(75999, 'Halki i koszulki nocne', 75993, 5),
 (76001, 'Pasy do pończoch', 75993, 7),
-(76002, 'Podkolanówki', 75993, 9),
 (76003, 'Pończochy', 75993, 11),
 (76004, 'Rajstopy', 75993, 12),
-(76005, 'Skarpetki', 75993, 13),
-(76006, 'Stopki', 75993, 14),
-(76007, 'Stringi', 75993, 15),
-(76008, 'Stroje kąpielowe', 75993, 16),
-(76009, 'Szorty', 75993, 18),
-(76010, 'Topy', 75993, 19),
-(76011, 'Zakolanówki', 75993, 20),
-(76012, 'Komplety', 75993, 21),
-(76013, 'Pozostałe', 75993, 22),
-(76014, 'Bardotki', 75994, 0),
-(76015, 'Bezszwowe', 75994, 1),
-(76017, 'Miękkie', 75994, 2),
-(76018, 'Modelujące', 75994, 3),
-(76019, 'Silikonowe', 75994, 5),
-(76020, 'Sportowe', 75994, 6),
-(76021, 'Push-upy', 75994, 4),
-(76022, 'Usztywniane', 75994, 7),
-(76023, 'Inne typy', 75994, 8),
+(76005, 'Skarpetki i kolanówki', 75993, 13),
+(76008, 'Stroje kąpielowe', 75993, 14),
+(76010, 'Topy', 75993, 16),
+(76012, 'Komplety', 75993, 17),
+(76013, 'Pozostałe', 75993, 18),
 (76024, 'Dwuczęściowe', 76008, 0),
 (76025, 'Jednoczęściowe', 76008, 1),
 (76026, 'Parea', 76008, 2),
 (76027, 'Piżamy', 75993, 8),
-(76028, 'Szlafroki', 75993, 17),
+(76028, 'Szlafroki', 75993, 15),
 (76033, 'Odzież damska', 1454, 1),
 (76034, 'Bluzki', 76033, 0),
 (76035, 'Bluzy', 76033, 1),
@@ -17805,8 +17676,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (76276, 'BLOW', 67094, 2),
 (76277, 'Clarion', 67094, 3),
 (76278, 'Cruser', 67094, 4),
-(76279, 'Peiying', 67094, 14),
-(76280, 'Pentagram', 67094, 15),
+(76279, 'Peiying', 67094, 15),
+(76280, 'Pentagram', 67094, 16),
 (76281, 'Kamery DVD', 8785, 2),
 (76282, 'Kamery Digital8', 8785, 1),
 (76283, 'Kamery MiniDV', 8785, 3),
@@ -18419,8 +18290,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (78615, 'S70', 4056, 4),
 (78633, 'Miedź i mosiądz', 26014, 2),
 (78673, 'Wyposażenie', 12092, 1),
-(78674, 'Umundurowanie', 12092, 0);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(78674, 'Umundurowanie', 12092, 0),
 (78713, 'Torebki miejskie', 1492, 0),
 (78714, 'Torebki sportowe', 1492, 1),
 (78715, 'Torebki wizytowe', 1492, 2),
@@ -18497,7 +18367,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79462, 'Filologie, językoznawstwo', 79455, 6),
 (79463, 'Filozofia, historia filozofii', 79455, 7),
 (79464, 'Fizyka, astronomia', 79455, 8),
-(79465, 'Geografia, geologia, turystyka', 79455, 9),
+(79465, 'Geografia, geologia, turystyka', 79455, 9);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79466, 'Historia, archeologia', 79455, 10),
 (79467, 'Literaturoznawstwo', 79455, 12),
 (79468, 'Informatyka, internet', 79455, 11),
@@ -18521,11 +18392,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79505, 'Elm', 5044, 42),
 (79506, 'XPERIA X10', 5044, 35),
 (79513, 'Botswana', 63544, 0),
-(79514, 'Pozostałe', 63548, 4),
-(79515, 'Hurghada i Safaga', 63548, 0),
-(79516, 'Marsa El Alam i El Quseir', 63548, 1),
-(79517, 'Sharm El Shaikh', 63548, 2),
-(79518, 'Taba', 63548, 3),
 (79519, 'Gambia', 63544, 2),
 (79520, 'Madagaskar', 63544, 4),
 (79521, 'Malawi', 63544, 5),
@@ -18539,13 +18405,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79529, 'Kenia', 63544, 3),
 (79530, 'Tanzania', 63544, 13),
 (79531, 'Tunezja', 63544, 14),
-(79532, 'Pozostałe', 79531, 6),
-(79533, 'Djerba', 79531, 0),
-(79534, 'Hammamet', 79531, 1),
-(79535, 'Mahdia', 79531, 2),
-(79536, 'Monastir', 79531, 3),
-(79537, 'Port El Kantaoui', 79531, 4),
-(79538, 'Sousse', 79531, 5),
 (79539, 'Uganda', 63544, 15),
 (79540, 'Zanzibar', 63544, 16),
 (79541, 'Ameryka Południowa', 63537, 1),
@@ -18564,17 +18423,10 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79554, 'Pozostałe', 79553, 16),
 (79555, 'Antigua', 79553, 0),
 (79556, 'Antyle Holenderskie', 79553, 1),
-(79557, 'Pozostałe', 79556, 3),
-(79558, 'Aruba', 79556, 0),
-(79559, 'Bonaire', 79556, 1),
-(79560, 'Curacao', 79556, 2),
 (79561, 'Bahamy', 79553, 2),
 (79562, 'Barbados', 79553, 3),
 (79563, 'Bermudy', 79553, 4),
 (79564, 'Dominikana', 79553, 5),
-(79565, 'Pozostałe', 79564, 2),
-(79566, 'Puerto Plata', 79564, 0),
-(79567, 'Punta Cana', 79564, 1),
 (79568, 'Ekwador', 79541, 3),
 (79569, 'Gwadelupe', 79553, 6),
 (79570, 'Jamajka', 79553, 7),
@@ -18586,8 +18438,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79576, 'Salwador', 79553, 13),
 (79577, 'St. Lucia', 79553, 14),
 (79578, 'Wenezuela - Wyspy', 79553, 15),
-(79579, 'Pozostałe', 79578, 1),
-(79580, 'Margarita i Coche', 79578, 0),
 (79581, 'Australia i Oceania', 63537, 4),
 (79582, 'Pozostałe', 79581, 5),
 (79583, 'Australia', 79581, 0),
@@ -18608,40 +18458,12 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79598, 'Singapur', 63545, 10),
 (79599, 'Sri Lanka', 63545, 11),
 (79600, 'Tajlandia', 63545, 12),
-(79601, 'Pozostałe', 79600, 4),
-(79602, 'Bangkok', 79600, 0),
-(79603, 'Pattaya', 79600, 1),
-(79604, 'Phi Phi Island', 79600, 2),
-(79605, 'Phuket', 79600, 3),
 (79606, 'Turcja', 63545, 13),
-(79607, 'Pozostałe', 79606, 12),
-(79608, 'Alanya', 79606, 0),
-(79609, 'Antalya', 79606, 1),
-(79610, 'Belek', 79606, 2),
-(79611, 'Bodrum', 79606, 3),
-(79612, 'Fethiye', 79606, 4),
-(79613, 'Kemer', 79606, 5),
-(79614, 'Kusadasi', 79606, 6),
-(79615, 'Marmaris', 79606, 7),
-(79616, 'Oludeniz', 79606, 8),
-(79617, 'Riwiera Egejska', 79606, 9),
-(79618, 'Riwiera Turecka', 79606, 10),
-(79619, 'Side', 79606, 11),
 (79620, 'Uzbekistan', 63545, 14),
 (79621, 'Wietnam', 63545, 15),
 (79622, 'Austria', 63546, 0),
-(79623, 'Pozostałe', 79622, 6),
-(79624, 'Karyntia', 79622, 0),
-(79625, 'Kitzbuhel', 79622, 1),
-(79626, 'Tyrol', 79622, 2),
-(79627, 'Zell am See - Kaprun', 79622, 3),
-(79628, 'Ziemia Salzburska', 79622, 4),
-(79629, 'Zillertal', 79622, 5),
 (79630, 'Bośnia i Hercegowina', 63546, 1),
 (79631, 'Bułgaria', 63546, 2),
-(79632, 'Pozostałe', 79631, 2),
-(79633, 'Słoneczny Brzeg', 79631, 0),
-(79634, 'Złote Piaski', 79631, 1),
 (79635, 'Chorwacja', 63546, 3),
 (79636, 'Cypr', 63546, 4),
 (79637, 'Czarnogóra', 63546, 5),
@@ -18681,16 +18503,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (79671, 'Węgry', 63546, 19),
 (79672, 'Wielka Brytania', 63546, 20),
 (79673, 'Włochy', 63546, 21),
-(79674, 'Pozostałe', 79673, 9),
-(79675, 'Kalabria', 79673, 0),
-(79676, 'Livigno', 79673, 1),
-(79677, 'Madonna Di Campiglio', 79673, 2),
-(79678, 'Południowy Tyrol', 79673, 3),
-(79679, 'Sardynia', 79673, 4),
-(79680, 'Sycylia', 79673, 5),
-(79681, 'Val Di Fassa', 79673, 6),
-(79682, 'Val Di Fiemme', 79673, 7),
-(79683, 'Val Di Sole', 79673, 8),
 (79684, 'Rejsy', 63537, 7),
 (79685, 'Wycieczki objazdowe', 63537, 8),
 (79686, 'Pozostałe', 63537, 9),
@@ -18923,10 +18735,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (82603, 'Klasyczne', 82597, 0),
 (82604, 'Pchacze', 82597, 1),
 (82605, 'Szelki do chodzenia', 82597, 2),
-(82606, 'Baby Mix', 82603, 1),
-(82607, 'Chicco', 82603, 2),
-(82608, 'Arti', 82603, 0),
-(82609, 'Inne', 82603, 3),
 (82610, 'Wielofunkcyjne', 82593, 0),
 (82611, 'Spacerowe', 82593, 1),
 (82612, 'Bliźniacze', 82593, 2),
@@ -18941,37 +18749,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (82662, 'Folie, okrycia na nóżki', 82614, 2),
 (82663, 'Adaptery do wózków', 82614, 0),
 (82664, 'Dostawki, platformy', 82614, 1),
-(82665, 'Fisher Price', 82604, 0),
-(82666, 'Inne', 82604, 1),
-(82667, 'Inne', 82599, 11),
-(82668, 'Chicco', 82599, 4),
-(82669, 'Klupś', 82599, 10),
-(82670, 'Fisher Price', 82599, 8),
-(82671, 'Baby Design', 82599, 2),
-(82672, '4Baby', 82599, 0),
-(82673, 'Graco', 82599, 9),
-(82674, 'BabyOno', 82599, 3),
-(82675, 'Dippo', 82599, 6),
-(82676, 'Drewex', 82599, 7),
-(82677, 'Arti', 82599, 1),
 (82680, 'Leżaczki', 82596, 0),
 (82681, 'Huśtawki', 82596, 1),
-(82682, 'Fisher Price', 82680, 3),
-(82683, 'Bright Starts', 82680, 1),
-(82684, 'Arti', 82680, 0),
-(82685, 'Chicco', 82680, 2),
-(82686, 'Inne', 82680, 4),
-(82687, 'Fisher Price', 82681, 2),
-(82688, 'Graco', 82681, 3),
-(82689, 'Bright Starts', 82681, 1),
-(82690, 'Arti', 82681, 0),
-(82691, 'Tako', 82681, 4),
-(82692, 'Inne', 82681, 5),
-(82693, 'Philips, Avent', 82600, 3),
-(82694, 'BabyOno', 82600, 1),
-(82695, 'Fisher Price', 82600, 2),
-(82696, 'Angelcare', 82600, 0),
-(82697, 'Inne', 82600, 4),
 (82698, 'Bramki na schody', 82601, 0),
 (82699, 'Do szafek, szuflad', 82601, 6),
 (82700, 'Do narożników', 82601, 5),
@@ -19039,19 +18818,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (83682, 'Rozmiar 32-36', 83664, 3),
 (83684, 'Nosidełka', 82598, 0),
 (83685, 'Chusty', 82598, 1),
-(83686, 'Inne', 83684, 8),
-(83687, 'Chicco', 83684, 2),
-(83688, 'Womar', 83684, 7),
-(83689, 'Infant', 83684, 3),
-(83690, 'BabyBjorn', 83684, 0),
-(83691, 'Red Castle', 83684, 6),
-(83692, 'Bondolino', 83684, 1),
-(83693, 'Mei Tai', 83684, 5),
-(83694, 'Inne', 83685, 5),
-(83695, 'Kieszonka-pouch', 83685, 0),
-(83696, 'Kółkowa', 83685, 2),
-(83697, 'Wiązana elastyczna', 83685, 3),
-(83698, 'Wiązana tkana', 83685, 4),
 (83699, 'Do drzwi', 82601, 1),
 (83700, 'Maty antypoślizgowe', 82601, 8),
 (83701, 'Wiosła', 13537, 2),
@@ -19141,7 +18907,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (83799, '600', 4041, 21),
 (83801, 'Sprinter', 4041, 32),
 (83802, 'Vito', 4041, 34),
-(83827, 'Kołyska', 83685, 1),
 (83918, 'Transit', 4036, 28),
 (83919, 'Mk1 (1965-1986)', 83918, 0),
 (83920, 'Mk2 (1986-2000)', 83918, 1),
@@ -19153,7 +18918,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (83926, '307 SW', 4045, 11),
 (83927, 'Grand Scenic', 4047, 2),
 (83928, 'Grand Espace', 4047, 1),
-(84076, 'Infantino', 83684, 4),
 (84597, 'Schleich', 11822, 20),
 (84735, 'Piórniki', 50673, 2),
 (84736, 'Pomoce naukowe', 50673, 3),
@@ -19237,7 +19001,6 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (85110, 'Q45', 18197, 5),
 (85111, 'QX56', 18197, 6),
 (85112, 'Pozostałe', 18197, 7),
-(85137, 'Coneco', 82599, 5),
 (85153, 'Kalkulatory', 84736, 1),
 (85154, 'Podkłady', 50675, 6),
 (85155, 'Plany lekcji', 50675, 5),
@@ -19943,8 +19706,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (89512, 'Kamizelki, bezrękawniki', 11764, 7),
 (89513, 'Koszule', 11764, 10),
 (89514, 'Krótkie spodenki', 11764, 11),
-(89515, 'Kurtki, płaszcze', 11764, 12);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(89515, 'Kurtki, płaszcze', 11764, 12),
 (89516, 'Kombinezony, śpiworki', 11764, 9),
 (89517, 'Nakrycia głowy', 11764, 15),
 (89518, 'Marynarki', 11764, 14),
@@ -20133,7 +19895,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (89701, 'Inny rozmiar', 89525, 18),
 (89702, 'Rozmiar 50/56', 89525, 0),
 (89703, 'Rozmiar 62', 89525, 1),
-(89704, 'Rozmiar 68', 89525, 2),
+(89704, 'Rozmiar 68', 89525, 2);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (89705, 'Rozmiar 74', 89525, 3),
 (89706, 'Rozmiar 80', 89525, 4),
 (89707, 'Rozmiar 86', 89525, 5),
@@ -21394,8 +21157,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (92892, 'Dla dorosłych', 79416, 2),
 (92893, 'Dla młodzieży', 79416, 1),
 (92894, 'Dla dzieci', 79416, 0),
-(92895, 'Pozostałe', 79417, 7);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(92895, 'Pozostałe', 79417, 7),
 (92896, 'Obyczajowe i przygodowe', 79417, 6),
 (92897, 'Historyczne i wojenne', 79417, 3),
 (92898, 'Humor, satyra', 79417, 5),
@@ -21585,7 +21347,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (93533, 'Gadżety piwne', 953, 2),
 (93534, 'Austria', 50443, 0),
 (93535, 'Szwajcaria', 50443, 5),
-(93536, 'Wielka Brytania', 50443, 6),
+(93536, 'Wielka Brytania', 50443, 6);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (93537, 'Włochy', 50443, 7),
 (93538, 'Rosja i ZSRR', 50444, 2),
 (93539, 'Niemcy', 50444, 0),
@@ -22959,8 +22722,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (100108, 'Kryminały', 100075, 10),
 (100109, 'Kursy, ćwiczenia, karaoke', 100075, 11),
 (100110, 'Ćwiczenia fizyczne, taniec', 100109, 0),
-(100111, 'Informatyka', 100109, 1);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(100111, 'Informatyka', 100109, 1),
 (100112, 'Karaoke', 100109, 2),
 (100113, 'Pozostałe', 100109, 3),
 (100114, 'Musicale', 100075, 12),
@@ -23113,13 +22875,13 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (102855, 'Ciężarki i śruciny', 13455, 0),
 (102856, 'Materace', 3922, 0),
 (102857, 'Namioty', 3922, 1),
-(102858, 'Plecaki', 3922, 2),
-(102859, 'Pontony i łodzie', 3922, 3),
-(102860, 'Torby', 3922, 5),
-(102861, 'Walizki', 3922, 6),
-(102862, 'Śpiwory', 3922, 4),
-(102863, 'Akcesoria plażowe', 3922, 7),
-(102864, 'Akcesoria turystyczne', 3922, 8),
+(102858, 'Plecaki', 3922, 4),
+(102859, 'Pontony i łodzie', 3922, 5),
+(102860, 'Torby', 3922, 8),
+(102861, 'Walizki', 3922, 9),
+(102862, 'Śpiwory', 3922, 7),
+(102863, 'Akcesoria plażowe', 3922, 10),
+(102864, 'Akcesoria turystyczne', 3922, 11),
 (102865, 'Materace', 102863, 0),
 (102866, 'Namioty plażowe i parawany', 102863, 1),
 (102867, 'Pozostałe', 102863, 2),
@@ -23145,7 +22907,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (102887, 'Miniaturowe', 102872, 2),
 (102888, 'Reflektory i szperacze', 102872, 3),
 (102889, 'Wielofunkcyjne', 102872, 4),
-(102890, 'Pozostałe', 102872, 5),
+(102890, 'Pozostałe', 102872, 5);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (104969, 'Hotele', 63538, 2),
 (104970, 'Hostele', 63538, 1),
 (104971, 'Pensjonaty', 63538, 3),
@@ -24328,8 +24091,7 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (110252, 'Ochronniki słuchu', 110248, 2),
 (110253, 'Kaski', 110248, 1),
 (110254, 'Apteczki', 110248, 0),
-(110255, 'Osłona twarzy', 110248, 3);
-INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
+(110255, 'Osłona twarzy', 110248, 3),
 (110256, 'Okulary i gogle', 110255, 1),
 (110257, 'Maski', 110255, 0),
 (110258, 'Rękawice', 110247, 7),
@@ -24524,7 +24286,8 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (110855, 'Ochraniacze i kaski', 13741, 6),
 (110856, 'Odzież', 13741, 8),
 (110857, 'Obuwie', 13741, 7),
-(110858, 'Deskorolki', 110854, 0),
+(110858, 'Deskorolki', 110854, 0);
+INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (110859, 'Blaty', 110858, 0),
 (110860, 'Kółka i łożyska', 110858, 1),
 (110861, 'Trucki', 110858, 2),
@@ -24778,42 +24541,89 @@ INSERT INTO `ps_allegro_cat` (`id`, `name`, `parent`, `position`) VALUES
 (111898, 'Fugi', 1527, 1),
 (111992, 'Moxie Girlz', 11825, 13),
 (111993, 'Nancy', 11825, 14),
-(111994, 'Friends', 17865, 8);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla  `ps_allegro_field`
---
-
-DROP TABLE IF EXISTS `ps_allegro_field`;
-CREATE TABLE IF NOT EXISTS `ps_allegro_field` (
-  `sell-form-id` int(11) NOT NULL,
-  `sell-form-title` varchar(255) NOT NULL,
-  `sell-form-cat` int(11) DEFAULT NULL,
-  `sell-form-type` int(11) DEFAULT NULL,
-  `sell-form-res-type` int(11) DEFAULT NULL,
-  `sell-form-def-value` int(11) DEFAULT NULL,
-  `sell-form-opt` int(11) DEFAULT NULL,
-  `sell-form-pos` int(11) DEFAULT NULL,
-  `sell-form-length` int(11) DEFAULT NULL,
-  `sell-min-value` double DEFAULT NULL,
-  `sell-max-value` double DEFAULT NULL,
-  `sell-form-desc` varchar(255) DEFAULT NULL,
-  `sell-form-opts-values` varchar(255) DEFAULT NULL,
-  `sell-form-field-desc` text,
-  `sell-form-param-id` int(11) DEFAULT NULL,
-  `sell-form-param-values` varchar(255) DEFAULT NULL,
-  `sell-form-parent-id` int(11) DEFAULT NULL,
-  `sell-form-parent-value` varchar(255) DEFAULT NULL,
-  `sell-form-unit` varchar(255) DEFAULT NULL,
-  `sell-form-options` int(11) DEFAULT NULL,
-  PRIMARY KEY (`sell-form-id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Zrzut danych tabeli `ps_allegro_field`
---
+(111994, 'Friends', 17865, 8),
+(112112, 'Majtki', 75993, 6),
+(112121, 'Podkoszulki', 75993, 9),
+(112252, 'Sporty ekstremalne', 3919, 4),
+(112253, 'Lotnictwo', 112252, 0),
+(112254, 'Literatura', 112253, 0),
+(112255, 'Odzież i obuwie', 112253, 1),
+(112256, 'Pozostałe', 112253, 2),
+(112257, 'Paralotniarstwo', 112252, 1),
+(112258, 'Literatura', 112257, 0),
+(112259, 'Paralotnie', 112257, 1),
+(112260, 'Sprzęt pomiarowy', 112257, 2),
+(112261, 'Uprzęże', 112257, 3),
+(112262, 'Pozostałe', 112257, 4),
+(112263, 'Spadochroniarstwo', 112252, 2),
+(112264, 'Spadochrony', 112263, 1),
+(112265, 'Kaski', 112263, 0),
+(112266, 'Pozostałe', 112263, 2),
+(112267, 'Wspinaczka', 112252, 3),
+(112268, 'Kaski', 112267, 0),
+(112269, 'Obuwie', 112267, 1),
+(112270, 'Odzież', 112267, 2),
+(112271, 'Sprzęt wspinaczkowy', 112267, 3),
+(112272, 'Sprzęt speleologiczny', 112267, 4),
+(112273, 'Pozostałe', 112267, 5),
+(112274, 'Chwyty', 112271, 0),
+(112275, 'Karabinki', 112271, 1),
+(112276, 'Kości, haki, śruby', 112271, 2),
+(112277, 'Liny i linki', 112271, 3),
+(112278, 'Magnezja i woreczki', 112271, 4),
+(112279, 'Raki i czekany', 112271, 5),
+(112280, 'Uprzęże', 112271, 6),
+(112281, 'Pozostałe', 112271, 7),
+(112282, 'Obuwie', 3922, 2),
+(112283, 'Trekkingowe', 112282, 0),
+(112284, 'Wysokogórskie', 112282, 1),
+(112285, 'Pozostałe', 112282, 2),
+(112286, 'Odzież', 3922, 3),
+(112287, 'Czapki', 112286, 1),
+(112288, 'Bluzy, polary', 112286, 0),
+(112289, 'Koszulki', 112286, 2),
+(112290, 'Kurtki', 112286, 3),
+(112291, 'Rękawice', 112286, 4),
+(112292, 'Skarpety', 112286, 5),
+(112293, 'Spodnie', 112286, 6),
+(112294, 'Pozostałe', 112286, 7),
+(112295, 'Przewodniki i mapy', 3922, 6),
+(112296, 'Albumy', 112295, 0),
+(112297, 'Literatura', 112295, 1),
+(112298, 'Mapy', 112295, 2),
+(112299, 'Przewodniki', 112295, 3),
+(112300, 'Pozostałe', 112295, 4),
+(112301, 'Pozostałe', 112252, 4),
+(112302, 'Jeździectwo', 13408, 4),
+(112303, 'Akcesoria', 112302, 0),
+(112304, 'Derki', 112303, 1),
+(112305, 'Kiełzna i wędzidła', 112303, 2),
+(112306, 'Ochraniacze i owijki', 112303, 3),
+(112307, 'Ogłowia', 112303, 4),
+(112308, 'Pielęgnacja i kosmetyka', 112303, 5),
+(112309, 'Praca z koniem', 112303, 6),
+(112310, 'Pozostałe', 112303, 8),
+(112311, 'Siodła', 112303, 7),
+(112312, 'Czapraki', 112303, 0),
+(112313, 'Gadżety', 112302, 1),
+(112314, 'Literatura', 112302, 2),
+(112315, 'Odzież i obuwie', 112302, 3),
+(112316, 'Bryczesy', 112315, 0),
+(112317, 'Buty', 112315, 1),
+(112318, 'Czapsy', 112315, 2),
+(112319, 'Kamizelki', 112315, 3),
+(112320, 'Koszulki i koszule', 112315, 4),
+(112321, 'Kurtki', 112315, 5),
+(112322, 'Rękawiczki', 112315, 6),
+(112323, 'Toczki i kaski', 112315, 7),
+(112324, 'Pozostałe', 112315, 8),
+(112325, 'Powozy i sanie', 112302, 4),
+(112326, 'Pozostałe', 112302, 5),
+(112327, 'Sporty z psami', 13408, 8),
+(112328, 'Sprzęt i akcesoria', 112327, 0),
+(112329, 'Pozostałe', 112327, 1),
+(112365, 'Siatki i bramki', 13372, 8),
+(112404, 'Modecom', 67094, 11);
 
 INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (1, 'Nazwa przedmiotu', 0, 1, 1, 0, 1, 0, 50, 0, 0, '', '', '', 0, '', 0, '', '', 0),
@@ -24840,6 +24650,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (22, 'Zdjęcie 7', 0, 7, 7, 0, 8, 22, 0, 0, 0, '', '', '', 0, '', 0, '', '', 0),
 (23, 'Zdjęcie 8', 0, 7, 7, 0, 8, 23, 0, 0, 0, '', '', '', 0, '', 0, '', '', 0),
 (24, 'Dodatkowe informacje o przedmiocie', 0, 8, 1, 0, 1, 0, 0, 0, 0, '', '', '', 0, '', 0, '', '', 0),
+(25, 'Rozszerzenie informacji o przedmiocie', 0, 8, 1, 0, 8, 0, 0, 0, 0, '', '', '', 0, '', 0, '', '', 0),
 (27, 'Dodatkowe informacje o przesyłce i płatności', 0, 8, 1, 0, 8, 27, 500, 0, 0, '', '', '', 0, '', 0, '', '', 0),
 (28, 'Sztuki / Komplety / Pary', 0, 4, 2, 0, 8, 28, 1, 0, 2, 'Sztuk|Kompletów|Par', '0|1|2', '', 0, '', 0, '', '', 0),
 (29, 'Format sprzedaży', 0, 4, 2, 0, 8, 0, 1, 0, 1, 'Tylko Kup Teraz! (bez licytacji) lub Licytacja|Sklep (bez licytacji)', '0|1', '', 0, '', 0, '', '', 0),
@@ -24906,19 +24717,14 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (340, 'Wysyłka w ciągu', 0, 4, 2, 0, 8, 0, 3, 0, 504, '-- Wybierz --|0|24|48|72|96|120|168|240|336|504', '0|1|24|48|72|96|120|168|240|336|504', '', 0, '', 0, '', '', 0),
 (738, 'Rozmiar', 13385, 4, 2, 0, 8, 3, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (739, 'Rozmiar', 13397, 4, 2, 0, 8, 3, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(740, 'Rozmiar', 13434, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(741, 'Rozmiar', 13435, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (742, 'Rozmiar', 13451, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (743, 'Rozmiar', 13452, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (744, 'Rozmiar', 13473, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (746, 'Rozmiar', 13657, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(747, 'Rozmiar', 13680, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(748, 'Rozmiar', 13681, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (751, 'Rozmiar', 14055, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (752, 'Rozmiar', 14056, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (753, 'Rozmiar', 14058, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (756, 'Rozmiar', 14737, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(757, 'Rozmiar', 16058, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (758, 'Rozmiar', 16068, 4, 2, 0, 8, 3, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (759, 'Rozmiar', 16069, 4, 2, 0, 8, 3, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (760, 'Rozmiar', 16074, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
@@ -25110,15 +24916,15 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (1526, 'Materiał', 16447, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Aluminium|Karbon/tytan|Stal', '0|1|2|3', '', 179, '0|1|2|3', 0, '0', '', 0),
 (1527, 'Materiał', 16483, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Aluminium|Karbon/tytan|Stal', '0|1|2|3', '', 179, '0|1|2|3', 0, '0', '', 0),
 (1528, 'Średnica (mm)', 26816, 3, 3, 0, 8, 1, 4, 1, 5000, '', '', '', 303, '', 0, '0', 'mm', 0),
-(1529, 'Długość (mm)', 26816, 3, 3, 0, 8, 1, 4, 5, 5000, '', '', '', 304, '', 0, '0', 'mm', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(1529, 'Długość (mm)', 26816, 3, 3, 0, 8, 1, 4, 5, 5000, '', '', '', 304, '', 0, '0', 'mm', 0),
 (1530, 'Firma', 1066, 4, 2, 0, 8, 1, 3, 0, 880, ' -- Wybierz -- |Abrex|Agritec|Albedo|Altaya|Amt & Ertl|Anson|Auto Art|AWM|Bburago|Brekina|Britains|Brumm|Busch|Carousel|Conrad|Corgi|CZZ|Dinky|Efsi|Eligor|Ertl|Estetyka|Exoto|Franklin Mint|Fujimi|Gama|Gate|Gescha|GMP|GreenLight|Hasegawa|Heller|Herpa|Hongw', '0|1|20|30|33|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300|310|320|330|340|350|360|370|380|390|400|403|410|420|430|440|450|460|470|480|490|500|510|520|530|540|550|560|570|580|590|600|610|620|630|640|', '', 305, '0|1|20|30|33|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270|280|290|300|310|320|330|340|350|360|370|380|390|400|403|410|420|430|440|450|460|470|480|490|500|510|520|530|540|550|560|570|580|590|600|610|620|630|640|', 0, '0', '', 0),
 (1531, 'Przód/Tył/Komplet', 16436, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Przód|Tył|Komplet', '0|1|2|3', '', 306, '0|1|2|3', 0, '0', '', 0),
 (1532, 'Przód/Tył/Komplet', 16445, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Przód|Tył|Komplet', '0|1|2|3', '', 306, '0|1|2|3', 0, '0', '', 0),
 (1533, 'Rozmiar ramy (cale)', 16447, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
 (1534, 'Rozmiar ramy (cale)', 16479, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
 (1535, 'Rozmiar ramy (cale)', 16480, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
-(1536, 'Rozmiar ramy (cale)', 16482, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
+(1536, 'Rozmiar ramy (cale)', 16482, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (1537, 'Rozmiar ramy (cale)', 16483, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
 (1538, 'Rozmiar ramy (cale)', 16484, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
 (1539, 'Rozmiar ramy (cale)', 16485, 3, 3, 0, 8, 3, 2, 1, 30, '', '', '', 307, '', 0, '0', 'in', 0),
@@ -25248,7 +25054,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (1749, 'Szerokość drzwi (cm)', 46101, 3, 3, 0, 8, 1, 0, 0, 0, '', '', '', 394, '', 0, '0', '', 0),
 (1750, 'Typ alarmu', 15964, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Bezprzewodowy|Przewodowy', '0|1|2', '', 395, '0|1|2', 0, '0', '', 0),
 (1751, 'Typ montażu', 46125, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Stojące|Ścienne', '0|1|2', '', 396, '0|1|2', 0, '0', '', 0),
-(1752, 'Typ montażu', 46128, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Stojące|Ścienne', '0|1|2', '', 396, '0|1|2', 0, '0', '', 0),
+(1752, 'Typ montażu', 46128, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Stojące|Ścienne', '0|1|2', '', 396, '0|1|2', 0, '0', '', 0),
 (1753, 'Materiał', 46130, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Ceramiczne|Szklane|Inne', '0|1|2|3', '', 397, '0|1|2|3', 0, '0', '', 0),
 (1756, 'Szerokość okna (mm)', 46156, 1, 2, 0, 8, 1, 0, 0, 0, '', '', '', 401, '', 0, '0', '', 0),
 (1757, 'Szerokość okna (mm)', 46157, 1, 2, 0, 8, 1, 0, 0, 0, '', '', '', 401, '', 0, '0', '', 0),
@@ -25425,8 +25231,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2184, 'Obsługa bluetooth', 14172, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1314, '0|1|2', 0, '0', '', 0),
 (2185, 'Obsługa USB', 14172, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1315, '0|1|2', 0, '0', '', 0),
 (2186, 'Obsługa USB', 5186, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1315, '0|1|2', 0, '0', '', 0),
-(2187, 'Montaż', 20175, 6, 2, 0, 8, 1, 2, 0, 15, 'Pod sufitem|W zagłówku|Do zabudowy w desce rozdzielczej|Wolnostojący', '1|2|4|8', '', 1316, '1|2|4|8', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(2187, 'Montaż', 20175, 6, 2, 0, 8, 1, 2, 0, 15, 'Pod sufitem|W zagłówku|Do zabudowy w desce rozdzielczej|Wolnostojący', '1|2|4|8', '', 1316, '1|2|4|8', 0, '0', '', 0),
 (2188, 'Liczba płyt', 715, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |< 5|6 - 10|> 10', '0|1|2|3', '', 1317, '0|1|2|3', 0, '0', '', 0),
 (2189, 'Rodzaje płyt ', 20178, 6, 2, 0, 8, 5, 2, 0, 15, 'CD|CD/RW|DVD|DVD/RW', '1|2|4|8', '', 1318, '1|2|4|8', 0, '0', '', 0),
 (2190, 'Zdejmowany panel', 5186, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1319, '0|1|2', 0, '0', '', 0),
@@ -25438,7 +25243,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2197, 'Mostek', 5566, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Stały|Ruchomy', '0|1|2', '', 1335, '0|1|2', 0, '0', '', 0),
 (2198, 'Ilość strun', 5566, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |6 strun|7 strun|Inna', '0|1|2|3', '', 1336, '0|1|2|3', 0, '0', '', 0),
 (2199, 'Ilość strun', 9509, 4, 2, 0, 8, 1, 1, 0, 4, ' -- Wybierz -- |4|5|6|Inna', '0|1|2|3|4', '', 1337, '0|1|2|3|4', 0, '0', '', 0),
-(2200, 'Konstrukcja', 52713, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |lampowy|tranzystorowy|hybrydowy', '0|1|2|3', '', 1354, '0|1|2|3', 0, '0', '', 0),
+(2200, 'Konstrukcja', 52713, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |lampowy|tranzystorowy|hybrydowy', '0|1|2|3', '', 1354, '0|1|2|3', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (2201, 'Konstrukcja', 52712, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |lampowy|tranzystorowy|hybrydowy', '0|1|2|3', '', 1354, '0|1|2|3', 0, '0', '', 0),
 (2202, 'Konstrukcja', 52716, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |lampowy|tranzystorowy|hybrydowy', '0|1|2|3', '', 1354, '0|1|2|3', 0, '0', '', 0),
 (2203, 'Konstrukcja', 52715, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |lampowy|tranzystorowy|hybrydowy', '0|1|2|3', '', 1354, '0|1|2|3', 0, '0', '', 0),
@@ -25741,8 +25547,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2708, 'Konstrukcja', 67169, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Dwudrożne|Trójdrożne', '0|1|2', '', 720, '0|1|2', 0, '0', '', 0),
 (2709, 'Konstrukcja', 67170, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Dwudrożne|Trójdrożne', '0|1|2', '', 720, '0|1|2', 0, '0', '', 0),
 (2710, 'Konstrukcja', 67168, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Dwudrożne|Trójdrożne', '0|1|2', '', 720, '0|1|2', 0, '0', '', 0),
-(2711, 'Formaty obrazu', 67191, 6, 2, 0, 8, 2, 2, 0, 15, 'DivX|DVD-Video|VCD|SVCD', '1|2|4|8', '', 1435, '1|2|4|8', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(2711, 'Formaty obrazu', 67191, 6, 2, 0, 8, 2, 2, 0, 15, 'DivX|DVD-Video|VCD|SVCD', '1|2|4|8', '', 1435, '1|2|4|8', 0, '0', '', 0),
 (2712, 'Pojemność dysku (GB)', 67191, 1, 2, 0, 8, 3, 5, 1, 10000, '', '', '', 1436, '', 0, '0', '', 0),
 (2713, 'Złącze HDMI', 67191, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1437, '0|1|2', 0, '0', '', 0),
 (2714, 'Informacje dodatkowe', 67191, 6, 2, 0, 8, 5, 1, 0, 3, 'Obsługa napisów|Polski tekst', '1|2', '', 1438, '1|2', 0, '0', '', 0),
@@ -25753,7 +25558,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2719, 'Konwerter', 67130, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1443, '0|1|2', 0, '0', '', 0),
 (2720, 'Dysk', 67129, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 1444, '0|1|2', 0, '0', '', 0),
 (2721, 'Marka', 67441, 4, 2, 0, 8, 5, 2, 0, 11, ' -- Wybierz -- |Amica|Ariston|Bosch|Candy|Electrolux|Indesit|Mastercook|Miele|Siemens|Whirlpool|Pozostałe', '0|1|2|3|4|5|6|7|8|9|10|11', '', 2914, '0|1|2|3|4|5|6|7|8|9|10|11', 0, '0', '', 0),
-(2722, 'Marka', 67482, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Braun|Philips|Pozostałe', '0|1|2|3', '', 3026, '0|1|2|3', 0, '0', '', 0),
+(2722, 'Marka', 67482, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Braun|Philips|Pozostałe', '0|1|2|3', '', 3026, '0|1|2|3', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (2723, 'Marka', 67480, 4, 2, 0, 8, 1, 1, 0, 5, ' -- Wybierz -- |Babyliss|Philips|Remington|Rowenta|Pozostałe', '0|1|2|3|4|5', '', 3027, '0|1|2|3|4|5', 0, '0', '', 0),
 (2724, 'Przeznaczenie', 66794, 6, 2, 0, 8, 5, 2, 0, 31, 'dla przedszkolaków|do szkoły podstawowej|do gimnazjum|do liceum|dla dorosłych', '1|2|4|8|16', '', 3048, '1|2|4|8|16', 0, '0', '', 0),
 (2725, 'Transmisja', 67129, 6, 2, 0, 8, 4, 1, 0, 3, 'SD|HD', '1|2', '', 3049, '1|2', 0, '0', '', 0),
@@ -25887,13 +25693,10 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2950, 'Data', 3970, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |do 1945 roku|po 1945 roku', '0|1|2', '', 3847, '0|1|2', 0, '0', '', 0),
 (2955, 'Rozmiar', 75996, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2956, 'Rozmiar', 75999, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(2957, 'Rozmiar', 76007, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2958, 'Rozmiar', 76013, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2959, 'Rozmiar', 75998, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2960, 'Rozmiar', 76012, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2961, 'Rozmiar', 76027, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(2962, 'Rozmiar', 76009, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(2963, 'Rozmiar', 75997, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2964, 'Rozmiar', 76028, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (2965, 'Rozmiar', 76008, 4, 2, 0, 8, 1, 2, 0, 12, ' -- Wybierz -- |Mniejszy niż 34|34|36|38|40|42|44|46|48|Większy niż 48|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 55, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (2966, 'Rozmiar', 76010, 4, 2, 0, 8, 2, 2, 0, 12, ' -- Wybierz -- |Mniejszy niż 34|34|36|38|40|42|44|46|48|Większy niż 48|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 55, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
@@ -25918,22 +25721,10 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (2989, 'Kolor', 75993, 6, 2, 0, 1, 8, 4, 0, 8191, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie szarości i srebra|Odcienie zieleni|Odcienie żółtego i złota|Wielokolorowy|Inny kolor|Odcienie czerwieni|Odcienie różu', '1|2|4|8|16|32|64|128|256|512|1024|2048|4096', '', 451, '1|2|4|16|32|64|128|256|512|1024|2048|4096|8192', 0, '0', '', 0),
 (2990, 'Rodzaj', 76102, 6, 2, 0, 8, 3, 2, 0, 15, 'Rozpinane|Wkładane przez głowę|Z kapturem|Bez kaptura', '1|2|4|8', '', 1294, '1|2|4|8', 0, '0', '', 0),
 (2991, 'Rodzaj', 76035, 6, 2, 0, 8, 3, 2, 0, 15, 'Rozpinane|Wkładane przez głowę|Z kapturem|Bez kaptura', '1|2|4|8', '', 1294, '1|2|4|8', 0, '0', '', 0),
-(2992, 'Rodzaj', 76005, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Pięciopalczaste|Standardowe', '0|1|2', '', 1814, '0|1|2', 0, '0', '', 0),
-(2993, 'Rodzaj', 76011, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Pięciopalczaste|Standardowe', '0|1|2', '', 1814, '0|1|2', 0, '0', '', 0),
-(2994, 'Rodzaj', 76006, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Pięciopalczaste|Standardowe', '0|1|2', '', 1814, '0|1|2', 0, '0', '', 0),
-(2995, 'Rodzaj', 76002, 4, 2, 0, 8, 2, 1, 0, 2, ' -- Wybierz -- |Pięciopalczaste|Standardowe', '0|1|2', '', 1814, '0|1|2', 0, '0', '', 0),
-(2996, 'Rozmiar', 76002, 4, 2, 0, 8, 1, 1, 0, 5, ' -- Wybierz -- |Mniejszy niż 35|35-37|38-40|41-43|Większy niż 43', '0|1|2|3|4|5', '', 1815, '0|1|2|3|4|5', 0, '0', '', 0),
+(2992, 'Rodzaj', 76005, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |Pięciopalczaste|Standardowe', '0|1|2', '', 1814, '0|1|2', 0, '0', '', 0),
 (2997, 'Rozmiar', 76005, 4, 2, 0, 8, 1, 1, 0, 5, ' -- Wybierz -- |Mniejszy niż 35|35-37|38-40|41-43|Większy niż 43', '0|1|2|3|4|5', '', 1815, '0|1|2|3|4|5', 0, '0', '', 0),
-(2998, 'Rozmiar', 76006, 4, 2, 0, 8, 1, 1, 0, 5, ' -- Wybierz -- |Mniejszy niż 35|35-37|38-40|41-43|Większy niż 43', '0|1|2|3|4|5', '', 1815, '0|1|2|3|4|5', 0, '0', '', 0),
-(2999, 'Rozmiar', 76011, 4, 2, 0, 8, 1, 1, 0, 5, ' -- Wybierz -- |Mniejszy niż 35|35-37|38-40|41-43|Większy niż 43', '0|1|2|3|4|5', '', 1815, '0|1|2|3|4|5', 0, '0', '', 0),
-(3000, 'Materiał dominujący', 76006, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Bawełna|Nylon|Inny materiał', '0|1|2|3', '', 1816, '0|1|2|3', 0, '0', '', 0),
-(3001, 'Materiał dominujący', 76011, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Bawełna|Nylon|Inny materiał', '0|1|2|3', '', 1816, '0|1|2|3', 0, '0', '', 0),
 (3002, 'Materiał dominujący', 76005, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Bawełna|Nylon|Inny materiał', '0|1|2|3', '', 1816, '0|1|2|3', 0, '0', '', 0),
-(3003, 'Materiał dominujący', 76002, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Bawełna|Nylon|Inny materiał', '0|1|2|3', '', 1816, '0|1|2|3', 0, '0', '', 0),
 (3004, 'Rodzaj', 75998, 4, 2, 0, 8, 1, 1, 0, 3, ' -- Wybierz -- |Korygujące|Ozdobne|Inny rodzaj', '0|1|2|3', '', 1817, '0|1|2|3', 0, '0', '', 0),
-(3005, 'Rodzaj', 75997, 6, 2, 0, 8, 3, 2, 0, 31, 'Bezszwowe|Koronkowe|Korygujące|Satynowe|Bawełniane', '1|2|4|8|16', '', 1818, '1|2|4|8|16', 0, '0', '', 0),
-(3006, 'Rodzaj', 76009, 6, 2, 0, 8, 4, 2, 0, 31, 'Bezszwowe|Koronkowe|Korygujące|Satynowe|Bawełniane', '1|2|4|8|16', '', 1818, '1|2|4|8|16', 0, '0', '', 0),
-(3007, 'Rodzaj', 76007, 6, 2, 0, 8, 3, 1, 0, 3, 'Bezszwowe|Koronkowe', '1|2', '', 1819, '1|2', 0, '0', '', 0),
 (3008, 'Rodzaj', 76012, 6, 2, 0, 8, 5, 1, 0, 7, 'Z biustonoszem|Z gorsetem|Z koszulką', '1|2|4', '', 1820, '1|2|4', 0, '0', '', 0),
 (3010, 'Materiał dominujący', 76083, 4, 2, 0, 8, 6, 1, 0, 8, ' -- Wybierz -- |Bawełna|Jeans|Len|Polyester|Satyna|Skóra|Sztruks|Inny materiał', '0|1|2|3|4|5|6|7|8', '', 1824, '0|1|2|3|4|5|6|7|8', 0, '0', '', 0),
 (3011, 'Krój', 76024, 6, 2, 0, 8, 5, 3, 0, 255, 'Biustonosz usztywniany|Biustonosz push-up|Na ramiączkach|Wiązane na szyi|Z figami|Ze stringami|Z szortami|Tankini', '1|2|4|8|16|32|64|128', '', 2969, '1|2|4|8|16|32|64|128', 0, '0', '', 0),
@@ -26016,8 +25807,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3136, 'Grubość', 76762, 6, 2, 0, 8, 0, 3, 0, 255, '0,25 mm|0,3 mm|0,35 mm|0,4 mm|0,6 mm|0,7 mm|0,8 mm |inna', '1|2|4|8|16|32|64|128', '', 4003, '1|2|4|8|16|32|64|128', 0, '0', '', 0),
 (3137, 'Rodzaj', 76694, 6, 2, 0, 8, 0, 1, 0, 7, 'akryl|wełna|inny', '1|2|4', '', 4004, '1|2|4', 0, '0', '', 0),
 (3138, 'Fason', 76077, 4, 2, 0, 8, 4, 1, 0, 7, ' -- Wybierz -- |Jesionka|Płaszcz zimowy|Prochowiec|Trencz|Inny fason|Kożuszek|Grzybek', '0|1|2|3|4|5|6|7', '', 4106, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
-(3139, 'Fason', 5538, 4, 2, 0, 8, 3, 1, 0, 7, ' -- Wybierz -- |Jesionka|Płaszcz zimowy|Prochowiec|Trencz|Inny fason|Kożuszek|Grzybek', '0|1|2|3|4|5|6|7', '', 4106, '0|1|2|3|4|5|6|7', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(3139, 'Fason', 5538, 4, 2, 0, 8, 3, 1, 0, 7, ' -- Wybierz -- |Jesionka|Płaszcz zimowy|Prochowiec|Trencz|Inny fason|Kożuszek|Grzybek', '0|1|2|3|4|5|6|7', '', 4106, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (3141, 'Długość rękawa', 76041, 4, 2, 0, 8, 3, 1, 0, 4, ' -- Wybierz -- |Długi rękaw|Rękaw 3/4|Krótki rękaw|Bez rękawów', '0|1|2|3|4', '', 4126, '0|1|2|3|4', 0, '0', '', 0),
 (3142, 'Długość rękawa', 76102, 4, 2, 0, 8, 4, 1, 0, 4, ' -- Wybierz -- |Długi rękaw|Rękaw 3/4|Krótki rękaw|Bez rękawów', '0|1|2|3|4', '', 4126, '0|1|2|3|4', 0, '0', '', 0),
 (3143, 'Rodzaj, krój', 76093, 6, 2, 0, 8, 5, 4, 0, 4095, 'Biodrówki|Bojówki|Ogrodniczki|Rurki|Rybaczki|Inny rodzaj|Alladynki|Dzwony|Z wysokim stanem|Cygaretki|Bryczesy|Chinosy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 339, '1|2|4|8|16|32|64|128|256|512|1024|2048', 0, '0', '', 0),
@@ -26037,7 +25827,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3164, 'Materiał', 54008, 4, 2, 0, 8, 2, 1, 0, 3, ' -- Wybierz -- |Frotte|Satyna|Inny materiał', '0|1|2|3', '', 3473, '0|1|2|3', 0, '0', '', 0),
 (3165, 'Długość rękawa', 15573, 4, 2, 0, 8, 2, 1, 0, 4, ' -- Wybierz -- |Długi rękaw|Rękaw 3/4|Krótki rękaw|Bez rękawów', '0|1|2|3|4', '', 4126, '0|1|2|3|4', 0, '0', '', 0),
 (3171, 'Rozmiar', 55253, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(3172, 'Rozmiar', 5555, 4, 2, 0, 1, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
+(3172, 'Rozmiar', 5555, 4, 2, 0, 1, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (3173, 'Rozmiar', 5553, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (3176, 'Rodzaj', 68951, 4, 2, 0, 1, 1, 1, 0, 7, ' -- Wybierz -- |Na długopis/pióro|Na dokumenty|Na klucze|Na okulary|Na wizytówki|Na telefon|Uniwersalny', '0|1|2|3|4|5|6|7', '', 4226, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (3177, 'Rozmiar (obwód głowy w cm)', 5554, 4, 2, 0, 1, 1, 2, 0, 13, ' -- Wybierz -- |52|53|54|55|56|57|58|59|60|61|62|63|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 4227, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
@@ -26277,8 +26068,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3564, 'Dodatkowe informacje', 82332, 6, 2, 0, 8, 1, 1, 0, 7, 'Folia|Edycja kolekcjonerska|Edycja GOTY', '1|2|4', '', 5186, '16|64|256', 0, '0', '', 0),
 (3565, 'Dodatkowe informacje', 82397, 6, 2, 0, 8, 1, 1, 0, 7, 'Folia|Edycja kolekcjonerska|Edycja GOTY', '1|2|4', '', 5186, '16|64|256', 0, '0', '', 0),
 (3566, 'Czas sadzenia', 12922, 6, 2, 0, 8, 0, 1, 0, 7, 'Sadzone jesienią|Sadzone wiosną|Wykopywanie na zimę', '1|2|4', '', 5187, '1|2|4', 0, '0', '', 0),
-(3573, 'Dodatkowe informacje', 82707, 6, 2, 0, 8, 2, 4, 0, 2047, 'Regulacja oparcia|Wkładka dla niemowląt|Daszek przeciwsłoneczny|Adaptery do wózka|Isofix|Nosidełko, bujaczek|Regulowany zagłówek|Demontaż oparcia|Pokrowiec na nóżki|Zdejmowane pokrycie|Śpiworek', '1|2|4|8|16|32|64|128|256|512|1024', '', 4886, '4|16|32|64|256|1024|4096|16384|65536|262144|4194304', 0, '0', '', 2);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(3573, 'Dodatkowe informacje', 82707, 6, 2, 0, 8, 2, 4, 0, 2047, 'Regulacja oparcia|Wkładka dla niemowląt|Daszek przeciwsłoneczny|Adaptery do wózka|Isofix|Nosidełko, bujaczek|Regulowany zagłówek|Demontaż oparcia|Pokrowiec na nóżki|Zdejmowane pokrycie|Śpiworek', '1|2|4|8|16|32|64|128|256|512|1024', '', 4886, '4|16|32|64|256|1024|4096|16384|65536|262144|4194304', 0, '0', '', 2),
 (3574, 'Dodatkowe informacje', 82708, 6, 2, 0, 8, 2, 4, 0, 2047, 'Regulacja oparcia|Wkładka dla niemowląt|Daszek przeciwsłoneczny|Adaptery do wózka|Isofix|Nosidełko, bujaczek|Regulowany zagłówek|Demontaż oparcia|Pokrowiec na nóżki|Zdejmowane pokrycie|Śpiworek', '1|2|4|8|16|32|64|128|256|512|1024', '', 4886, '4|16|32|64|256|1024|4096|16384|65536|262144|4194304', 0, '0', '', 2),
 (3575, 'Dodatkowe informacje', 82710, 6, 2, 0, 8, 3, 4, 0, 2047, 'Regulacja oparcia|Wkładka dla niemowląt|Daszek przeciwsłoneczny|Adaptery do wózka|Isofix|Nosidełko, bujaczek|Regulowany zagłówek|Demontaż oparcia|Pokrowiec na nóżki|Zdejmowane pokrycie|Śpiworek', '1|2|4|8|16|32|64|128|256|512|1024', '', 4886, '4|16|32|64|256|1024|4096|16384|65536|262144|4194304', 0, '0', '', 2),
 (3576, 'Dodatkowe informacje', 82713, 6, 2, 0, 8, 3, 4, 0, 2047, 'Regulacja oparcia|Wkładka dla niemowląt|Daszek przeciwsłoneczny|Adaptery do wózka|Isofix|Nosidełko, bujaczek|Regulowany zagłówek|Demontaż oparcia|Pokrowiec na nóżki|Zdejmowane pokrycie|Śpiworek', '1|2|4|8|16|32|64|128|256|512|1024', '', 4886, '4|16|32|64|256|1024|4096|16384|65536|262144|4194304', 0, '0', '', 2),
@@ -26288,7 +26078,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3580, 'Kolor', 82710, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
 (3581, 'Kolor', 82711, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
 (3582, 'Kolor', 82708, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
-(3583, 'Kolor', 82709, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
+(3583, 'Kolor', 82709, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (3584, 'Kolor', 82712, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
 (3585, 'Kolor', 82707, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
 (3586, 'Kolor', 82713, 6, 2, 0, 8, 3, 4, 0, 4095, 'Biel|Czerń|Odcienie brązu i beżu|Odcienie różu|Odcienie czerwieni|Odcienie fioletu|Odcienie niebieskiego|Odcienie pomarańczowego|Odcienie zieleni|Odcienie szarości i srebra|Odcienie żółtego i złota|Wielokolorowy', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 4887, '4|16|256|1024|2048|4096|16384|65536|131072|262144|1048576|4194304', 0, '0', '', 0),
@@ -26530,8 +26321,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3887, 'Data wydania', 26160, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |do 1918|1919-1945|po 1945', '0|1|2|3', '', 6110, '0|1|2|3', 0, '0', '', 0),
 (3888, 'Data wydania', 26155, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |do 1918|1919-1945|po 1945', '0|1|2|3', '', 6110, '0|1|2|3', 0, '0', '', 0),
 (3889, 'Data wydania', 26158, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |do 1918|1919-1945|po 1945', '0|1|2|3', '', 6110, '0|1|2|3', 0, '0', '', 0),
-(3890, 'Data wydania', 26159, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |do 1918|1919-1945|po 1945', '0|1|2|3', '', 6110, '0|1|2|3', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(3890, 'Data wydania', 26159, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |do 1918|1919-1945|po 1945', '0|1|2|3', '', 6110, '0|1|2|3', 0, '0', '', 0),
 (3891, 'Technika', 26959, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |kredka|ołówek|rysunek patykiem|rysunek pędzlem|sangwina|tusz lawowany|węgiel', '0|1|2|3|4|5|6|7', '', 6128, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (3892, 'Tematyka', 26100, 4, 2, 0, 8, 0, 2, 0, 11, ' -- Wybierz -- |codzienna / informacyjna|ekonomiczna|emigracyjna|kobieca|literacka|medyczna|młodzieżowa|polityczna|prawnicza|religijna|rolnicza', '0|1|2|3|4|5|6|7|8|9|10|11', '', 6148, '0|1|2|3|4|5|6|7|8|9|10|11', 0, '0', '', 0),
 (3893, 'Firma', 86082, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |Agfa|Fed|Kiev|Kodak|Leica|Praktica|Smiena|Voigtlander|Zeiss|Zenit|Zorka|Pozostałe', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 6149, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
@@ -26548,7 +26338,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (3907, 'Rozmiar', 87875, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (3908, 'Rozmiar', 87893, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
 (3909, 'Rozmiar', 87896, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
-(3910, 'Rozmiar', 87878, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
+(3910, 'Rozmiar', 87878, 4, 2, 0, 8, 2, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (3911, 'Rozmiar/Wzrost', 87840, 4, 2, 0, 8, 4, 1, 0, 5, ' -- Wybierz -- |30/około 164 cm|32/około 176 cm|34/około 182 cm|36/około 188 cm|Inne', '0|1|2|3|4|5', '', 62, '0|1|2|3|4|5', 0, '0', '', 0),
 (3912, 'Rozmiar/Obwód pasa', 87840, 4, 2, 0, 8, 3, 2, 0, 15, ' -- Wybierz -- |26/około 62 cm|27/około 66 cm|28/około 70 cm|29/około 74 cm|30/około 78 cm|31/około 80 cm|32/około 82 cm|33/około 84 cm|34/około 86 cm|36/około 90 cm|38/około 94 cm|40/około 98 cm|42/około 102 cm|44/około 106 cm|Inne', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15', '', 63, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15', 0, '0', '', 0),
 (3913, 'Rozmiar', 87836, 4, 2, 0, 8, 2, 2, 0, 14, ' -- Wybierz -- |Mniejszy niż 38|38|39|40|41|42|43|44|45|46|48|Większy niż 48|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14', '', 69, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14', 0, '0', '', 0),
@@ -26792,8 +26583,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (4186, 'Rok produkcji', 78177, 1, 2, 0, 8, 0, 4, 1900, 2100, '', '', '', 1, '', 0, '0', '', 0),
 (4187, 'Rok produkcji', 78208, 1, 2, 0, 8, 0, 4, 1900, 2100, '', '', '', 1, '', 0, '0', '', 0),
 (4192, 'Uszkodzony', 78208, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0),
-(4193, 'Uszkodzony', 78180, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(4193, 'Uszkodzony', 78180, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0),
 (4194, 'Uszkodzony', 78213, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0),
 (4195, 'Uszkodzony', 78177, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0),
 (4196, 'Uszkodzony', 78179, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Nie|Tak', '0|1|2', '', 178, '0|1|2', 0, '0', '', 0),
@@ -26819,7 +26609,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (4217, 'Marka', 531, 4, 2, 0, 8, 1, 2, 0, 54, ' -- Wybierz -- |Adidas|Aldo|Asos|Atmosphere|Badura|Bata|Bershka|Caprice|CCC|Christian Louboutin|Clarks|Crocs|Dr. Martens|Ecco|Ed Hardy|Eksbut|Emu|Geox|Gino Rossi|Guess|H&M|Inblu|Karino|Kazar|Krimen|Lacoste|Lemar|Maciejka|McArthur|Merrell|Nessi|New Look|Ne', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54', '', 7108, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54', 0, '0', '', 0),
 (4219, 'Przedział wiekowy', 66781, 6, 2, 0, 8, 5, 2, 0, 31, 'dla najmłodszych (0-2 lata)|dla przedszkolaków (3-5 lat)|dla dzieci z klas I-III (6-9 lat)|dla dzieci z klas IV-VI (10-12 lat)|dla młodzieży (13-18 lat)', '1|2|4|8|16', '', 7453, '1|2|4|8|16', 0, '0', '', 0),
 (4220, 'Autor', 91438, 6, 2, 0, 8, 0, 2, 0, 15, 'Andersen Hans Christian|Grimm Jakob i Wilhelm|Perrault Charles|Inny autor', '1|2|4|8', '', 7454, '1|2|4|8', 0, '0', '', 0),
-(4221, 'Autor', 91434, 6, 2, 0, 8, 0, 4, 0, 4095, 'Brzechwa Jan|Chotomska Wanda|Fredro Aleksander|Janczarski Czesław|Kern Ludwik Jerzy|Konopnicka Maria|Krasicki Ignacy|Mickiewicz Adam|Tuwim Julian|La Fontaine Jean|Inny autor|Antologia', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 7455, '1|2|4|8|16|32|64|128|256|512|1024|2048', 0, '0', '', 0),
+(4221, 'Autor', 91434, 6, 2, 0, 8, 0, 4, 0, 4095, 'Brzechwa Jan|Chotomska Wanda|Fredro Aleksander|Janczarski Czesław|Kern Ludwik Jerzy|Konopnicka Maria|Krasicki Ignacy|Mickiewicz Adam|Tuwim Julian|La Fontaine Jean|Inny autor|Antologia', '1|2|4|8|16|32|64|128|256|512|1024|2048', '', 7455, '1|2|4|8|16|32|64|128|256|512|1024|2048', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (4222, 'Autor', 66791, 4, 2, 0, 8, 0, 2, 0, 19, ' -- Wybierz -- |Burnett Frances Hodgson|Fiedler Arkady|Kipling Rudyard|Lindgren Astrid|Lofting Hugh|Makuszyński Kornel|May Karol|Meyer Stephenie|Milne Alan Alexander|Montgomery Lucy Maud|Musierowicz Małgorzata|Nienacki Zbigniew|Niziurski Edmund|Rowling Jo', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 7473, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
 (4223, 'Rok produkcji (xxxx)', 5415, 1, 2, 0, 8, 1, 4, 1990, 2010, '', '', '', 7485, '', 0, '0', '', 0),
 (4226, 'Przekątna ekranu [cale]', 62998, 3, 3, 0, 8, 40, 0, 0, 0, '', '', '', 7131, '', 0, '0', '', 0),
@@ -27052,8 +26843,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (4605, 'Temat', 26274, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |Abstrakcja|Akt|Historia|Martwa natura|Marynistyka|Pejzaż|Portret|Religia|Scena rodzajowa', '0|1|2|3|4|5|6|7|8|9', '', 774, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
 (4606, 'Temat', 26280, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |Abstrakcja|Akt|Historia|Martwa natura|Marynistyka|Pejzaż|Portret|Religia|Scena rodzajowa', '0|1|2|3|4|5|6|7|8|9', '', 774, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
 (4607, 'Temat', 26275, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |Abstrakcja|Akt|Historia|Martwa natura|Marynistyka|Pejzaż|Portret|Religia|Scena rodzajowa', '0|1|2|3|4|5|6|7|8|9', '', 774, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
-(4608, 'Temat', 26277, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |Abstrakcja|Akt|Historia|Martwa natura|Marynistyka|Pejzaż|Portret|Religia|Scena rodzajowa', '0|1|2|3|4|5|6|7|8|9', '', 774, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(4608, 'Temat', 26277, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |Abstrakcja|Akt|Historia|Martwa natura|Marynistyka|Pejzaż|Portret|Religia|Scena rodzajowa', '0|1|2|3|4|5|6|7|8|9', '', 774, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
 (4609, 'Wersja', 16206, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Leworęczna|Praworęczna', '0|1|2', '', 1334, '0|1|2', 0, '0', '', 0),
 (4610, 'Wersja', 52710, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Leworęczna|Praworęczna', '0|1|2', '', 1334, '0|1|2', 0, '0', '', 0),
 (4611, 'Wersja', 92674, 4, 2, 0, 8, 4, 1, 0, 2, ' -- Wybierz -- |Leworęczna|Praworęczna', '0|1|2', '', 1334, '0|1|2', 0, '0', '', 0),
@@ -27063,10 +26853,11 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (4615, 'Profil opony', 99193, 4, 2, 0, 8, 2, 4, 0, 8192, ' -- Wybierz -- |25|30|35|40|45|50|55|60|65|70|75|80|85|inny', '0|1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192', '', 344, '0|1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192', 0, '0', '', 0),
 (4616, 'Szerokość opony', 99193, 4, 2, 0, 8, 3, 2, 0, 48, ' -- Wybierz -- |125|135|145|155|165|175|185|195|205|215|220|225|230|235|245|255|265|275|285|295|305|315|325|335|345|355|6.00|6.50|7.00|7.50|8.00|8.50|8.25|8.75|9.00|9.50|10.00|10.50|30x9.50|31|31x10.50|31x11.50|32x11.50|33x10.50|33x12.50|35x12.50|37x12.50', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48', '', 345, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48', 0, '0', '', 0),
 (4619, 'Rozmiar', 86395, 3, 3, 0, 8, 2, 2, 14, 45, '', '', '', 5389, '', 0, '0', '', 0),
-(4620, 'Producent', 99193, 4, 2, 0, 8, 1, 2, 0, 32, ' -- Wybierz -- |Barum|Bridgestone|Continental|Dayton|Dębica|Dunlop|Fulda|Goodyear|Kleber|Pirelli|Sava|Uniroyal|Pozostałe|Michelin|Achilles|Avon|Bfgoodrich|Ceat|Cooper|Falken|General|Goodride|GT Radial|Hankook|Kumho|Maxxis|Metzeler|Nankang|Nexen|Toyo|Vrede', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32', '', 9300, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32', 0, '0', '', 0),
+(4620, 'Producent', 99193, 4, 2, 0, 8, 1, 2, 0, 34, ' -- Wybierz -- |Barum|Bridgestone|Continental|Dayton|Dębica|Dunlop|Fulda|Goodyear|Kleber|Pirelli|Sava|Uniroyal|Pozostałe|Michelin|Achilles|Avon|Bfgoodrich|Ceat|Cooper|Falken|General|Goodride|GT Radial|Hankook|Kumho|Maxxis|Metzeler|Nankang|Nexen|Toyo|Vrede', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34', '', 9300, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34', 0, '0', '', 0),
 (4621, 'Prędkość', 99194, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
 (4622, 'Prędkość', 99195, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
-(4623, 'Prędkość', 99201, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
+(4623, 'Prędkość', 99201, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (4624, 'Prędkość', 99197, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
 (4625, 'Prędkość', 99198, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
 (4626, 'Prędkość', 99196, 4, 2, 0, 8, 4, 2, 0, 19, ' -- Wybierz -- |B do 50 km/h|E do 70 km/h|F do 80 km/h|G do 90 km/h|J do 100 km/h |K do 110 km/h|L do 120 km/h|M do 130 km/h|N do 140 km/h|P do 150 km/h|Q do 160 km/h|R do 170 km/h|S do 180 km/h|T do 190 km/h|H do 210 km/h|V do 240 km/h|W do 270 km/h|Y do', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', '', 9301, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19', 0, '0', '', 0),
@@ -27100,7 +26891,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (4654, 'Dodatkowe informacje', 86395, 6, 2, 0, 8, 4, 1, 0, 7, 'Kask|Ochraniacze|Deskorolka', '1|2|4', '', 9315, '2|8|32', 0, '0', '', 0),
 (4655, 'Rodzaj', 86395, 4, 2, 0, 8, 0, 2, 0, 42, ' -- Wybierz -- |Rolki|Wrotki|Łyżwy|Łyżwo-rolki|Wrotko-rolki', '0|2|12|22|32|42', '', 9316, '0|2|12|22|32|42', 0, '0', '', 0),
 (4678, 'Rozmiar', 13448, 4, 2, 0, 8, 2, 3, 0, 270, ' -- Wybierz -- |Poniżej 35|35|35,5|36|36,5|37|37,5|38|38,5|39|39,5|40|40,5|41|41,5|42|42,5|43|43,5|44|44,5|45|45,5|46|46,5|47|Powyżej 47', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270', '', 5272, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270', 0, '0', '', 0),
-(4679, 'Rozmiar', 13429, 4, 2, 0, 8, 1, 3, 0, 270, ' -- Wybierz -- |Poniżej 35|35|35,5|36|36,5|37|37,5|38|38,5|39|39,5|40|40,5|41|41,5|42|42,5|43|43,5|44|44,5|45|45,5|46|46,5|47|Powyżej 47', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270', '', 5272, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|220|230|240|250|260|270', 0, '0', '', 0),
 (4680, 'Długość rękawa', 89508, 4, 2, 0, 8, 3, 2, 0, 34, ' -- Wybierz -- |Długi rękaw|Krótki rękaw|Rękaw 3/4|Bez rękawów', '0|4|14|24|34', '', 9320, '0|4|14|24|34', 0, '0', '', 0),
 (4681, 'Długość rękawa', 89521, 4, 2, 0, 8, 3, 2, 0, 34, ' -- Wybierz -- |Długi rękaw|Krótki rękaw|Rękaw 3/4|Bez rękawów', '0|4|14|24|34', '', 9320, '0|4|14|24|34', 0, '0', '', 0),
 (4682, 'Oryginał', 14605, 4, 2, 0, 8, 0, 1, 0, 1, ' -- Wybierz -- |oryginał', '0|1', '', 9343, '0|1', 0, '0', '', 0),
@@ -27345,13 +27135,12 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5067, 'Licencja do wypożyczania', 100075, 4, 2, 0, 8, 7, 1, 0, 2, ' -- Wybierz -- |Bez licencji|Z licencją', '0|1|2', '', 121, '0|1|2', 0, '0', '', 0),
 (5069, 'Polska wersja językowa', 100075, 6, 2, 0, 8, 4, 1, 0, 7, 'lektor|napisy|dubbing', '1|2|4', '', 123, '1|2|4', 0, '0', '', 0),
 (5070, 'Liczba płyt w wydaniu', 100075, 4, 2, 0, 8, 6, 1, 0, 3, ' -- Wybierz -- |jedna|dwie|trzy i więcej', '0|1|2|3', '', 124, '0|1|2|3', 0, '0', '', 0),
-(5071, 'Reżyser', 100075, 4, 2, 0, 8, 5, 3, 0, 575, ' -- Wybierz -- |Adam Dobrzycki|Adam Sikora|Adamson Andrew|Agnieszka Holland|Akira Kurosawa|Aleksandr Buravsky|Alfred Hitchcock|Allen Coulter|Anand Tucker|Andrew Niccole|Andrew Stanton|Andrzej Jakimowski|Andrzej Wajda|Andy Tennant|Arkadiusz Jakubik|Bernard', '0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|3', '', 6988, '0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|3', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(5071, 'Reżyser', 100075, 4, 2, 0, 8, 5, 3, 0, 575, ' -- Wybierz -- |Adam Dobrzycki|Adam Sikora|Adamson Andrew|Agnieszka Holland|Akira Kurosawa|Aleksandr Buravsky|Alfred Hitchcock|Allen Coulter|Anand Tucker|Andrew Niccole|Andrew Stanton|Andrzej Jakimowski|Andrzej Wajda|Andy Tennant|Arkadiusz Jakubik|Bernard', '0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|3', '', 6988, '0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|3', 0, '0', '', 0),
 (5072, 'Aktor - odtwórca głównej roli', 100075, 4, 2, 0, 8, 8, 4, 0, 1420, ' -- Wybierz -- |Agata Buzek |Agnieszka Dygant |Agnieszka Włodarczyk |Al Pacino |Alan Andersz |Alan Rickman |Alejandro Gonzalez Inarritu |Aleksandra Nieśpielak |Aleksandra Szwed |Alicja Bachleda-Curuś |Amanda Seyfried |Amy Adams |Andrzej Chyra |Andrzej Gra', '0|5|10|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|345|', '', 7028, '0|5|10|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100|105|110|115|120|125|130|135|140|145|150|155|160|165|170|175|180|185|190|195|200|205|210|215|220|225|230|235|240|245|250|255|260|265|270|275|280|285|290|295|300|305|310|315|320|325|330|335|340|345|', 0, '0', '', 0),
 (5073, 'Region producenta filmu', 100075, 4, 2, 0, 8, 2, 1, 0, 7, ' -- Wybierz -- |Afryka|Ameryka Południowa|Ameryka Północna|Australia|Azja|Europa|Produkcja mieszana', '0|1|2|3|4|5|6|7', '', 7037, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (5074, 'Opakowanie', 100075, 4, 2, 0, 8, 1, 1, 0, 6, ' -- Wybierz -- |Digi-Pack|DVD-box |Jewel Box|Koperta kartonowa|Opakowanie książkowe|Pudełko metalowe', '0|1|2|3|4|5|6', '', 10523, '0|1|2|3|4|5|6', 0, '0', '', 0),
 (5075, 'Rodzaj wydania', 100075, 4, 2, 0, 8, 9, 1, 0, 4, ' -- Wybierz -- |Wydanie pełne|Wydanie z gazety|Wydanie - część kolekcji|Wydanie specjalne, limitowane', '0|1|2|3|4', '', 10524, '0|1|2|3|4', 0, '0', '', 0),
-(5076, 'Marka', 1455, 4, 2, 0, 1, 1, 2, 0, 57, ' -- Wybierz -- |Nike|Adidas|Abercrombie&Fitch|Tommy Hilfiger|Puma|Wrangler|Lacoste|Armani|Everlast|H&M|Zara|Diesel|Ralph Lauren|Lee|Levi''s|Hugo Boss|Ecko|Stoprocent|Prosto|Reebok|Calvin Klein|Lonsdale|Umbro|DC Shoes|Reserved|Fred Perry|Cipo Baxx|Cropp|Div', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|40|41|42|43|44|45|46|47|49|50|51|52|53|55|56|57', '', 10563, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|40|41|42|43|44|45|46|47|49|50|51|52|53|55|56|57', 0, '0', '', 0),
+(5076, 'Marka', 1455, 4, 2, 0, 1, 1, 2, 0, 64, ' -- Wybierz -- |Nike|Adidas|Abercrombie&Fitch|Tommy Hilfiger|Puma|Wrangler|Lacoste|Armani|Everlast|H&M|Zara|Diesel|Ralph Lauren|Lee|Levi''s|Hugo Boss|Ecko|Stoprocent|Prosto|Reebok|Calvin Klein|Lonsdale|Umbro|DC Shoes|Reserved|Fred Perry|Cipo Baxx|Cropp|Div', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|40|41|42|43|44|45|46|47|49|50|51|52|53|55|56|57|58|59|60|61|62|63|64', '', 10563, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|40|41|42|43|44|45|46|47|49|50|51|52|53|55|56|57|58|59|60|61|62|63|64', 0, '0', '', 0),
 (5077, 'Certyfikat:', 74062, 6, 2, 0, 8, 0, 1, 0, 7, 'Ekologiczny|Jakość Tradycja|Sprawiedliwy Handel', '1|2|4', '', 10643, '4|64|1024', 0, '0', '', 0),
 (5078, 'Technika wykonania', 76741, 6, 2, 0, 8, 0, 5, 0, 16383, 'decoupage|druty|frywolitka|haft|masa termoutwardzalna|rzeźba|scrapbooking|sutasz|szycie maszynowe|szycie ręczne|szydełko|wire wrapping|wikliniarstwo|inny', '1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192', '', 10543, '1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192', 0, '0', '', 0),
 (5079, 'Kolor', 101476, 6, 2, 0, 8, 5, 1, 0, 7, 'Białe|Czerwone|Różowe', '1|2|4', '', 10783, '1|2|4', 0, '0', '', 6),
@@ -27364,7 +27153,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5086, 'Zamknięcie', 64490, 6, 2, 0, 8, 0, 1, 0, 3, 'zamykany|otwarty', '1|2', '', 10809, '1|2', 0, '0', '', 2),
 (5087, 'Przeznaczenie', 64491, 6, 2, 0, 8, 0, 1, 0, 7, 'Biurowe|Ozdobne|Inne', '1|2|4', '', 10810, '1|2|4', 0, '0', '', 6),
 (5088, 'Ilość wierszy', 64500, 6, 2, 0, 8, 0, 2, 0, 31, '3 wiersze|4 wiersze|5 wierszy|powyżej 5 wierszy|1-2 wiersze', '1|2|4|8|16', '', 10811, '1|2|4|8|16', 0, '0', '', 2),
-(5089, 'Kształt', 64503, 6, 2, 0, 8, 0, 2, 0, 63, 'Prostokątna|Okrągła|Owalna|Kwadratowa|Trójkątna|Inna', '1|2|4|8|16|32', '', 10812, '1|2|16|32|64|128', 0, '0', '', 6),
+(5089, 'Kształt', 64503, 6, 2, 0, 8, 0, 2, 0, 63, 'Prostokątna|Okrągła|Owalna|Kwadratowa|Trójkątna|Inna', '1|2|4|8|16|32', '', 10812, '1|2|16|32|64|128', 0, '0', '', 6);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (5090, 'Przeznaczenie', 64493, 6, 2, 0, 8, 0, 2, 0, 15, 'na długopisy|na karteczki|na długopisy|inne', '1|2|4|8', '', 10813, '1|2|4|8', 0, '0', '', 0),
 (5091, 'Rodzaj', 64495, 6, 2, 0, 8, 0, 1, 0, 3, 'Taśma jednostronna|Taśma dwustronna', '1|2', '', 10814, '1|2', 0, '0', '', 2),
 (5092, 'Przeznaczenie', 64495, 6, 2, 0, 8, 0, 1, 0, 3, 'pakowa|biurowa', '1|2', '', 10815, '1|2', 0, '0', '', 2),
@@ -27592,8 +27382,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5356, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 121, ' -- Wybierz -- |Alero|Astro|Avalanche|Aveo|Blazer|Camaro|Captiva|Cavalier|Corsica|Corvette|Cruze|Epica|Equinox|Evanda|Express|HHR|Impala|Kalos|Lacetti|Lumina|Matiz|Nubira|Pozostałe|Rezzo|Silverado|Spark|Suburban|Tahoe|TrailBlazer|Venture', '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', '', 11205, '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', 11204, '12', '', 1),
 (5357, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |300C|300M|Aspen|Concorde|Crossfire|Grand Voyager|Le Baron|Neon|New Yorker|Pacifica|Pozostałe|PT Cruiser|Saratoga|Sebring|Stratus/Cirrus|Town & Country|Vision|Voyager', '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', '', 11205, '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', 11204, '13', '', 1),
 (5358, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 162, ' -- Wybierz -- |AX|Berlingo|BX|C1|C2|C3|C3 Picasso|C3 Pluriel|C4|C4 Picasso|C5|C6|C8|C-Crosser|CX|Evasion|Pozostałe|Saxo|Xantia|XM|Xsara|Xsara Picasso|ZX', '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', '', 11205, '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', 11204, '14', '', 1),
-(5359, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 164, ' -- Wybierz -- |Logan|Pozostałe', '0|163|164', '', 11205, '0|163|164', 11204, '15', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(5359, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 164, ' -- Wybierz -- |Logan|Pozostałe', '0|163|164', '', 11205, '0|163|164', 11204, '15', '', 1),
 (5360, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 175, ' -- Wybierz -- |Espero|Korando|Lanos|Leganza|Matiz|Musso|Nexia|Nubira|Pozostałe|Tacuma|Tico', '0|165|166|167|168|169|170|171|172|173|174|175', '', 11205, '0|165|166|167|168|169|170|171|172|173|174|175', 11204, '16', '', 1),
 (5361, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 183, ' -- Wybierz -- |Applause|Charade|Cuore|Feroza|Move/Gran Move|Pozostałe|Rocky|Sirion', '0|176|177|178|179|180|181|182|183', '', 11205, '0|176|177|178|179|180|181|182|183', 11204, '17', '', 1),
 (5362, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 202, ' -- Wybierz -- |Avenger|Caliber|Caravan|Challenger|Charger|Dakota|Diplomat|Durango|Grand Caravan|Intrepid|Journey|Magnum|Neon|Nitro|Pozostałe|RAM|Stealth|Stratus|Viper', '0|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202', '', 11205, '0|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202', 11204, '18', '', 1),
@@ -27607,7 +27396,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5370, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 317, ' -- Wybierz -- |Campo|Pozostałe|Trooper', '0|315|316|317', '', 11205, '0|315|316|317', 11204, '26', '', 1),
 (5371, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 325, ' -- Wybierz -- |Pozostałe|S-Type|XJ|XJR|XJS|XK|XKR|X-Type', '0|318|319|320|321|322|323|324|325', '', 11205, '0|318|319|320|321|322|323|324|325', 11204, '27', '', 1),
 (5372, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 332, ' -- Wybierz -- |Cherokee|Commander|Compass|Grand Cherokee|Liberty|Pozostałe|Wrangler', '0|326|327|328|329|330|331|332', '', 11205, '0|326|327|328|329|330|331|332', 11204, '28', '', 1),
-(5373, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 349, ' -- Wybierz -- |Carens|Carnival|Cee''d|Cerato|Clarus|Joice|Magentis|Opirus/Amanti|Picanto|Pozostałe|Pride|Retona|Rio|Sephia|Shuma|Sorento|Sportage', '0|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349', '', 11205, '0|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349', 11204, '29', '', 1),
+(5373, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 349, ' -- Wybierz -- |Carens|Carnival|Cee''d|Cerato|Clarus|Joice|Magentis|Opirus/Amanti|Picanto|Pozostałe|Pride|Retona|Rio|Sephia|Shuma|Sorento|Sportage', '0|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349', '', 11205, '0|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349', 11204, '29', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (5374, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 350, ' -- Wybierz -- |Wszystkie', '0|350', '', 11205, '0|350', 11204, '30', '', 1),
 (5375, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 361, ' -- Wybierz -- |Dedra|Delta|Kappa|Lybra|Musa|Phedra|Pozostałe|Thema|Thesis|Ypsilon|Zeta', '0|351|352|353|354|355|356|357|358|359|360|361', '', 11205, '0|351|352|353|354|355|356|357|358|359|360|361', 11204, '31', '', 1),
 (5376, 'Model', 622, 4, 2, 0, 8, 3, 3, 0, 366, ' -- Wybierz -- |Defender|Discovery|Freelander|Pozostałe|Range Rover', '0|362|363|364|365|366', '', 11205, '0|362|363|364|365|366', 11204, '32', '', 1),
@@ -27912,8 +27702,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5675, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 336, ' -- Wybierz -- |Mk1 (1982-1986)|Mk2 (1987-1993)', '0|335|336', '', 11206, '0|335|336', 11205, '261', '', 1),
 (5676, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 337, ' -- Wybierz -- |Wszystkie', '0|337', '', 11206, '0|337', 11205, '262', '', 1),
 (5677, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 338, ' -- Wybierz -- |Wszystkie', '0|338', '', 11206, '0|338', 11205, '263', '', 1),
-(5678, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 339, ' -- Wybierz -- |Wszystkie', '0|339', '', 11206, '0|339', 11205, '264', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(5678, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 339, ' -- Wybierz -- |Wszystkie', '0|339', '', 11206, '0|339', 11205, '264', '', 1),
 (5679, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 342, ' -- Wybierz -- |Mk1 (1965-1986)|Mk2 (1986-2000)|Mk3 (2000-)', '0|340|341|342', '', 11206, '0|340|341|342', 11205, '265', '', 1),
 (5680, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 343, ' -- Wybierz -- |Wszystkie', '0|343', '', 11206, '0|343', 11205, '266', '', 1),
 (5681, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 349, ' -- Wybierz -- |II (1983-1985)|III (1985-1989)|IV (1990-1993)|V (1993-1998)|VI (1998-2002)|VII (2002-)', '0|344|345|346|347|348|349', '', 11206, '0|344|345|346|347|348|349', 11205, '267', '', 1),
@@ -27945,7 +27734,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (5707, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 381, ' -- Wybierz -- |Wszystkie', '0|381', '', 11206, '0|381', 11205, '293', '', 1),
 (5708, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 382, ' -- Wybierz -- |Wszystkie', '0|382', '', 11206, '0|382', 11205, '294', '', 1),
 (5709, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 383, ' -- Wybierz -- |Wszystkie', '0|383', '', 11206, '0|383', 11205, '295', '', 1),
-(5710, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |Wszystkie', '0|384', '', 11206, '0|384', 11205, '296', '', 1),
+(5710, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |Wszystkie', '0|384', '', 11206, '0|384', 11205, '296', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (5711, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 385, ' -- Wybierz -- |Wszystkie', '0|385', '', 11206, '0|385', 11205, '297', '', 1),
 (5712, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 386, ' -- Wybierz -- |Wszystkie', '0|386', '', 11206, '0|386', 11205, '298', '', 1),
 (5713, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 387, ' -- Wybierz -- |Wszystkie', '0|387', '', 11206, '0|387', 11205, '299', '', 1),
@@ -28282,8 +28072,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6044, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 838, ' -- Wybierz -- |Wszystkie', '0|838', '', 11206, '0|838', 11205, '630', '', 1),
 (6045, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 839, ' -- Wybierz -- |Wszystkie', '0|839', '', 11206, '0|839', 11205, '631', '', 1),
 (6046, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 840, ' -- Wybierz -- |Wszystkie', '0|840', '', 11206, '0|840', 11205, '632', '', 1),
-(6047, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 842, ' -- Wybierz -- |I (1998-2002)|II (2003-)', '0|841|842', '', 11206, '0|841|842', 11205, '633', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(6047, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 842, ' -- Wybierz -- |I (1998-2002)|II (2003-)', '0|841|842', '', 11206, '0|841|842', 11205, '633', '', 1),
 (6048, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 843, ' -- Wybierz -- |Wszystkie', '0|843', '', 11206, '0|843', 11205, '634', '', 1),
 (6049, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 844, ' -- Wybierz -- |Wszystkie', '0|844', '', 11206, '0|844', 11205, '635', '', 1),
 (6050, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 845, ' -- Wybierz -- |Wszystkie', '0|845', '', 11206, '0|845', 11205, '636', '', 1),
@@ -28315,7 +28104,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6076, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 882, ' -- Wybierz -- |Wszystkie', '0|882', '', 11206, '0|882', 11205, '662', '', 1),
 (6077, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 883, ' -- Wybierz -- |Wszystkie', '0|883', '', 11206, '0|883', 11205, '663', '', 1),
 (6078, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 884, ' -- Wybierz -- |Wszystkie', '0|884', '', 11206, '0|884', 11205, '664', '', 1),
-(6079, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 885, ' -- Wybierz -- |Wszystkie', '0|885', '', 11206, '0|885', 11205, '665', '', 1),
+(6079, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 885, ' -- Wybierz -- |Wszystkie', '0|885', '', 11206, '0|885', 11205, '665', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (6080, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 886, ' -- Wybierz -- |Wszystkie', '0|886', '', 11206, '0|886', 11205, '666', '', 1),
 (6081, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 887, ' -- Wybierz -- |Wszystkie', '0|887', '', 11206, '0|887', 11205, '667', '', 1),
 (6082, 'Wersja', 622, 4, 2, 0, 8, 3, 3, 0, 890, ' -- Wybierz -- |GC (1992-2001)|GD (2001-2007)|GH (2007-)', '0|888|889|890', '', 11206, '0|888|889|890', 11205, '668', '', 1),
@@ -28584,8 +28374,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6346, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |Wszystkie', '0|139', '', 11206, '0|139', 11205, '101', '', 1),
 (6347, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 140, ' -- Wybierz -- |Wszystkie', '0|140', '', 11206, '0|140', 11205, '102', '', 1),
 (6348, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 141, ' -- Wybierz -- |Wszystkie', '0|141', '', 11206, '0|141', 11205, '103', '', 1),
-(6349, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 142, ' -- Wybierz -- |Wszystkie', '0|142', '', 11206, '0|142', 11205, '104', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(6349, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 142, ' -- Wybierz -- |Wszystkie', '0|142', '', 11206, '0|142', 11205, '104', '', 1),
 (6350, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 143, ' -- Wybierz -- |Wszystkie', '0|143', '', 11206, '0|143', 11205, '105', '', 1),
 (6351, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 144, ' -- Wybierz -- |Wszystkie', '0|144', '', 11206, '0|144', 11205, '106', '', 1),
 (6352, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 145, ' -- Wybierz -- |Wszystkie', '0|145', '', 11206, '0|145', 11205, '107', '', 1),
@@ -28618,7 +28407,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6379, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 174, ' -- Wybierz -- |Wszystkie', '0|174', '', 11206, '0|174', 11205, '134', '', 1),
 (6380, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 175, ' -- Wybierz -- |Wszystkie', '0|175', '', 11206, '0|175', 11205, '135', '', 1),
 (6381, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 176, ' -- Wybierz -- |Wszystkie', '0|176', '', 11206, '0|176', 11205, '136', '', 1),
-(6382, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 178, ' -- Wybierz -- |I (1995-2005)|II (2001-)', '0|177|178', '', 11206, '0|177|178', 11205, '137', '', 1),
+(6382, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 178, ' -- Wybierz -- |I (1995-2005)|II (2001-)', '0|177|178', '', 11206, '0|177|178', 11205, '137', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (6383, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 179, ' -- Wybierz -- |Wszystkie', '0|179', '', 11206, '0|179', 11205, '138', '', 1),
 (6384, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 182, ' -- Wybierz -- |I (1984-1995)|II (1995-2000)|III (2001-)', '0|180|181|182', '', 11206, '0|180|181|182', 11205, '139', '', 1),
 (6385, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 183, ' -- Wybierz -- |Wszystkie', '0|183', '', 11206, '0|183', 11205, '140', '', 1),
@@ -28952,8 +28742,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6713, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 632, ' -- Wybierz -- |Wszystkie', '0|632', '', 11206, '0|632', 11205, '468', '', 1),
 (6714, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 636, ' -- Wybierz -- |I (1982-1990)|II (1990-2000)|III (2000-2006)|IV (2007-)', '0|633|634|635|636', '', 11206, '0|633|634|635|636', 11205, '469', '', 1),
 (6715, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 637, ' -- Wybierz -- |Wszystkie', '0|637', '', 11206, '0|637', 11205, '470', '', 1),
-(6716, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 638, ' -- Wybierz -- |Wszystkie', '0|638', '', 11206, '0|638', 11205, '471', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(6716, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 638, ' -- Wybierz -- |Wszystkie', '0|638', '', 11206, '0|638', 11205, '471', '', 1),
 (6717, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 639, ' -- Wybierz -- |Wszystkie', '0|639', '', 11206, '0|639', 11205, '472', '', 1),
 (6718, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 640, ' -- Wybierz -- |Wszystkie', '0|640', '', 11206, '0|640', 11205, '473', '', 1),
 (6719, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 641, ' -- Wybierz -- |Wszystkie', '0|641', '', 11206, '0|641', 11205, '474', '', 1),
@@ -28984,7 +28773,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (6744, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 673, ' -- Wybierz -- |Wszystkie', '0|673', '', 11206, '0|673', 11205, '499', '', 1),
 (6745, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 676, ' -- Wybierz -- |B11 (1982-1987)|B12/N13 (1986-1991)|B13/N14 (1990-1995)', '0|674|675|676', '', 11206, '0|674|675|676', 11205, '500', '', 1),
 (6746, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 678, ' -- Wybierz -- |I (1987-1995)|II (1995-)', '0|677|678', '', 11206, '0|677|678', 11205, '501', '', 1),
-(6747, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 679, ' -- Wybierz -- |Wszystkie', '0|679', '', 11206, '0|679', 11205, '502', '', 1),
+(6747, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 679, ' -- Wybierz -- |Wszystkie', '0|679', '', 11206, '0|679', 11205, '502', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (6748, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 680, ' -- Wybierz -- |Wszystkie', '0|680', '', 11206, '0|680', 11205, '503', '', 1),
 (6749, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 681, ' -- Wybierz -- |Wszystkie', '0|681', '', 11206, '0|681', 11205, '504', '', 1),
 (6750, 'Wersja', 4141, 4, 2, 0, 8, 3, 3, 0, 682, ' -- Wybierz -- |Wszystkie', '0|682', '', 11206, '0|682', 11205, '505', '', 1),
@@ -29280,8 +29070,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7041, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |110|2107|Niva|Pozostałe|Samara', '0|380|381|382|383|384', '', 11205, '0|380|381|382|383|384', 11204, '35', '', 1),
 (7042, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 385, ' -- Wybierz -- |Wszystkie', '0|385', '', 11205, '0|385', 11204, '36', '', 1),
 (7043, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 410, ' -- Wybierz -- |121|2|3|323|323F|5|6|626|929|B-seria|BT-50|CX-7|CX-9|Demio|Millenia|MPV|MX-3|MX-5|MX-6|Pozostałe|Premacy|RX-7|RX-8|Tribute|Xedos', '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', '', 11205, '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', 11204, '37', '', 1),
-(7044, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 450, ' -- Wybierz -- |180|190|200|219|220|240|250|260|278|280|290|300|320|350|380|400|416|420|450|500|560|600|A-klasa|B-klasa|C-klasa|CLK-klasa|CL-klasa|CLS-klasa|E-klasa|G-klasa|ML-klasa|Pozostałe|R-klasa|S-klasa|SLK-klasa|SL-klasa|Sprinter|Viano|Vito|V-klasa', '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', '', 11205, '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', 11204, '38', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(7044, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 450, ' -- Wybierz -- |180|190|200|219|220|240|250|260|278|280|290|300|320|350|380|400|416|420|450|500|560|600|A-klasa|B-klasa|C-klasa|CLK-klasa|CL-klasa|CLS-klasa|E-klasa|G-klasa|ML-klasa|Pozostałe|R-klasa|S-klasa|SLK-klasa|SL-klasa|Sprinter|Viano|Vito|V-klasa', '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', '', 11205, '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', 11204, '38', '', 1),
 (7045, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 451, ' -- Wybierz -- |Wszystkie', '0|451', '', 11205, '0|451', 11204, '39', '', 1),
 (7046, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 452, ' -- Wybierz -- |Wszystkie', '0|452', '', 11205, '0|452', 11204, '40', '', 1),
 (7047, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 458, ' -- Wybierz -- |1000|1300|Cooper|Cooper S|ONE|Pozostałe', '0|453|454|455|456|457|458', '', 11205, '0|453|454|455|456|457|458', 11204, '41', '', 1),
@@ -29297,7 +29086,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7057, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 582, ' -- Wybierz -- |Amerykańskie|Pozostałe', '0|581|582', '', 11205, '0|581|582', 11204, '51', '', 1),
 (7058, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 583, ' -- Wybierz -- |Wszystkie', '0|583', '', 11205, '0|583', 11204, '52', '', 1),
 (7059, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 602, ' -- Wybierz -- |19|21|25|5|Avantime|Clio|Espace|Grand Espace|Grand Scenic|Kangoo|Laguna|Megane|Modus|Pozostałe|Safrane|Scenic|Thalia|Twingo|Vel Satis', '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', '', 11205, '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', 11204, '53', '', 1),
-(7060, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 603, ' -- Wybierz -- |Wszystkie', '0|603', '', 11205, '0|603', 11204, '54', '', 1),
+(7060, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 603, ' -- Wybierz -- |Wszystkie', '0|603', '', 11205, '0|603', 11204, '54', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (7061, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 630, ' -- Wybierz -- |111|114|115|200|213|214|216|218|220|25|400|414|416|418|420|45|600|618|620|623|75|800|820|823|825|827|Pozostałe', '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', '', 11205, '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', 11204, '55', '', 1),
 (7062, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 635, ' -- Wybierz -- |900|9000|9-3|9-5|Pozostałe', '0|631|632|633|634|635', '', 11205, '0|631|632|633|634|635', 11204, '56', '', 1),
 (7063, 'Model', 18834, 4, 2, 0, 8, 3, 3, 0, 646, ' -- Wybierz -- |Alhambra|Altea|Arosa|Cordoba|Ibiza|Inca|Leon|Malaga|Marbella|Pozostałe|Toledo', '0|636|637|638|639|640|641|642|643|644|645|646', '', 11205, '0|636|637|638|639|640|641|642|643|644|645|646', 11204, '57', '', 1),
@@ -29623,8 +29413,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7383, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 395, ' -- Wybierz -- |Wszystkie', '0|395', '', 11206, '0|395', 11205, '307', '', 1),
 (7384, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 396, ' -- Wybierz -- |Wszystkie', '0|396', '', 11206, '0|396', 11205, '308', '', 1),
 (7385, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 397, ' -- Wybierz -- |Wszystkie', '0|397', '', 11206, '0|397', 11205, '309', '', 1),
-(7386, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 398, ' -- Wybierz -- |Wszystkie', '0|398', '', 11206, '0|398', 11205, '310', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(7386, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 398, ' -- Wybierz -- |Wszystkie', '0|398', '', 11206, '0|398', 11205, '310', '', 1),
 (7387, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 399, ' -- Wybierz -- |Wszystkie', '0|399', '', 11206, '0|399', 11205, '311', '', 1),
 (7388, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 400, ' -- Wybierz -- |Wszystkie', '0|400', '', 11206, '0|400', 11205, '312', '', 1),
 (7389, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 401, ' -- Wybierz -- |Wszystkie', '0|401', '', 11206, '0|401', 11205, '313', '', 1),
@@ -29655,7 +29444,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7414, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 429, ' -- Wybierz -- |Wszystkie', '0|429', '', 11206, '0|429', 11205, '338', '', 1),
 (7415, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 430, ' -- Wybierz -- |Wszystkie', '0|430', '', 11206, '0|430', 11205, '339', '', 1),
 (7416, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 431, ' -- Wybierz -- |Wszystkie', '0|431', '', 11206, '0|431', 11205, '340', '', 1),
-(7417, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 432, ' -- Wybierz -- |Wszystkie', '0|432', '', 11206, '0|432', 11205, '341', '', 1),
+(7417, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 432, ' -- Wybierz -- |Wszystkie', '0|432', '', 11206, '0|432', 11205, '341', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (7418, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 433, ' -- Wybierz -- |Wszystkie', '0|433', '', 11206, '0|433', 11205, '342', '', 1),
 (7419, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 434, ' -- Wybierz -- |Wszystkie', '0|434', '', 11206, '0|434', 11205, '343', '', 1),
 (7420, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 435, ' -- Wybierz -- |Wszystkie', '0|435', '', 11206, '0|435', 11205, '344', '', 1),
@@ -29987,8 +29777,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7746, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 892, ' -- Wybierz -- |Wszystkie', '0|892', '', 11206, '0|892', 11205, '670', '', 1),
 (7747, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 893, ' -- Wybierz -- |Wszystkie', '0|893', '', 11206, '0|893', 11205, '671', '', 1),
 (7748, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 894, ' -- Wybierz -- |Wszystkie', '0|894', '', 11206, '0|894', 11205, '672', '', 1),
-(7749, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 895, ' -- Wybierz -- |Wszystkie', '0|895', '', 11206, '0|895', 11205, '673', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(7749, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 895, ' -- Wybierz -- |Wszystkie', '0|895', '', 11206, '0|895', 11205, '673', '', 1),
 (7750, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 896, ' -- Wybierz -- |Wszystkie', '0|896', '', 11206, '0|896', 11205, '674', '', 1),
 (7751, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 897, ' -- Wybierz -- |Wszystkie', '0|897', '', 11206, '0|897', 11205, '675', '', 1),
 (7752, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 898, ' -- Wybierz -- |Wszystkie', '0|898', '', 11206, '0|898', 11205, '676', '', 1),
@@ -30017,7 +29806,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (7775, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 933, ' -- Wybierz -- |Wszystkie', '0|933', '', 11206, '0|933', 11205, '699', '', 1),
 (7776, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 934, ' -- Wybierz -- |Wszystkie', '0|934', '', 11206, '0|934', 11205, '700', '', 1),
 (7777, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 935, ' -- Wybierz -- |Wszystkie', '0|935', '', 11206, '0|935', 11205, '701', '', 1),
-(7778, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 936, ' -- Wybierz -- |Wszystkie', '0|936', '', 11206, '0|936', 11205, '702', '', 1),
+(7778, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 936, ' -- Wybierz -- |Wszystkie', '0|936', '', 11206, '0|936', 11205, '702', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (7779, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 937, ' -- Wybierz -- |Wszystkie', '0|937', '', 11206, '0|937', 11205, '703', '', 1),
 (7780, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 938, ' -- Wybierz -- |Wszystkie', '0|938', '', 11206, '0|938', 11205, '704', '', 1),
 (7781, 'Wersja', 18834, 4, 2, 0, 8, 3, 3, 0, 939, ' -- Wybierz -- |Wszystkie', '0|939', '', 11206, '0|939', 11205, '705', '', 1),
@@ -30287,8 +30077,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8046, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 182, ' -- Wybierz -- |I (1984-1995)|II (1995-2000)|III (2001-)', '0|180|181|182', '', 11206, '0|180|181|182', 11205, '139', '', 1),
 (8047, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 183, ' -- Wybierz -- |Wszystkie', '0|183', '', 11206, '0|183', 11205, '140', '', 1),
 (8048, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 185, ' -- Wybierz -- |I (1997-2002)|II (2002- )', '0|184|185', '', 11206, '0|184|185', 11205, '141', '', 1),
-(8049, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 186, ' -- Wybierz -- |Wszystkie', '0|186', '', 11206, '0|186', 11205, '142', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(8049, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 186, ' -- Wybierz -- |Wszystkie', '0|186', '', 11206, '0|186', 11205, '142', '', 1),
 (8050, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 187, ' -- Wybierz -- |Wszystkie', '0|187', '', 11206, '0|187', 11205, '143', '', 1),
 (8051, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 188, ' -- Wybierz -- |Wszystkie', '0|188', '', 11206, '0|188', 11205, '144', '', 1),
 (8052, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 190, ' -- Wybierz -- |I (2002-2009)|II (2008-)', '0|189|190', '', 11206, '0|189|190', 11205, '145', '', 1),
@@ -30319,7 +30108,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8077, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 217, ' -- Wybierz -- |Wszystkie', '0|217', '', 11206, '0|217', 11205, '170', '', 1),
 (8078, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 218, ' -- Wybierz -- |Wszystkie', '0|218', '', 11206, '0|218', 11205, '171', '', 1),
 (8079, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 219, ' -- Wybierz -- |Wszystkie', '0|219', '', 11206, '0|219', 11205, '172', '', 1),
-(8080, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 220, ' -- Wybierz -- |Wszystkie', '0|220', '', 11206, '0|220', 11205, '173', '', 1),
+(8080, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 220, ' -- Wybierz -- |Wszystkie', '0|220', '', 11206, '0|220', 11205, '173', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (8081, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 221, ' -- Wybierz -- |Wszystkie', '0|221', '', 11206, '0|221', 11205, '174', '', 1),
 (8082, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 222, ' -- Wybierz -- |Wszystkie', '0|222', '', 11206, '0|222', 11205, '175', '', 1),
 (8083, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 223, ' -- Wybierz -- |Wszystkie', '0|223', '', 11206, '0|223', 11205, '176', '', 1),
@@ -30651,8 +30441,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8409, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 679, ' -- Wybierz -- |Wszystkie', '0|679', '', 11206, '0|679', 11205, '502', '', 1),
 (8410, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 680, ' -- Wybierz -- |Wszystkie', '0|680', '', 11206, '0|680', 11205, '503', '', 1),
 (8411, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 681, ' -- Wybierz -- |Wszystkie', '0|681', '', 11206, '0|681', 11205, '504', '', 1),
-(8412, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 682, ' -- Wybierz -- |Wszystkie', '0|682', '', 11206, '0|682', 11205, '505', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(8412, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 682, ' -- Wybierz -- |Wszystkie', '0|682', '', 11206, '0|682', 11205, '505', '', 1),
 (8413, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 683, ' -- Wybierz -- |Wszystkie', '0|683', '', 11206, '0|683', 11205, '506', '', 1),
 (8414, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 684, ' -- Wybierz -- |Wszystkie', '0|684', '', 11206, '0|684', 11205, '507', '', 1),
 (8415, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 685, ' -- Wybierz -- |Wszystkie', '0|685', '', 11206, '0|685', 11205, '508', '', 1),
@@ -30681,7 +30470,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8438, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 724, ' -- Wybierz -- |Wszystkie', '0|724', '', 11206, '0|724', 11205, '531', '', 1),
 (8439, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 725, ' -- Wybierz -- |Wszystkie', '0|725', '', 11206, '0|725', 11205, '532', '', 1),
 (8440, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 726, ' -- Wybierz -- |Wszystkie', '0|726', '', 11206, '0|726', 11205, '533', '', 1),
-(8441, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 727, ' -- Wybierz -- |Wszystkie', '0|727', '', 11206, '0|727', 11205, '534', '', 1),
+(8441, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 727, ' -- Wybierz -- |Wszystkie', '0|727', '', 11206, '0|727', 11205, '534', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (8442, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 728, ' -- Wybierz -- |Wszystkie', '0|728', '', 11206, '0|728', 11205, '535', '', 1),
 (8443, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 729, ' -- Wybierz -- |Wszystkie', '0|729', '', 11206, '0|729', 11205, '536', '', 1),
 (8444, 'Wersja', 18844, 4, 2, 0, 8, 3, 3, 0, 730, ' -- Wybierz -- |Wszystkie', '0|730', '', 11206, '0|730', 11205, '537', '', 1),
@@ -30961,8 +30751,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8719, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 582, ' -- Wybierz -- |Amerykańskie|Pozostałe', '0|581|582', '', 11205, '0|581|582', 11204, '51', '', 1),
 (8720, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 583, ' -- Wybierz -- |Wszystkie', '0|583', '', 11205, '0|583', 11204, '52', '', 1),
 (8721, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 602, ' -- Wybierz -- |19|21|25|5|Avantime|Clio|Espace|Grand Espace|Grand Scenic|Kangoo|Laguna|Megane|Modus|Pozostałe|Safrane|Scenic|Thalia|Twingo|Vel Satis', '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', '', 11205, '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', 11204, '53', '', 1),
-(8722, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 603, ' -- Wybierz -- |Wszystkie', '0|603', '', 11205, '0|603', 11204, '54', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(8722, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 603, ' -- Wybierz -- |Wszystkie', '0|603', '', 11205, '0|603', 11204, '54', '', 1),
 (8723, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 630, ' -- Wybierz -- |111|114|115|200|213|214|216|218|220|25|400|414|416|418|420|45|600|618|620|623|75|800|820|823|825|827|Pozostałe', '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', '', 11205, '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', 11204, '55', '', 1),
 (8724, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 635, ' -- Wybierz -- |900|9000|9-3|9-5|Pozostałe', '0|631|632|633|634|635', '', 11205, '0|631|632|633|634|635', 11204, '56', '', 1),
 (8725, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 646, ' -- Wybierz -- |Alhambra|Altea|Arosa|Cordoba|Ibiza|Inca|Leon|Malaga|Marbella|Pozostałe|Toledo', '0|636|637|638|639|640|641|642|643|644|645|646', '', 11205, '0|636|637|638|639|640|641|642|643|644|645|646', 11204, '57', '', 1),
@@ -30981,7 +30770,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (8738, 'Model', 18862, 4, 2, 0, 8, 3, 3, 0, 760, ' -- Wybierz -- |Wszystkie', '0|760', '', 11205, '0|760', 11204, '70', '', 1),
 (8739, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 1, ' -- Wybierz -- |Wszystkie', '0|1', '', 11206, '0|1', 11205, '1', '', 1),
 (8740, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |Wszystkie', '0|2', '', 11206, '0|2', 11205, '2', '', 1),
-(8741, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Wszystkie', '0|3', '', 11206, '0|3', 11205, '3', '', 1),
+(8741, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 3, ' -- Wybierz -- |Wszystkie', '0|3', '', 11206, '0|3', 11205, '3', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (8742, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 4, ' -- Wybierz -- |Wszystkie', '0|4', '', 11206, '0|4', 11205, '4', '', 1),
 (8743, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 5, ' -- Wybierz -- |Wszystkie', '0|5', '', 11206, '0|5', 11205, '5', '', 1),
 (8744, 'Wersja', 18862, 4, 2, 0, 8, 3, 1, 0, 6, ' -- Wybierz -- |Wszystkie', '0|6', '', 11206, '0|6', 11205, '6', '', 1),
@@ -31319,8 +31109,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9076, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 429, ' -- Wybierz -- |Wszystkie', '0|429', '', 11206, '0|429', 11205, '338', '', 1),
 (9077, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 430, ' -- Wybierz -- |Wszystkie', '0|430', '', 11206, '0|430', 11205, '339', '', 1),
 (9078, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 431, ' -- Wybierz -- |Wszystkie', '0|431', '', 11206, '0|431', 11205, '340', '', 1),
-(9079, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 432, ' -- Wybierz -- |Wszystkie', '0|432', '', 11206, '0|432', 11205, '341', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(9079, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 432, ' -- Wybierz -- |Wszystkie', '0|432', '', 11206, '0|432', 11205, '341', '', 1),
 (9080, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 433, ' -- Wybierz -- |Wszystkie', '0|433', '', 11206, '0|433', 11205, '342', '', 1),
 (9081, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 434, ' -- Wybierz -- |Wszystkie', '0|434', '', 11206, '0|434', 11205, '343', '', 1),
 (9082, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 435, ' -- Wybierz -- |Wszystkie', '0|435', '', 11206, '0|435', 11205, '344', '', 1),
@@ -31352,7 +31141,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9108, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 472, ' -- Wybierz -- |IS200|IS220|IS250|IS300|IS350', '0|468|469|470|471|472', '', 11206, '0|468|469|470|471|472', 11205, '370', '', 1),
 (9109, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 476, ' -- Wybierz -- |LS400|LS430|LS460|LS600', '0|473|474|475|476', '', 11206, '0|473|474|475|476', 11205, '371', '', 1),
 (9110, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 478, ' -- Wybierz -- |LX470|LX570', '0|477|478', '', 11206, '0|477|478', 11205, '372', '', 1),
-(9111, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 483, ' -- Wybierz -- |RX300|RX330|RX350|RX400|RX450', '0|479|480|481|482|483', '', 11206, '0|479|480|481|482|483', 11205, '373', '', 1),
+(9111, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 483, ' -- Wybierz -- |RX300|RX330|RX350|RX400|RX450', '0|479|480|481|482|483', '', 11206, '0|479|480|481|482|483', 11205, '373', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (9112, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 485, ' -- Wybierz -- |SC400|SC430', '0|484|485', '', 11206, '0|484|485', 11205, '374', '', 1),
 (9113, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 486, ' -- Wybierz -- |Wszystkie', '0|486', '', 11206, '0|486', 11205, '375', '', 1),
 (9114, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 487, ' -- Wybierz -- |Wszystkie', '0|487', '', 11206, '0|487', 11205, '376', '', 1),
@@ -31681,8 +31471,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9437, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 933, ' -- Wybierz -- |Wszystkie', '0|933', '', 11206, '0|933', 11205, '699', '', 1),
 (9438, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 934, ' -- Wybierz -- |Wszystkie', '0|934', '', 11206, '0|934', 11205, '700', '', 1),
 (9439, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 935, ' -- Wybierz -- |Wszystkie', '0|935', '', 11206, '0|935', 11205, '701', '', 1),
-(9440, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 936, ' -- Wybierz -- |Wszystkie', '0|936', '', 11206, '0|936', 11205, '702', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(9440, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 936, ' -- Wybierz -- |Wszystkie', '0|936', '', 11206, '0|936', 11205, '702', '', 1),
 (9441, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 937, ' -- Wybierz -- |Wszystkie', '0|937', '', 11206, '0|937', 11205, '703', '', 1),
 (9442, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 938, ' -- Wybierz -- |Wszystkie', '0|938', '', 11206, '0|938', 11205, '704', '', 1),
 (9443, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 939, ' -- Wybierz -- |Wszystkie', '0|939', '', 11206, '0|939', 11205, '705', '', 1),
@@ -31712,7 +31501,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9467, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 973, ' -- Wybierz -- |Wszystkie', '0|973', '', 11206, '0|973', 11205, '729', '', 1),
 (9468, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 980, ' -- Wybierz -- |B1 (1973-1981)|B2 (1981-1987)|B3 (1988-1993)|B4 (1993-1997)|B5 (1996-2000)|B5 FL (2000-2005)|B6 (2005-)', '0|974|975|976|977|978|979|980', '', 11206, '0|974|975|976|977|978|979|980', 11205, '730', '', 1),
 (9469, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 981, ' -- Wybierz -- |Wszystkie', '0|981', '', 11206, '0|981', 11205, '731', '', 1),
-(9470, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 986, ' -- Wybierz -- |I (1975-1981)|II (1981-1994)|III (1994-2001)|IV (2001-2005)|IV FL (2005-)', '0|982|983|984|985|986', '', 11206, '0|982|983|984|985|986', 11205, '732', '', 1),
+(9470, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 986, ' -- Wybierz -- |I (1975-1981)|II (1981-1994)|III (1994-2001)|IV (2001-2005)|IV FL (2005-)', '0|982|983|984|985|986', '', 11206, '0|982|983|984|985|986', 11205, '732', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (9471, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 987, ' -- Wybierz -- |Wszystkie', '0|987', '', 11206, '0|987', 11205, '733', '', 1),
 (9472, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 988, ' -- Wybierz -- |Wszystkie', '0|988', '', 11206, '0|988', 11205, '734', '', 1),
 (9473, 'Wersja', 18862, 4, 2, 0, 8, 3, 3, 0, 989, ' -- Wybierz -- |Wszystkie', '0|989', '', 11206, '0|989', 11205, '735', '', 1),
@@ -31983,8 +31773,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9739, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 217, ' -- Wybierz -- |Wszystkie', '0|217', '', 11206, '0|217', 11205, '170', '', 1),
 (9740, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 218, ' -- Wybierz -- |Wszystkie', '0|218', '', 11206, '0|218', 11205, '171', '', 1),
 (9741, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 219, ' -- Wybierz -- |Wszystkie', '0|219', '', 11206, '0|219', 11205, '172', '', 1),
-(9742, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 220, ' -- Wybierz -- |Wszystkie', '0|220', '', 11206, '0|220', 11205, '173', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(9742, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 220, ' -- Wybierz -- |Wszystkie', '0|220', '', 11206, '0|220', 11205, '173', '', 1),
 (9743, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 221, ' -- Wybierz -- |Wszystkie', '0|221', '', 11206, '0|221', 11205, '174', '', 1),
 (9744, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 222, ' -- Wybierz -- |Wszystkie', '0|222', '', 11206, '0|222', 11205, '175', '', 1),
 (9745, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 223, ' -- Wybierz -- |Wszystkie', '0|223', '', 11206, '0|223', 11205, '176', '', 1),
@@ -32017,7 +31806,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (9772, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 252, ' -- Wybierz -- |Wszystkie', '0|252', '', 11206, '0|252', 11205, '203', '', 1),
 (9773, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 253, ' -- Wybierz -- |Wszystkie', '0|253', '', 11206, '0|253', 11205, '204', '', 1),
 (9774, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 254, ' -- Wybierz -- |Wszystkie', '0|254', '', 11206, '0|254', 11205, '205', '', 1),
-(9775, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 255, ' -- Wybierz -- |Wszystkie', '0|255', '', 11206, '0|255', 11205, '206', '', 1),
+(9775, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 255, ' -- Wybierz -- |Wszystkie', '0|255', '', 11206, '0|255', 11205, '206', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (9776, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 256, ' -- Wybierz -- |Wszystkie', '0|256', '', 11206, '0|256', 11205, '207', '', 1),
 (9777, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 257, ' -- Wybierz -- |Wszystkie', '0|257', '', 11206, '0|257', 11205, '208', '', 1),
 (9778, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 258, ' -- Wybierz -- |Wszystkie', '0|258', '', 11206, '0|258', 11205, '209', '', 1),
@@ -32344,8 +32134,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10099, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 723, ' -- Wybierz -- |I (1991-1996)|II (1996-2006)', '0|722|723', '', 11206, '0|722|723', 11205, '530', '', 1),
 (10100, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 724, ' -- Wybierz -- |Wszystkie', '0|724', '', 11206, '0|724', 11205, '531', '', 1),
 (10101, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 725, ' -- Wybierz -- |Wszystkie', '0|725', '', 11206, '0|725', 11205, '532', '', 1),
-(10102, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 726, ' -- Wybierz -- |Wszystkie', '0|726', '', 11206, '0|726', 11205, '533', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(10102, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 726, ' -- Wybierz -- |Wszystkie', '0|726', '', 11206, '0|726', 11205, '533', '', 1),
 (10103, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 727, ' -- Wybierz -- |Wszystkie', '0|727', '', 11206, '0|727', 11205, '534', '', 1),
 (10104, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 728, ' -- Wybierz -- |Wszystkie', '0|728', '', 11206, '0|728', 11205, '535', '', 1),
 (10105, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 729, ' -- Wybierz -- |Wszystkie', '0|729', '', 11206, '0|729', 11205, '536', '', 1),
@@ -32378,7 +32167,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10132, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 758, ' -- Wybierz -- |Wszystkie', '0|758', '', 11206, '0|758', 11205, '563', '', 1),
 (10133, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 759, ' -- Wybierz -- |Wszystkie', '0|759', '', 11206, '0|759', 11205, '564', '', 1),
 (10134, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 760, ' -- Wybierz -- |Wszystkie', '0|760', '', 11206, '0|760', 11205, '565', '', 1),
-(10135, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 761, ' -- Wybierz -- |Wszystkie', '0|761', '', 11206, '0|761', 11205, '566', '', 1),
+(10135, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 761, ' -- Wybierz -- |Wszystkie', '0|761', '', 11206, '0|761', 11205, '566', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (10136, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 762, ' -- Wybierz -- |Wszystkie', '0|762', '', 11206, '0|762', 11205, '567', '', 1),
 (10137, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 763, ' -- Wybierz -- |Wszystkie', '0|763', '', 11206, '0|763', 11205, '568', '', 1),
 (10138, 'Wersja', 18730, 4, 2, 0, 8, 3, 3, 0, 764, ' -- Wybierz -- |Wszystkie', '0|764', '', 11206, '0|764', 11205, '569', '', 1),
@@ -32641,8 +32431,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10396, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 716, ' -- Wybierz -- |Wszystkie', '0|716', '', 11205, '0|716', 11204, '66', '', 1),
 (10397, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 717, ' -- Wybierz -- |Wszystkie', '0|717', '', 11205, '0|717', 11204, '67', '', 1),
 (10398, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 740, ' -- Wybierz -- |Bora|Caddy|Corrado|Eos|Fox|Garbus|Golf|Golf Plus|Jetta|Lupo|Multivan|New Beetle|Passat|Phaeton|Polo|Pozostałe|Scirocco|Sharan|Tiguan|Touareg|Touran|Transporter|Vento', '0|718|719|720|721|722|723|724|725|726|727|728|729|730|731|732|733|734|735|736|737|738|739|740', '', 11205, '0|718|719|720|721|722|723|724|725|726|727|728|729|730|731|732|733|734|735|736|737|738|739|740', 11204, '68', '', 1),
-(10399, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 759, ' -- Wybierz -- |C30|C70|Pozostałe|S40|S60|S70|S80|Seria 200|Seria 300|Seria 400|Seria 700|Seria 800|Seria 900|V40|V50|V70|XC 60|XC 70|XC 90', '0|741|742|743|744|745|746|747|748|749|750|751|752|753|754|755|756|757|758|759', '', 11205, '0|741|742|743|744|745|746|747|748|749|750|751|752|753|754|755|756|757|758|759', 11204, '69', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(10399, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 759, ' -- Wybierz -- |C30|C70|Pozostałe|S40|S60|S70|S80|Seria 200|Seria 300|Seria 400|Seria 700|Seria 800|Seria 900|V40|V50|V70|XC 60|XC 70|XC 90', '0|741|742|743|744|745|746|747|748|749|750|751|752|753|754|755|756|757|758|759', '', 11205, '0|741|742|743|744|745|746|747|748|749|750|751|752|753|754|755|756|757|758|759', 11204, '69', '', 1),
 (10400, 'Model', 49183, 4, 2, 0, 8, 3, 3, 0, 760, ' -- Wybierz -- |Wszystkie', '0|760', '', 11205, '0|760', 11204, '70', '', 1),
 (10401, 'Wersja', 49183, 4, 2, 0, 8, 3, 1, 0, 1, ' -- Wybierz -- |Wszystkie', '0|1', '', 11206, '0|1', 11205, '1', '', 1),
 (10402, 'Wersja', 49183, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |Wszystkie', '0|2', '', 11206, '0|2', 11205, '2', '', 1),
@@ -32677,7 +32466,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10431, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 31, ' -- Wybierz -- |Wszystkie', '0|31', '', 11206, '0|31', 11205, '31', '', 1),
 (10432, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 32, ' -- Wybierz -- |Wszystkie', '0|32', '', 11206, '0|32', 11205, '32', '', 1),
 (10433, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 33, ' -- Wybierz -- |Wszystkie', '0|33', '', 11206, '0|33', 11205, '33', '', 1),
-(10434, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 34, ' -- Wybierz -- |Wszystkie', '0|34', '', 11206, '0|34', 11205, '34', '', 1),
+(10434, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 34, ' -- Wybierz -- |Wszystkie', '0|34', '', 11206, '0|34', 11205, '34', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (10435, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 35, ' -- Wybierz -- |Wszystkie', '0|35', '', 11206, '0|35', 11205, '35', '', 1),
 (10436, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 36, ' -- Wybierz -- |Wszystkie', '0|36', '', 11206, '0|36', 11205, '36', '', 1),
 (10437, 'Wersja', 49183, 4, 2, 0, 8, 3, 2, 0, 37, ' -- Wybierz -- |Wszystkie', '0|37', '', 11206, '0|37', 11205, '37', '', 1),
@@ -33011,8 +32801,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10765, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 456, ' -- Wybierz -- |Wszystkie', '0|456', '', 11206, '0|456', 11205, '365', '', 1),
 (10766, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 457, ' -- Wybierz -- |Wszystkie', '0|457', '', 11206, '0|457', 11205, '366', '', 1),
 (10767, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 458, ' -- Wybierz -- |Wszystkie', '0|458', '', 11206, '0|458', 11205, '367', '', 1),
-(10768, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 461, ' -- Wybierz -- |ES300|ES330|ES350', '0|459|460|461', '', 11206, '0|459|460|461', 11205, '368', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(10768, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 461, ' -- Wybierz -- |ES300|ES330|ES350', '0|459|460|461', '', 11206, '0|459|460|461', 11205, '368', '', 1),
 (10769, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 467, ' -- Wybierz -- |GS300|GS350|GS400|GS450|GS460|GS470', '0|462|463|464|465|466|467', '', 11206, '0|462|463|464|465|466|467', 11205, '369', '', 1),
 (10770, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 472, ' -- Wybierz -- |IS200|IS220|IS250|IS300|IS350', '0|468|469|470|471|472', '', 11206, '0|468|469|470|471|472', 11205, '370', '', 1),
 (10771, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 476, ' -- Wybierz -- |LS400|LS430|LS460|LS600', '0|473|474|475|476', '', 11206, '0|473|474|475|476', 11205, '371', '', 1),
@@ -33042,7 +32831,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (10795, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 516, ' -- Wybierz -- |Wszystkie', '0|516', '', 11206, '0|516', 11205, '395', '', 1),
 (10796, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 517, ' -- Wybierz -- |Wszystkie', '0|517', '', 11206, '0|517', 11205, '396', '', 1),
 (10797, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 518, ' -- Wybierz -- |Wszystkie', '0|518', '', 11206, '0|518', 11205, '397', '', 1),
-(10798, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 519, ' -- Wybierz -- |Wszystkie', '0|519', '', 11206, '0|519', 11205, '398', '', 1),
+(10798, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 519, ' -- Wybierz -- |Wszystkie', '0|519', '', 11206, '0|519', 11205, '398', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (10799, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 520, ' -- Wybierz -- |Wszystkie', '0|520', '', 11206, '0|520', 11205, '399', '', 1),
 (10800, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 521, ' -- Wybierz -- |Wszystkie', '0|521', '', 11206, '0|521', 11205, '400', '', 1),
 (10801, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 522, ' -- Wybierz -- |Wszystkie', '0|522', '', 11206, '0|522', 11205, '401', '', 1),
@@ -33369,8 +33159,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11122, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 959, ' -- Wybierz -- |Wszystkie', '0|959', '', 11206, '0|959', 11205, '722', '', 1),
 (11123, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 960, ' -- Wybierz -- |Wszystkie', '0|960', '', 11206, '0|960', 11205, '723', '', 1),
 (11124, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 966, ' -- Wybierz -- |I (1974-1983)|II (1983-1992)|III (1991-1998)|IV (1997-2003)|V (2003-)|VI (2008-)', '0|961|962|963|964|965|966', '', 11206, '0|961|962|963|964|965|966', 11205, '724', '', 1),
-(11125, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 967, ' -- Wybierz -- |Wszystkie', '0|967', '', 11206, '0|967', 11205, '725', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(11125, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 967, ' -- Wybierz -- |Wszystkie', '0|967', '', 11206, '0|967', 11205, '725', '', 1),
 (11126, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 970, ' -- Wybierz -- |A1 (1980-1984)|A2 (1984-1992)|A5 (2005-)', '0|968|969|970', '', 11206, '0|968|969|970', 11205, '726', '', 1),
 (11127, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 971, ' -- Wybierz -- |Wszystkie', '0|971', '', 11206, '0|971', 11205, '727', '', 1),
 (11128, 'Wersja', 49183, 4, 2, 0, 8, 3, 3, 0, 972, ' -- Wybierz -- |Wszystkie', '0|972', '', 11206, '0|972', 11205, '728', '', 1),
@@ -33401,7 +33190,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11153, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1011, ' -- Wybierz -- |Wszystkie', '0|1011', '', 11206, '0|1011', 11205, '753', '', 1),
 (11154, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1012, ' -- Wybierz -- |Wszystkie', '0|1012', '', 11206, '0|1012', 11205, '754', '', 1),
 (11155, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1013, ' -- Wybierz -- |Wszystkie', '0|1013', '', 11206, '0|1013', 11205, '755', '', 1),
-(11156, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1014, ' -- Wybierz -- |Wszystkie', '0|1014', '', 11206, '0|1014', 11205, '756', '', 1),
+(11156, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1014, ' -- Wybierz -- |Wszystkie', '0|1014', '', 11206, '0|1014', 11205, '756', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (11157, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1015, ' -- Wybierz -- |Wszystkie', '0|1015', '', 11206, '0|1015', 11205, '757', '', 1),
 (11158, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1016, ' -- Wybierz -- |Wszystkie', '0|1016', '', 11206, '0|1016', 11205, '758', '', 1),
 (11159, 'Wersja', 49183, 4, 2, 0, 8, 3, 4, 0, 1017, ' -- Wybierz -- |Wszystkie', '0|1017', '', 11206, '0|1017', 11205, '759', '', 1),
@@ -33670,8 +33460,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11423, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 241, ' -- Wybierz -- |Wszystkie', '0|241', '', 11206, '0|241', 11205, '192', '', 1),
 (11424, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 242, ' -- Wybierz -- |Wszystkie', '0|242', '', 11206, '0|242', 11205, '193', '', 1),
 (11425, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 243, ' -- Wybierz -- |Wszystkie', '0|243', '', 11206, '0|243', 11205, '194', '', 1),
-(11426, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 244, ' -- Wybierz -- |Wszystkie', '0|244', '', 11206, '0|244', 11205, '195', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(11426, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 244, ' -- Wybierz -- |Wszystkie', '0|244', '', 11206, '0|244', 11205, '195', '', 1),
 (11427, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 245, ' -- Wybierz -- |Wszystkie', '0|245', '', 11206, '0|245', 11205, '196', '', 1),
 (11428, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 246, ' -- Wybierz -- |Wszystkie', '0|246', '', 11206, '0|246', 11205, '197', '', 1),
 (11429, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 247, ' -- Wybierz -- |Wszystkie', '0|247', '', 11206, '0|247', 11205, '198', '', 1),
@@ -33703,7 +33492,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11455, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 278, ' -- Wybierz -- |Wszystkie', '0|278', '', 11206, '0|278', 11205, '224', '', 1),
 (11456, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 279, ' -- Wybierz -- |Wszystkie', '0|279', '', 11206, '0|279', 11205, '225', '', 1),
 (11457, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 280, ' -- Wybierz -- |Wszystkie', '0|280', '', 11206, '0|280', 11205, '226', '', 1),
-(11458, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 281, ' -- Wybierz -- |Wszystkie', '0|281', '', 11206, '0|281', 11205, '227', '', 1),
+(11458, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 281, ' -- Wybierz -- |Wszystkie', '0|281', '', 11206, '0|281', 11205, '227', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (11459, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 282, ' -- Wybierz -- |Wszystkie', '0|282', '', 11206, '0|282', 11205, '228', '', 1),
 (11460, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 283, ' -- Wybierz -- |Wszystkie', '0|283', '', 11206, '0|283', 11205, '229', '', 1),
 (11461, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 284, ' -- Wybierz -- |Wszystkie', '0|284', '', 11206, '0|284', 11205, '230', '', 1),
@@ -34029,8 +33819,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11781, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 744, ' -- Wybierz -- |Wszystkie', '0|744', '', 11206, '0|744', 11205, '550', '', 1),
 (11782, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 745, ' -- Wybierz -- |Wszystkie', '0|745', '', 11206, '0|745', 11205, '551', '', 1),
 (11783, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 746, ' -- Wybierz -- |Wszystkie', '0|746', '', 11206, '0|746', 11205, '552', '', 1),
-(11784, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 747, ' -- Wybierz -- |Wszystkie', '0|747', '', 11206, '0|747', 11205, '553', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(11784, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 747, ' -- Wybierz -- |Wszystkie', '0|747', '', 11206, '0|747', 11205, '553', '', 1),
 (11785, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 748, ' -- Wybierz -- |Wszystkie', '0|748', '', 11206, '0|748', 11205, '554', '', 1),
 (11786, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 750, ' -- Wybierz -- |I (1997-2002)|II (2002- )', '0|749|750', '', 11206, '0|749|750', 11205, '555', '', 1),
 (11787, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 751, ' -- Wybierz -- |Wszystkie', '0|751', '', 11206, '0|751', 11205, '556', '', 1),
@@ -34063,7 +33852,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (11814, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 778, ' -- Wybierz -- |Wszystkie', '0|778', '', 11206, '0|778', 11205, '583', '', 1),
 (11815, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 780, ' -- Wybierz -- |I (1988-1992)|II (1992-1997)', '0|779|780', '', 11206, '0|779|780', 11205, '584', '', 1),
 (11816, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 781, ' -- Wybierz -- |Wszystkie', '0|781', '', 11206, '0|781', 11205, '585', '', 1),
-(11817, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 782, ' -- Wybierz -- |Wszystkie', '0|782', '', 11206, '0|782', 11205, '586', '', 1),
+(11817, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 782, ' -- Wybierz -- |Wszystkie', '0|782', '', 11206, '0|782', 11205, '586', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (11818, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 783, ' -- Wybierz -- |Wszystkie', '0|783', '', 11206, '0|783', 11205, '587', '', 1),
 (11819, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 784, ' -- Wybierz -- |Wszystkie', '0|784', '', 11206, '0|784', 11205, '588', '', 1),
 (11820, 'Wersja', 50821, 4, 2, 0, 8, 3, 3, 0, 787, ' -- Wybierz -- |I (1990-1998)|II (1998-)|III (2005-)', '0|785|786|787', '', 11206, '0|785|786|787', 11205, '589', '', 1),
@@ -34328,8 +34118,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12080, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 18, ' -- Wybierz -- |Wszystkie', '0|18', '', 11206, '0|18', 11205, '18', '', 1),
 (12081, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 19, ' -- Wybierz -- |Wszystkie', '0|19', '', 11206, '0|19', 11205, '19', '', 1),
 (12082, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 20, ' -- Wybierz -- |Wszystkie', '0|20', '', 11206, '0|20', 11205, '20', '', 1),
-(12083, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 21, ' -- Wybierz -- |Wszystkie', '0|21', '', 11206, '0|21', 11205, '21', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(12083, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 21, ' -- Wybierz -- |Wszystkie', '0|21', '', 11206, '0|21', 11205, '21', '', 1),
 (12084, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 22, ' -- Wybierz -- |Wszystkie', '0|22', '', 11206, '0|22', 11205, '22', '', 1),
 (12085, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 23, ' -- Wybierz -- |Wszystkie', '0|23', '', 11206, '0|23', 11205, '23', '', 1),
 (12086, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 24, ' -- Wybierz -- |Wszystkie', '0|24', '', 11206, '0|24', 11205, '24', '', 1),
@@ -34361,7 +34150,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12112, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 64, ' -- Wybierz -- |D2 (1994-2002)|D3 (2002-)', '0|63|64', '', 11206, '0|63|64', 11205, '50', '', 1),
 (12113, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 66, ' -- Wybierz -- |C5 (2000-2006)|C6 (2006-)', '0|65|66', '', 11206, '0|65|66', 11205, '51', '', 1),
 (12114, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 67, ' -- Wybierz -- |Wszystkie', '0|67', '', 11206, '0|67', 11205, '52', '', 1),
-(12115, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 68, ' -- Wybierz -- |Wszystkie', '0|68', '', 11206, '0|68', 11205, '53', '', 1),
+(12115, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 68, ' -- Wybierz -- |Wszystkie', '0|68', '', 11206, '0|68', 11205, '53', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (12116, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 69, ' -- Wybierz -- |Wszystkie', '0|69', '', 11206, '0|69', 11205, '54', '', 1),
 (12117, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 70, ' -- Wybierz -- |Wszystkie', '0|70', '', 11206, '0|70', 11205, '55', '', 1),
 (12118, 'Wersja', 1114, 4, 2, 0, 8, 3, 2, 0, 72, ' -- Wybierz -- |(1996-2003)|(2003-)', '0|71|72', '', 11206, '0|71|72', 11205, '56', '', 1),
@@ -34697,8 +34487,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12448, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 497, ' -- Wybierz -- |Wszystkie', '0|497', '', 11206, '0|497', 11205, '386', '', 1),
 (12449, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 498, ' -- Wybierz -- |Wszystkie', '0|498', '', 11206, '0|498', 11205, '387', '', 1),
 (12450, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 499, ' -- Wybierz -- |Wszystkie', '0|499', '', 11206, '0|499', 11205, '388', '', 1),
-(12451, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 504, ' -- Wybierz -- |II (1980-1986)|III (1986-1989)|IV (1989-1994)|V (1994-1998)|VI (1998-2003)', '0|500|501|502|503|504', '', 11206, '0|500|501|502|503|504', 11205, '389', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(12451, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 504, ' -- Wybierz -- |II (1980-1986)|III (1986-1989)|IV (1989-1994)|V (1994-1998)|VI (1998-2003)', '0|500|501|502|503|504', '', 11206, '0|500|501|502|503|504', 11205, '389', '', 1),
 (12452, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 507, ' -- Wybierz -- |I (1989-1994)|II (1994-1998)|III (1998-2003)', '0|505|506|507', '', 11206, '0|505|506|507', 11205, '390', '', 1),
 (12453, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 508, ' -- Wybierz -- |Wszystkie', '0|508', '', 11206, '0|508', 11205, '391', '', 1),
 (12454, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 509, ' -- Wybierz -- |Wszystkie', '0|509', '', 11206, '0|509', 11205, '392', '', 1),
@@ -34731,7 +34520,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12481, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 540, ' -- Wybierz -- |Wszystkie', '0|540', '', 11206, '0|540', 11205, '419', '', 1),
 (12482, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 541, ' -- Wybierz -- |Wszystkie', '0|541', '', 11206, '0|541', 11205, '420', '', 1),
 (12483, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 542, ' -- Wybierz -- |Wszystkie', '0|542', '', 11206, '0|542', 11205, '421', '', 1),
-(12484, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 543, ' -- Wybierz -- |Wszystkie', '0|543', '', 11206, '0|543', 11205, '422', '', 1),
+(12484, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 543, ' -- Wybierz -- |Wszystkie', '0|543', '', 11206, '0|543', 11205, '422', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (12485, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 544, ' -- Wybierz -- |Wszystkie', '0|544', '', 11206, '0|544', 11205, '423', '', 1),
 (12486, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 545, ' -- Wybierz -- |Wszystkie', '0|545', '', 11206, '0|545', 11205, '424', '', 1),
 (12487, 'Wersja', 1114, 4, 2, 0, 8, 3, 3, 0, 546, ' -- Wybierz -- |Wszystkie', '0|546', '', 11206, '0|546', 11205, '425', '', 1),
@@ -35058,8 +34848,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12808, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1004, ' -- Wybierz -- |Wszystkie', '0|1004', '', 11206, '0|1004', 11205, '746', '', 1),
 (12809, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1005, ' -- Wybierz -- |Wszystkie', '0|1005', '', 11206, '0|1005', 11205, '747', '', 1),
 (12810, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1006, ' -- Wybierz -- |Wszystkie', '0|1006', '', 11206, '0|1006', 11205, '748', '', 1),
-(12811, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1007, ' -- Wybierz -- |Wszystkie', '0|1007', '', 11206, '0|1007', 11205, '749', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(12811, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1007, ' -- Wybierz -- |Wszystkie', '0|1007', '', 11206, '0|1007', 11205, '749', '', 1),
 (12812, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1008, ' -- Wybierz -- |Wszystkie', '0|1008', '', 11206, '0|1008', 11205, '750', '', 1),
 (12813, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1009, ' -- Wybierz -- |Wszystkie', '0|1009', '', 11206, '0|1009', 11205, '751', '', 1),
 (12814, 'Wersja', 1114, 4, 2, 0, 8, 3, 4, 0, 1010, ' -- Wybierz -- |Wszystkie', '0|1010', '', 11206, '0|1010', 11205, '752', '', 1),
@@ -35082,7 +34871,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (12832, 'Model', 629, 4, 2, 0, 8, 3, 2, 0, 82, ' -- Wybierz -- |EB 110|Pozostałe|Veyron', '0|80|81|82', '', 11205, '0|80|81|82', 11204, '9', '', 1),
 (12833, 'Model', 629, 4, 2, 0, 8, 3, 2, 0, 83, ' -- Wybierz -- |Wszystkie', '0|83', '', 11205, '0|83', 11204, '10', '', 1),
 (12834, 'Model', 629, 4, 2, 0, 8, 3, 2, 0, 91, ' -- Wybierz -- |BLS|CTS|DeVille|Eldorado|Escalade|Pozostałe|SRX|STS', '0|84|85|86|87|88|89|90|91', '', 11205, '0|84|85|86|87|88|89|90|91', 11204, '11', '', 1),
-(12835, 'Model', 629, 4, 2, 0, 8, 3, 3, 0, 121, ' -- Wybierz -- |Alero|Astro|Avalanche|Aveo|Blazer|Camaro|Captiva|Cavalier|Corsica|Corvette|Cruze|Epica|Equinox|Evanda|Express|HHR|Impala|Kalos|Lacetti|Lumina|Matiz|Nubira|Pozostałe|Rezzo|Silverado|Spark|Suburban|Tahoe|TrailBlazer|Venture', '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', '', 11205, '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', 11204, '12', '', 1),
+(12835, 'Model', 629, 4, 2, 0, 8, 3, 3, 0, 121, ' -- Wybierz -- |Alero|Astro|Avalanche|Aveo|Blazer|Camaro|Captiva|Cavalier|Corsica|Corvette|Cruze|Epica|Equinox|Evanda|Express|HHR|Impala|Kalos|Lacetti|Lumina|Matiz|Nubira|Pozostałe|Rezzo|Silverado|Spark|Suburban|Tahoe|TrailBlazer|Venture', '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', '', 11205, '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', 11204, '12', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (12836, 'Model', 629, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |300C|300M|Aspen|Concorde|Crossfire|Grand Voyager|Le Baron|Neon|New Yorker|Pacifica|Pozostałe|PT Cruiser|Saratoga|Sebring|Stratus/Cirrus|Town & Country|Vision|Voyager', '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', '', 11205, '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', 11204, '13', '', 1),
 (12837, 'Model', 629, 4, 2, 0, 8, 3, 3, 0, 162, ' -- Wybierz -- |AX|Berlingo|BX|C1|C2|C3|C3 Picasso|C3 Pluriel|C4|C4 Picasso|C5|C6|C8|C-Crosser|CX|Evasion|Pozostałe|Saxo|Xantia|XM|Xsara|Xsara Picasso|ZX', '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', '', 11205, '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', 11204, '14', '', 1),
 (12838, 'Model', 629, 4, 2, 0, 8, 3, 3, 0, 164, ' -- Wybierz -- |Logan|Pozostałe', '0|163|164', '', 11205, '0|163|164', 11204, '15', '', 1),
@@ -35365,8 +35155,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13115, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 274, ' -- Wybierz -- |Wszystkie', '0|274', '', 11206, '0|274', 11205, '222', '', 1),
 (13116, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 277, ' -- Wybierz -- |I (1994-1999)|II (1999-2003)|II FL (2003-)', '0|275|276|277', '', 11206, '0|275|276|277', 11205, '223', '', 1),
 (13117, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 278, ' -- Wybierz -- |Wszystkie', '0|278', '', 11206, '0|278', 11205, '224', '', 1),
-(13118, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 279, ' -- Wybierz -- |Wszystkie', '0|279', '', 11206, '0|279', 11205, '225', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(13118, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 279, ' -- Wybierz -- |Wszystkie', '0|279', '', 11206, '0|279', 11205, '225', '', 1),
 (13119, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 280, ' -- Wybierz -- |Wszystkie', '0|280', '', 11206, '0|280', 11205, '226', '', 1),
 (13120, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 281, ' -- Wybierz -- |Wszystkie', '0|281', '', 11206, '0|281', 11205, '227', '', 1),
 (13121, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 282, ' -- Wybierz -- |Wszystkie', '0|282', '', 11206, '0|282', 11205, '228', '', 1),
@@ -35395,7 +35184,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13144, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 320, ' -- Wybierz -- |Wszystkie', '0|320', '', 11206, '0|320', 11205, '251', '', 1),
 (13145, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 324, ' -- Wybierz -- |Mk1 (1993-1996)|Mk2 (1996-2000)|Mk3 (2000-2006)|Mk4 (2007-)', '0|321|322|323|324', '', 11206, '0|321|322|323|324', 11205, '252', '', 1),
 (13146, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 325, ' -- Wybierz -- |Wszystkie', '0|325', '', 11206, '0|325', 11205, '253', '', 1),
-(13147, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 326, ' -- Wybierz -- |Wszystkie', '0|326', '', 11206, '0|326', 11205, '254', '', 1),
+(13147, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 326, ' -- Wybierz -- |Wszystkie', '0|326', '', 11206, '0|326', 11205, '254', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (13148, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 327, ' -- Wybierz -- |Wszystkie', '0|327', '', 11206, '0|327', 11205, '255', '', 1),
 (13149, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 329, ' -- Wybierz -- |I (1989-1992)|II (1993-1997)', '0|328|329', '', 11206, '0|328|329', 11205, '256', '', 1),
 (13150, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 330, ' -- Wybierz -- |Wszystkie', '0|330', '', 11206, '0|330', 11205, '257', '', 1),
@@ -35730,8 +35520,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13479, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 782, ' -- Wybierz -- |Wszystkie', '0|782', '', 11206, '0|782', 11205, '586', '', 1),
 (13480, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 783, ' -- Wybierz -- |Wszystkie', '0|783', '', 11206, '0|783', 11205, '587', '', 1),
 (13481, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 784, ' -- Wybierz -- |Wszystkie', '0|784', '', 11206, '0|784', 11205, '588', '', 1),
-(13482, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 787, ' -- Wybierz -- |I (1990-1998)|II (1998-)|III (2005-)', '0|785|786|787', '', 11206, '0|785|786|787', 11205, '589', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(13482, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 787, ' -- Wybierz -- |I (1990-1998)|II (1998-)|III (2005-)', '0|785|786|787', '', 11206, '0|785|786|787', 11205, '589', '', 1),
 (13483, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 791, ' -- Wybierz -- |I (1984-1991)|II (1991-1996)|III (1997-2003)|IV (2003-)', '0|788|789|790|791', '', 11206, '0|788|789|790|791', 11205, '590', '', 1),
 (13484, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 792, ' -- Wybierz -- |Wszystkie', '0|792', '', 11206, '0|792', 11205, '591', '', 1),
 (13485, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 793, ' -- Wybierz -- |Wszystkie', '0|793', '', 11206, '0|793', 11205, '592', '', 1),
@@ -35762,7 +35551,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13510, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 825, ' -- Wybierz -- |Wszystkie', '0|825', '', 11206, '0|825', 11205, '617', '', 1),
 (13511, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 826, ' -- Wybierz -- |Wszystkie', '0|826', '', 11206, '0|826', 11205, '618', '', 1),
 (13512, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 827, ' -- Wybierz -- |Wszystkie', '0|827', '', 11206, '0|827', 11205, '619', '', 1),
-(13513, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 828, ' -- Wybierz -- |Wszystkie', '0|828', '', 11206, '0|828', 11205, '620', '', 1),
+(13513, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 828, ' -- Wybierz -- |Wszystkie', '0|828', '', 11206, '0|828', 11205, '620', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (13514, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 829, ' -- Wybierz -- |Wszystkie', '0|829', '', 11206, '0|829', 11205, '621', '', 1),
 (13515, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 830, ' -- Wybierz -- |Wszystkie', '0|830', '', 11206, '0|830', 11205, '622', '', 1),
 (13516, 'Wersja', 629, 4, 2, 0, 8, 3, 3, 0, 831, ' -- Wybierz -- |Wszystkie', '0|831', '', 11206, '0|831', 11205, '623', '', 1),
@@ -36030,8 +35820,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13779, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 70, ' -- Wybierz -- |Wszystkie', '0|70', '', 11206, '0|70', 11205, '55', '', 1),
 (13780, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 72, ' -- Wybierz -- |(1996-2003)|(2003-)', '0|71|72', '', 11206, '0|71|72', 11205, '56', '', 1),
 (13781, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 76, ' -- Wybierz -- |B5 (1995-2001)|B6 (2000-2004)|B7 (2004-2007)|B8 (2007-)', '0|73|74|75|76', '', 11206, '0|73|74|75|76', 11205, '57', '', 1),
-(13782, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 77, ' -- Wybierz -- |Wszystkie', '0|77', '', 11206, '0|77', 11205, '58', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(13782, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 77, ' -- Wybierz -- |Wszystkie', '0|77', '', 11206, '0|77', 11205, '58', '', 1),
 (13783, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 80, ' -- Wybierz -- |C4 (1994-1997)|C5 (1997-2004)|C6 (2004-)', '0|78|79|80', '', 11206, '0|78|79|80', 11205, '59', '', 1),
 (13784, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 82, ' -- Wybierz -- |D2 (1994-2002)|D3 (2002-)', '0|81|82', '', 11206, '0|81|82', 11205, '60', '', 1),
 (13785, 'Wersja', 49236, 4, 2, 0, 8, 3, 2, 0, 84, ' -- Wybierz -- |8J (2006-)|8N (1998-2006)', '0|83|84', '', 11206, '0|83|84', 11205, '61', '', 1),
@@ -36060,7 +35849,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (13808, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 122, ' -- Wybierz -- |Wszystkie', '0|122', '', 11206, '0|122', 11205, '84', '', 1),
 (13809, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 123, ' -- Wybierz -- |Wszystkie', '0|123', '', 11206, '0|123', 11205, '85', '', 1),
 (13810, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 124, ' -- Wybierz -- |Wszystkie', '0|124', '', 11206, '0|124', 11205, '86', '', 1),
-(13811, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 125, ' -- Wybierz -- |Wszystkie', '0|125', '', 11206, '0|125', 11205, '87', '', 1),
+(13811, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 125, ' -- Wybierz -- |Wszystkie', '0|125', '', 11206, '0|125', 11205, '87', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (13812, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 126, ' -- Wybierz -- |Wszystkie', '0|126', '', 11206, '0|126', 11205, '88', '', 1),
 (13813, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 127, ' -- Wybierz -- |Wszystkie', '0|127', '', 11206, '0|127', 11205, '89', '', 1),
 (13814, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 128, ' -- Wybierz -- |Wszystkie', '0|128', '', 11206, '0|128', 11205, '90', '', 1),
@@ -36398,8 +36188,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14146, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 543, ' -- Wybierz -- |Wszystkie', '0|543', '', 11206, '0|543', 11205, '422', '', 1),
 (14147, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 544, ' -- Wybierz -- |Wszystkie', '0|544', '', 11206, '0|544', 11205, '423', '', 1),
 (14148, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 545, ' -- Wybierz -- |Wszystkie', '0|545', '', 11206, '0|545', 11205, '424', '', 1),
-(14149, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 546, ' -- Wybierz -- |Wszystkie', '0|546', '', 11206, '0|546', 11205, '425', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(14149, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 546, ' -- Wybierz -- |Wszystkie', '0|546', '', 11206, '0|546', 11205, '425', '', 1),
 (14150, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 547, ' -- Wybierz -- |Wszystkie', '0|547', '', 11206, '0|547', 11205, '426', '', 1),
 (14151, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 548, ' -- Wybierz -- |Wszystkie', '0|548', '', 11206, '0|548', 11205, '427', '', 1),
 (14152, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 549, ' -- Wybierz -- |Wszystkie', '0|549', '', 11206, '0|549', 11205, '428', '', 1),
@@ -36427,7 +36216,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14174, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 593, ' -- Wybierz -- |Pozostałe|Vaneo|Viano|Vito', '0|590|591|592|593', '', 11206, '0|590|591|592|593', 11205, '450', '', 1),
 (14175, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 594, ' -- Wybierz -- |Wszystkie', '0|594', '', 11206, '0|594', 11205, '451', '', 1),
 (14176, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 595, ' -- Wybierz -- |Wszystkie', '0|595', '', 11206, '0|595', 11205, '452', '', 1),
-(14177, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 596, ' -- Wybierz -- |Wszystkie', '0|596', '', 11206, '0|596', 11205, '453', '', 1),
+(14177, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 596, ' -- Wybierz -- |Wszystkie', '0|596', '', 11206, '0|596', 11205, '453', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (14178, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 597, ' -- Wybierz -- |Wszystkie', '0|597', '', 11206, '0|597', 11205, '454', '', 1),
 (14179, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 598, ' -- Wybierz -- |Wszystkie', '0|598', '', 11206, '0|598', 11205, '455', '', 1),
 (14180, 'Wersja', 49236, 4, 2, 0, 8, 3, 3, 0, 599, ' -- Wybierz -- |Wszystkie', '0|599', '', 11206, '0|599', 11205, '456', '', 1),
@@ -36746,8 +36536,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14494, 'Model', 50863, 4, 2, 0, 8, 3, 2, 0, 82, ' -- Wybierz -- |EB 110|Pozostałe|Veyron', '0|80|81|82', '', 11205, '0|80|81|82', 11204, '9', '', 1),
 (14495, 'Model', 50863, 4, 2, 0, 8, 3, 2, 0, 83, ' -- Wybierz -- |Wszystkie', '0|83', '', 11205, '0|83', 11204, '10', '', 1),
 (14496, 'Model', 50863, 4, 2, 0, 8, 3, 2, 0, 91, ' -- Wybierz -- |BLS|CTS|DeVille|Eldorado|Escalade|Pozostałe|SRX|STS', '0|84|85|86|87|88|89|90|91', '', 11205, '0|84|85|86|87|88|89|90|91', 11204, '11', '', 1),
-(14497, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 121, ' -- Wybierz -- |Alero|Astro|Avalanche|Aveo|Blazer|Camaro|Captiva|Cavalier|Corsica|Corvette|Cruze|Epica|Equinox|Evanda|Express|HHR|Impala|Kalos|Lacetti|Lumina|Matiz|Nubira|Pozostałe|Rezzo|Silverado|Spark|Suburban|Tahoe|TrailBlazer|Venture', '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', '', 11205, '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', 11204, '12', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(14497, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 121, ' -- Wybierz -- |Alero|Astro|Avalanche|Aveo|Blazer|Camaro|Captiva|Cavalier|Corsica|Corvette|Cruze|Epica|Equinox|Evanda|Express|HHR|Impala|Kalos|Lacetti|Lumina|Matiz|Nubira|Pozostałe|Rezzo|Silverado|Spark|Suburban|Tahoe|TrailBlazer|Venture', '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', '', 11205, '0|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121', 11204, '12', '', 1),
 (14498, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |300C|300M|Aspen|Concorde|Crossfire|Grand Voyager|Le Baron|Neon|New Yorker|Pacifica|Pozostałe|PT Cruiser|Saratoga|Sebring|Stratus/Cirrus|Town & Country|Vision|Voyager', '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', '', 11205, '0|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139', 11204, '13', '', 1),
 (14499, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 162, ' -- Wybierz -- |AX|Berlingo|BX|C1|C2|C3|C3 Picasso|C3 Pluriel|C4|C4 Picasso|C5|C6|C8|C-Crosser|CX|Evasion|Pozostałe|Saxo|Xantia|XM|Xsara|Xsara Picasso|ZX', '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', '', 11205, '0|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162', 11204, '14', '', 1),
 (14500, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 164, ' -- Wybierz -- |Logan|Pozostałe', '0|163|164', '', 11205, '0|163|164', 11204, '15', '', 1),
@@ -36760,7 +36549,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14507, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 284, ' -- Wybierz -- |Accord|City|Civic|Concerto|CR-V|CRX|Element|FR-V|HR-V|Integra|Jazz|Legend|Odyssey|Pilot|Pozostałe|Prelude|S2000|Shuttle', '0|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284', '', 11205, '0|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284', 11204, '22', '', 1),
 (14508, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 285, ' -- Wybierz -- |Wszystkie', '0|285', '', 11205, '0|285', 11204, '23', '', 1),
 (14509, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 306, ' -- Wybierz -- |Accent|Atos|Coupe|Elantra|Galloper|Getz|H|i10|i20|i30|ix35|Lantra|Matrix|Pony|Pozostałe|Santa Fe|Sonata|Terracan|Trajet|Tucson|XG', '0|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306', '', 11205, '0|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306', 11204, '24', '', 1),
-(14510, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 314, ' -- Wybierz -- |FX 35|FX 45|FX 50|G35|G37|Pozostałe|Q45|QX56', '0|307|308|309|310|311|312|313|314', '', 11205, '0|307|308|309|310|311|312|313|314', 11204, '25', '', 1),
+(14510, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 314, ' -- Wybierz -- |FX 35|FX 45|FX 50|G35|G37|Pozostałe|Q45|QX56', '0|307|308|309|310|311|312|313|314', '', 11205, '0|307|308|309|310|311|312|313|314', 11204, '25', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (14511, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 317, ' -- Wybierz -- |Campo|Pozostałe|Trooper', '0|315|316|317', '', 11205, '0|315|316|317', 11204, '26', '', 1),
 (14512, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 325, ' -- Wybierz -- |Pozostałe|S-Type|XJ|XJR|XJS|XK|XKR|X-Type', '0|318|319|320|321|322|323|324|325', '', 11205, '0|318|319|320|321|322|323|324|325', 11204, '27', '', 1),
 (14513, 'Model', 50863, 4, 2, 0, 8, 3, 3, 0, 332, ' -- Wybierz -- |Cherokee|Commander|Compass|Grand Cherokee|Liberty|Pozostałe|Wrangler', '0|326|327|328|329|330|331|332', '', 11205, '0|326|327|328|329|330|331|332', 11204, '28', '', 1),
@@ -37055,8 +36845,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14802, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 316, ' -- Wybierz -- |Mk1 (1995-2000)|Mk2 (2000-2005)|Mk3 (2006-)', '0|314|315|316', '', 11206, '0|314|315|316', 11205, '247', '', 1),
 (14803, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 317, ' -- Wybierz -- |Wszystkie', '0|317', '', 11206, '0|317', 11205, '248', '', 1),
 (14804, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 318, ' -- Wybierz -- |Wszystkie', '0|318', '', 11206, '0|318', 11205, '249', '', 1),
-(14805, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 319, ' -- Wybierz -- |Wszystkie', '0|319', '', 11206, '0|319', 11205, '250', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(14805, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 319, ' -- Wybierz -- |Wszystkie', '0|319', '', 11206, '0|319', 11205, '250', '', 1),
 (14806, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 320, ' -- Wybierz -- |Wszystkie', '0|320', '', 11206, '0|320', 11205, '251', '', 1),
 (14807, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 324, ' -- Wybierz -- |Mk1 (1993-1996)|Mk2 (1996-2000)|Mk3 (2000-2006)|Mk4 (2007-)', '0|321|322|323|324', '', 11206, '0|321|322|323|324', 11205, '252', '', 1),
 (14808, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 325, ' -- Wybierz -- |Wszystkie', '0|325', '', 11206, '0|325', 11205, '253', '', 1),
@@ -37086,7 +36875,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (14832, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 365, ' -- Wybierz -- |Wszystkie', '0|365', '', 11206, '0|365', 11205, '277', '', 1),
 (14833, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 366, ' -- Wybierz -- |Wszystkie', '0|366', '', 11206, '0|366', 11205, '278', '', 1),
 (14834, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 367, ' -- Wybierz -- |Wszystkie', '0|367', '', 11206, '0|367', 11205, '279', '', 1),
-(14835, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 368, ' -- Wybierz -- |Wszystkie', '0|368', '', 11206, '0|368', 11205, '280', '', 1),
+(14835, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 368, ' -- Wybierz -- |Wszystkie', '0|368', '', 11206, '0|368', 11205, '280', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (14836, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 369, ' -- Wybierz -- |Wszystkie', '0|369', '', 11206, '0|369', 11205, '281', '', 1),
 (14837, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 370, ' -- Wybierz -- |Wszystkie', '0|370', '', 11206, '0|370', 11205, '282', '', 1),
 (14838, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 371, ' -- Wybierz -- |Wszystkie', '0|371', '', 11206, '0|371', 11205, '283', '', 1),
@@ -37415,8 +37205,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15161, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 814, ' -- Wybierz -- |Wszystkie', '0|814', '', 11206, '0|814', 11205, '606', '', 1),
 (15162, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 815, ' -- Wybierz -- |Wszystkie', '0|815', '', 11206, '0|815', 11205, '607', '', 1),
 (15163, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 816, ' -- Wybierz -- |Wszystkie', '0|816', '', 11206, '0|816', 11205, '608', '', 1),
-(15164, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 817, ' -- Wybierz -- |Wszystkie', '0|817', '', 11206, '0|817', 11205, '609', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(15164, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 817, ' -- Wybierz -- |Wszystkie', '0|817', '', 11206, '0|817', 11205, '609', '', 1),
 (15165, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 818, ' -- Wybierz -- |Wszystkie', '0|818', '', 11206, '0|818', 11205, '610', '', 1),
 (15166, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 819, ' -- Wybierz -- |Wszystkie', '0|819', '', 11206, '0|819', 11205, '611', '', 1),
 (15167, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 820, ' -- Wybierz -- |Wszystkie', '0|820', '', 11206, '0|820', 11205, '612', '', 1),
@@ -37448,7 +37237,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15193, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 847, ' -- Wybierz -- |Wszystkie', '0|847', '', 11206, '0|847', 11205, '638', '', 1),
 (15194, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 850, ' -- Wybierz -- |I (1993-1999)|I FL (1999-2002)|II (2002-)', '0|848|849|850', '', 11206, '0|848|849|850', 11205, '639', '', 1),
 (15195, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 855, ' -- Wybierz -- |I (1985-1993)|II (1993-1999)|II FL (1999-2002)|III (2002-2008)|IV (2008-)', '0|851|852|853|854|855', '', 11206, '0|851|852|853|854|855', 11205, '640', '', 1),
-(15196, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 856, ' -- Wybierz -- |Wszystkie', '0|856', '', 11206, '0|856', 11205, '641', '', 1),
+(15196, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 856, ' -- Wybierz -- |Wszystkie', '0|856', '', 11206, '0|856', 11205, '641', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (15197, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 858, ' -- Wybierz -- |I (1999-2005)|II (2005-)', '0|857|858', '', 11206, '0|857|858', 11205, '642', '', 1),
 (15198, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 859, ' -- Wybierz -- |Wszystkie', '0|859', '', 11206, '0|859', 11205, '643', '', 1),
 (15199, 'Wersja', 50863, 4, 2, 0, 8, 3, 3, 0, 860, ' -- Wybierz -- |Wszystkie', '0|860', '', 11206, '0|860', 11205, '644', '', 1),
@@ -37712,8 +37502,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15458, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 109, ' -- Wybierz -- |E23 (1977-1986)|E32 (1986-1994)|E38 (1994-2001)|E65/66 (2001-2008)|F01 (2008-)', '0|105|106|107|108|109', '', 11206, '0|105|106|107|108|109', 11205, '72', '', 1),
 (15459, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 110, ' -- Wybierz -- |Wszystkie', '0|110', '', 11206, '0|110', 11205, '73', '', 1),
 (15460, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 111, ' -- Wybierz -- |Wszystkie', '0|111', '', 11206, '0|111', 11205, '74', '', 1),
-(15461, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 112, ' -- Wybierz -- |Wszystkie', '0|112', '', 11206, '0|112', 11205, '75', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(15461, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 112, ' -- Wybierz -- |Wszystkie', '0|112', '', 11206, '0|112', 11205, '75', '', 1),
 (15462, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 114, ' -- Wybierz -- |E53 (1999-2006)|E70 (2006-)', '0|113|114', '', 11206, '0|113|114', 11205, '76', '', 1),
 (15463, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 115, ' -- Wybierz -- |Wszystkie', '0|115', '', 11206, '0|115', 11205, '77', '', 1),
 (15464, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 116, ' -- Wybierz -- |Wszystkie', '0|116', '', 11206, '0|116', 11205, '78', '', 1),
@@ -37747,7 +37536,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15492, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 144, ' -- Wybierz -- |Wszystkie', '0|144', '', 11206, '0|144', 11205, '106', '', 1),
 (15493, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 145, ' -- Wybierz -- |Wszystkie', '0|145', '', 11206, '0|145', 11205, '107', '', 1),
 (15494, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 146, ' -- Wybierz -- |Wszystkie', '0|146', '', 11206, '0|146', 11205, '108', '', 1),
-(15495, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 147, ' -- Wybierz -- |Wszystkie', '0|147', '', 11206, '0|147', 11205, '109', '', 1),
+(15495, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 147, ' -- Wybierz -- |Wszystkie', '0|147', '', 11206, '0|147', 11205, '109', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (15496, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 148, ' -- Wybierz -- |Wszystkie', '0|148', '', 11206, '0|148', 11205, '110', '', 1),
 (15497, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 149, ' -- Wybierz -- |Wszystkie', '0|149', '', 11206, '0|149', 11205, '111', '', 1),
 (15498, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 150, ' -- Wybierz -- |Wszystkie', '0|150', '', 11206, '0|150', 11205, '112', '', 1),
@@ -38082,8 +37872,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15827, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 574, ' -- Wybierz -- |W163 (1998-2005)|W164 (2005-)', '0|573|574', '', 11206, '0|573|574', 11205, '441', '', 1),
 (15828, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 575, ' -- Wybierz -- |Wszystkie', '0|575', '', 11206, '0|575', 11205, '442', '', 1),
 (15829, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 576, ' -- Wybierz -- |Wszystkie', '0|576', '', 11206, '0|576', 11205, '443', '', 1),
-(15830, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 581, ' -- Wybierz -- |W116 (1972-1980)|W126 (1980-1993)|W140 (1992-1998)|W220 (1998-2005)|W221 (2005-)', '0|577|578|579|580|581', '', 11206, '0|577|578|579|580|581', 11205, '444', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(15830, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 581, ' -- Wybierz -- |W116 (1972-1980)|W126 (1980-1993)|W140 (1992-1998)|W220 (1998-2005)|W221 (2005-)', '0|577|578|579|580|581', '', 11206, '0|577|578|579|580|581', 11205, '444', '', 1),
 (15831, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 583, ' -- Wybierz -- |R170 (1996-2004)|R171 (2004-)', '0|582|583', '', 11206, '0|582|583', 11205, '445', '', 1),
 (15832, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 586, ' -- Wybierz -- |R107 (1972-1989)|R129 (1989-2000)|R230 (2001-)', '0|584|585|586', '', 11206, '0|584|585|586', 11205, '446', '', 1),
 (15833, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 587, ' -- Wybierz -- |Wszystkie', '0|587', '', 11206, '0|587', 11205, '447', '', 1),
@@ -38112,7 +37901,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (15856, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 637, ' -- Wybierz -- |Wszystkie', '0|637', '', 11206, '0|637', 11205, '470', '', 1),
 (15857, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 638, ' -- Wybierz -- |Wszystkie', '0|638', '', 11206, '0|638', 11205, '471', '', 1),
 (15858, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 639, ' -- Wybierz -- |Wszystkie', '0|639', '', 11206, '0|639', 11205, '472', '', 1),
-(15859, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 640, ' -- Wybierz -- |Wszystkie', '0|640', '', 11206, '0|640', 11205, '473', '', 1),
+(15859, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 640, ' -- Wybierz -- |Wszystkie', '0|640', '', 11206, '0|640', 11205, '473', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (15860, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 641, ' -- Wybierz -- |Wszystkie', '0|641', '', 11206, '0|641', 11205, '474', '', 1),
 (15861, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 642, ' -- Wybierz -- |Wszystkie', '0|642', '', 11206, '0|642', 11205, '475', '', 1),
 (15862, 'Wersja', 8683, 4, 2, 0, 8, 3, 3, 0, 643, ' -- Wybierz -- |Wszystkie', '0|643', '', 11206, '0|643', 11205, '476', '', 1),
@@ -38420,8 +38210,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16165, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 202, ' -- Wybierz -- |Avenger|Caliber|Caravan|Challenger|Charger|Dakota|Diplomat|Durango|Grand Caravan|Intrepid|Journey|Magnum|Neon|Nitro|Pozostałe|RAM|Stealth|Stratus|Viper', '0|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202', '', 11205, '0|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202', 11204, '18', '', 1),
 (16166, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 203, ' -- Wybierz -- |Wszystkie', '0|203', '', 11205, '0|203', 11204, '19', '', 1),
 (16167, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 235, ' -- Wybierz -- |125p|126|500|Albea|Barchetta|Brava|Bravo|Cinquecento|Coupe|Croma|Doblo|Grande Punto|Idea|Linea|Marea|Multipla|Palio|Panda|Pozostałe|Punto|Punto Evo|Qubo|Scudo|Sedici|Seicento|Siena|Stilo|Strada|Tempra|Tipo|Ulysse|Uno', '0|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235', '', 11205, '0|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235', 11204, '20', '', 1),
-(16168, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 266, ' -- Wybierz -- |Aerostar|C-MAX|Cougar|Escape|Escort|Expedition|Explorer|Fiesta|Focus|Focus C-Max|Fusion|Galaxy|Granada|KA|Kuga|Maverick|Mondeo|Mustang|Orion|Pozostałe|Probe|Puma|Ranger|Scorpio|Seria F|Sierra|S-MAX|Taunus|Taurus|Transit|Windstar', '0|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266', '', 11205, '0|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266', 11204, '21', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(16168, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 266, ' -- Wybierz -- |Aerostar|C-MAX|Cougar|Escape|Escort|Expedition|Explorer|Fiesta|Focus|Focus C-Max|Fusion|Galaxy|Granada|KA|Kuga|Maverick|Mondeo|Mustang|Orion|Pozostałe|Probe|Puma|Ranger|Scorpio|Seria F|Sierra|S-MAX|Taunus|Taurus|Transit|Windstar', '0|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266', '', 11205, '0|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266', 11204, '21', '', 1),
 (16169, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 284, ' -- Wybierz -- |Accord|City|Civic|Concerto|CR-V|CRX|Element|FR-V|HR-V|Integra|Jazz|Legend|Odyssey|Pilot|Pozostałe|Prelude|S2000|Shuttle', '0|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284', '', 11205, '0|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284', 11204, '22', '', 1),
 (16170, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 285, ' -- Wybierz -- |Wszystkie', '0|285', '', 11205, '0|285', 11204, '23', '', 1),
 (16171, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 306, ' -- Wybierz -- |Accent|Atos|Coupe|Elantra|Galloper|Getz|H|i10|i20|i30|ix35|Lantra|Matrix|Pony|Pozostałe|Santa Fe|Sonata|Terracan|Trajet|Tucson|XG', '0|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306', '', 11205, '0|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306', 11204, '24', '', 1),
@@ -38438,7 +38227,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16182, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |110|2107|Niva|Pozostałe|Samara', '0|380|381|382|383|384', '', 11205, '0|380|381|382|383|384', 11204, '35', '', 1),
 (16183, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 385, ' -- Wybierz -- |Wszystkie', '0|385', '', 11205, '0|385', 11204, '36', '', 1),
 (16184, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 410, ' -- Wybierz -- |121|2|3|323|323F|5|6|626|929|B-seria|BT-50|CX-7|CX-9|Demio|Millenia|MPV|MX-3|MX-5|MX-6|Pozostałe|Premacy|RX-7|RX-8|Tribute|Xedos', '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', '', 11205, '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', 11204, '37', '', 1),
-(16185, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 450, ' -- Wybierz -- |180|190|200|219|220|240|250|260|278|280|290|300|320|350|380|400|416|420|450|500|560|600|A-klasa|B-klasa|C-klasa|CLK-klasa|CL-klasa|CLS-klasa|E-klasa|G-klasa|ML-klasa|Pozostałe|R-klasa|S-klasa|SLK-klasa|SL-klasa|Sprinter|Viano|Vito|V-klasa', '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', '', 11205, '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', 11204, '38', '', 1),
+(16185, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 450, ' -- Wybierz -- |180|190|200|219|220|240|250|260|278|280|290|300|320|350|380|400|416|420|450|500|560|600|A-klasa|B-klasa|C-klasa|CLK-klasa|CL-klasa|CLS-klasa|E-klasa|G-klasa|ML-klasa|Pozostałe|R-klasa|S-klasa|SLK-klasa|SL-klasa|Sprinter|Viano|Vito|V-klasa', '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', '', 11205, '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', 11204, '38', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (16186, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 451, ' -- Wybierz -- |Wszystkie', '0|451', '', 11205, '0|451', 11204, '39', '', 1),
 (16187, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 452, ' -- Wybierz -- |Wszystkie', '0|452', '', 11205, '0|452', 11204, '40', '', 1),
 (16188, 'Model', 18689, 4, 2, 0, 8, 3, 3, 0, 458, ' -- Wybierz -- |1000|1300|Cooper|Cooper S|ONE|Pozostałe', '0|453|454|455|456|457|458', '', 11205, '0|453|454|455|456|457|458', 11204, '41', '', 1),
@@ -38741,8 +38531,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16485, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 350, ' -- Wybierz -- |Wszystkie', '0|350', '', 11206, '0|350', 11205, '268', '', 1),
 (16486, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 357, ' -- Wybierz -- |II (1979-1983)|III (1983-1987)|IV (1987-1991)|V (1991-1995)|VI (1995-2000)|VII (2001-2005)|VIII (2006-)', '0|351|352|353|354|355|356|357', '', 11206, '0|351|352|353|354|355|356|357', 11205, '269', '', 1),
 (16487, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 358, ' -- Wybierz -- |Wszystkie', '0|358', '', 11206, '0|358', 11205, '270', '', 1),
-(16488, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 359, ' -- Wybierz -- |Wszystkie', '0|359', '', 11206, '0|359', 11205, '271', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(16488, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 359, ' -- Wybierz -- |Wszystkie', '0|359', '', 11206, '0|359', 11205, '271', '', 1),
 (16489, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 360, ' -- Wybierz -- |Wszystkie', '0|360', '', 11206, '0|360', 11205, '272', '', 1),
 (16490, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 361, ' -- Wybierz -- |Wszystkie', '0|361', '', 11206, '0|361', 11205, '273', '', 1),
 (16491, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 362, ' -- Wybierz -- |Wszystkie', '0|362', '', 11206, '0|362', 11205, '274', '', 1),
@@ -38778,7 +38567,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16521, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 392, ' -- Wybierz -- |Wszystkie', '0|392', '', 11206, '0|392', 11205, '304', '', 1),
 (16522, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 393, ' -- Wybierz -- |Wszystkie', '0|393', '', 11206, '0|393', 11205, '305', '', 1),
 (16523, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 394, ' -- Wybierz -- |Wszystkie', '0|394', '', 11206, '0|394', 11205, '306', '', 1),
-(16524, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 395, ' -- Wybierz -- |Wszystkie', '0|395', '', 11206, '0|395', 11205, '307', '', 1),
+(16524, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 395, ' -- Wybierz -- |Wszystkie', '0|395', '', 11206, '0|395', 11205, '307', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (16525, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 396, ' -- Wybierz -- |Wszystkie', '0|396', '', 11206, '0|396', 11205, '308', '', 1),
 (16526, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 397, ' -- Wybierz -- |Wszystkie', '0|397', '', 11206, '0|397', 11205, '309', '', 1),
 (16527, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 398, ' -- Wybierz -- |Wszystkie', '0|398', '', 11206, '0|398', 11205, '310', '', 1),
@@ -39105,8 +38895,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16848, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 839, ' -- Wybierz -- |Wszystkie', '0|839', '', 11206, '0|839', 11205, '631', '', 1),
 (16849, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 840, ' -- Wybierz -- |Wszystkie', '0|840', '', 11206, '0|840', 11205, '632', '', 1),
 (16850, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 842, ' -- Wybierz -- |I (1998-2002)|II (2003-)', '0|841|842', '', 11206, '0|841|842', 11205, '633', '', 1),
-(16851, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 843, ' -- Wybierz -- |Wszystkie', '0|843', '', 11206, '0|843', 11205, '634', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(16851, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 843, ' -- Wybierz -- |Wszystkie', '0|843', '', 11206, '0|843', 11205, '634', '', 1),
 (16852, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 844, ' -- Wybierz -- |Wszystkie', '0|844', '', 11206, '0|844', 11205, '635', '', 1),
 (16853, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 845, ' -- Wybierz -- |Wszystkie', '0|845', '', 11206, '0|845', 11205, '636', '', 1),
 (16854, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 846, ' -- Wybierz -- |Wszystkie', '0|846', '', 11206, '0|846', 11205, '637', '', 1),
@@ -39139,7 +38928,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (16881, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 884, ' -- Wybierz -- |Wszystkie', '0|884', '', 11206, '0|884', 11205, '664', '', 1),
 (16882, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 885, ' -- Wybierz -- |Wszystkie', '0|885', '', 11206, '0|885', 11205, '665', '', 1),
 (16883, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 886, ' -- Wybierz -- |Wszystkie', '0|886', '', 11206, '0|886', 11205, '666', '', 1),
-(16884, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 887, ' -- Wybierz -- |Wszystkie', '0|887', '', 11206, '0|887', 11205, '667', '', 1),
+(16884, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 887, ' -- Wybierz -- |Wszystkie', '0|887', '', 11206, '0|887', 11205, '667', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (16885, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 890, ' -- Wybierz -- |GC (1992-2001)|GD (2001-2007)|GH (2007-)', '0|888|889|890', '', 11206, '0|888|889|890', 11205, '668', '', 1),
 (16886, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 891, ' -- Wybierz -- |Wszystkie', '0|891', '', 11206, '0|891', 11205, '669', '', 1),
 (16887, 'Wersja', 18689, 4, 2, 0, 8, 3, 3, 0, 892, ' -- Wybierz -- |Wszystkie', '0|892', '', 11206, '0|892', 11205, '670', '', 1),
@@ -39403,8 +39193,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17146, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 136, ' -- Wybierz -- |Wszystkie', '0|136', '', 11206, '0|136', 11205, '98', '', 1),
 (17147, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 137, ' -- Wybierz -- |Wszystkie', '0|137', '', 11206, '0|137', 11205, '99', '', 1),
 (17148, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 138, ' -- Wybierz -- |Wszystkie', '0|138', '', 11206, '0|138', 11205, '100', '', 1),
-(17149, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |Wszystkie', '0|139', '', 11206, '0|139', 11205, '101', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(17149, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 139, ' -- Wybierz -- |Wszystkie', '0|139', '', 11206, '0|139', 11205, '101', '', 1),
 (17150, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 140, ' -- Wybierz -- |Wszystkie', '0|140', '', 11206, '0|140', 11205, '102', '', 1),
 (17151, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 141, ' -- Wybierz -- |Wszystkie', '0|141', '', 11206, '0|141', 11205, '103', '', 1),
 (17152, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 142, ' -- Wybierz -- |Wszystkie', '0|142', '', 11206, '0|142', 11205, '104', '', 1),
@@ -39438,7 +39227,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17180, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 172, ' -- Wybierz -- |Wszystkie', '0|172', '', 11206, '0|172', 11205, '132', '', 1),
 (17181, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 173, ' -- Wybierz -- |Wszystkie', '0|173', '', 11206, '0|173', 11205, '133', '', 1),
 (17182, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 174, ' -- Wybierz -- |Wszystkie', '0|174', '', 11206, '0|174', 11205, '134', '', 1),
-(17183, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 175, ' -- Wybierz -- |Wszystkie', '0|175', '', 11206, '0|175', 11205, '135', '', 1),
+(17183, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 175, ' -- Wybierz -- |Wszystkie', '0|175', '', 11206, '0|175', 11205, '135', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (17184, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 176, ' -- Wybierz -- |Wszystkie', '0|176', '', 11206, '0|176', 11205, '136', '', 1),
 (17185, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 178, ' -- Wybierz -- |I (1995-2005)|II (2001-)', '0|177|178', '', 11206, '0|177|178', 11205, '137', '', 1),
 (17186, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 179, ' -- Wybierz -- |Wszystkie', '0|179', '', 11206, '0|179', 11205, '138', '', 1),
@@ -39768,8 +39558,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17510, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 614, ' -- Wybierz -- |I (1990-1995)|II (1995-1999)|III (1999-2006)|IV (2006-)', '0|611|612|613|614', '', 11206, '0|611|612|613|614', 11205, '462', '', 1),
 (17511, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 619, ' -- Wybierz -- |II (1980-1984)|III (1984-1987)|IV (1987-1992)|V (1992-1996)|VI (1996-)', '0|615|616|617|618|619', '', 11206, '0|615|616|617|618|619', 11205, '463', '', 1),
 (17512, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 620, ' -- Wybierz -- |Wszystkie', '0|620', '', 11206, '0|620', 11205, '464', '', 1),
-(17513, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 621, ' -- Wybierz -- |Wszystkie', '0|621', '', 11206, '0|621', 11205, '465', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(17513, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 621, ' -- Wybierz -- |Wszystkie', '0|621', '', 11206, '0|621', 11205, '465', '', 1),
 (17514, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 630, ' -- Wybierz -- |II (1983-1984)|III (1984-1988)|IV (1988-1992)|IX (2005-2008)|V (1992-2000)|VI (2000-2001)|VII (2001-2003)|VIII (2003-2005)|X (2008-)', '0|622|623|624|625|626|627|628|629|630', '', 11206, '0|622|623|624|625|626|627|628|629|630', 11205, '466', '', 1),
 (17515, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 631, ' -- Wybierz -- |Wszystkie', '0|631', '', 11206, '0|631', 11205, '467', '', 1),
 (17516, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 632, ' -- Wybierz -- |Wszystkie', '0|632', '', 11206, '0|632', 11205, '468', '', 1),
@@ -39802,7 +39591,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17543, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 669, ' -- Wybierz -- |P10/W10 (1990-1998)|P11 (1996-2000)|P12 (2001-)', '0|667|668|669', '', 11206, '0|667|668|669', 11205, '495', '', 1),
 (17544, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 670, ' -- Wybierz -- |Wszystkie', '0|670', '', 11206, '0|670', 11205, '496', '', 1),
 (17545, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 671, ' -- Wybierz -- |Wszystkie', '0|671', '', 11206, '0|671', 11205, '497', '', 1),
-(17546, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 672, ' -- Wybierz -- |Wszystkie', '0|672', '', 11206, '0|672', 11205, '498', '', 1),
+(17546, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 672, ' -- Wybierz -- |Wszystkie', '0|672', '', 11206, '0|672', 11205, '498', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (17547, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 673, ' -- Wybierz -- |Wszystkie', '0|673', '', 11206, '0|673', 11205, '499', '', 1),
 (17548, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 676, ' -- Wybierz -- |B11 (1982-1987)|B12/N13 (1986-1991)|B13/N14 (1990-1995)', '0|674|675|676', '', 11206, '0|674|675|676', 11205, '500', '', 1),
 (17549, 'Wersja', 4094, 4, 2, 0, 8, 3, 3, 0, 678, ' -- Wybierz -- |I (1987-1995)|II (1995-)', '0|677|678', '', 11206, '0|677|678', 11205, '501', '', 1),
@@ -40099,8 +39889,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17841, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 366, ' -- Wybierz -- |Defender|Discovery|Freelander|Pozostałe|Range Rover', '0|362|363|364|365|366', '', 11205, '0|362|363|364|365|366', 11204, '32', '', 1),
 (17842, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 374, ' -- Wybierz -- |Pozostałe|Seria ES|Seria GS|Seria IS|Seria LS|Seria LX|Seria RX|Seria SC', '0|367|368|369|370|371|372|373|374', '', 11205, '0|367|368|369|370|371|372|373|374', 11204, '33', '', 1),
 (17843, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 379, ' -- Wybierz -- |Continental|Mark VIII|Navigator|Pozostałe|Town Car', '0|375|376|377|378|379', '', 11205, '0|375|376|377|378|379', 11204, '34', '', 1),
-(17844, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |110|2107|Niva|Pozostałe|Samara', '0|380|381|382|383|384', '', 11205, '0|380|381|382|383|384', 11204, '35', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(17844, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 384, ' -- Wybierz -- |110|2107|Niva|Pozostałe|Samara', '0|380|381|382|383|384', '', 11205, '0|380|381|382|383|384', 11204, '35', '', 1),
 (17845, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 385, ' -- Wybierz -- |Wszystkie', '0|385', '', 11205, '0|385', 11204, '36', '', 1),
 (17846, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 410, ' -- Wybierz -- |121|2|3|323|323F|5|6|626|929|B-seria|BT-50|CX-7|CX-9|Demio|Millenia|MPV|MX-3|MX-5|MX-6|Pozostałe|Premacy|RX-7|RX-8|Tribute|Xedos', '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', '', 11205, '0|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410', 11204, '37', '', 1),
 (17847, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 450, ' -- Wybierz -- |180|190|200|219|220|240|250|260|278|280|290|300|320|350|380|400|416|420|450|500|560|600|A-klasa|B-klasa|C-klasa|CLK-klasa|CL-klasa|CLS-klasa|E-klasa|G-klasa|ML-klasa|Pozostałe|R-klasa|S-klasa|SLK-klasa|SL-klasa|Sprinter|Viano|Vito|V-klasa', '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', '', 11205, '0|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450', 11204, '38', '', 1),
@@ -40117,7 +39906,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (17858, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 572, ' -- Wybierz -- |Fiero|Firebird|Grand Am|Grand Prix|Pozostałe|Sunfire|Trans Sport|Vibe', '0|565|566|567|568|569|570|571|572', '', 11205, '0|565|566|567|568|569|570|571|572', 11204, '49', '', 1),
 (17859, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 580, ' -- Wybierz -- |911|924|928|944|Boxster|Cayenne|Cayman|Pozostałe', '0|573|574|575|576|577|578|579|580', '', 11205, '0|573|574|575|576|577|578|579|580', 11204, '50', '', 1),
 (17860, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 582, ' -- Wybierz -- |Amerykańskie|Pozostałe', '0|581|582', '', 11205, '0|581|582', 11204, '51', '', 1),
-(17861, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 583, ' -- Wybierz -- |Wszystkie', '0|583', '', 11205, '0|583', 11204, '52', '', 1),
+(17861, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 583, ' -- Wybierz -- |Wszystkie', '0|583', '', 11205, '0|583', 11204, '52', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (17862, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 602, ' -- Wybierz -- |19|21|25|5|Avantime|Clio|Espace|Grand Espace|Grand Scenic|Kangoo|Laguna|Megane|Modus|Pozostałe|Safrane|Scenic|Thalia|Twingo|Vel Satis', '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', '', 11205, '0|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602', 11204, '53', '', 1),
 (17863, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 603, ' -- Wybierz -- |Wszystkie', '0|603', '', 11205, '0|603', 11204, '54', '', 1),
 (17864, 'Model', 623, 4, 2, 0, 8, 3, 3, 0, 630, ' -- Wybierz -- |111|114|115|200|213|214|216|218|220|25|400|414|416|418|420|45|600|618|620|623|75|800|820|823|825|827|Pozostałe', '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', '', 11205, '0|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630', 11204, '55', '', 1),
@@ -40438,8 +40228,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18179, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 388, ' -- Wybierz -- |Wszystkie', '0|388', '', 11206, '0|388', 11205, '300', '', 1),
 (18180, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 389, ' -- Wybierz -- |Wszystkie', '0|389', '', 11206, '0|389', 11205, '301', '', 1),
 (18181, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 390, ' -- Wybierz -- |Wszystkie', '0|390', '', 11206, '0|390', 11205, '302', '', 1),
-(18182, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 391, ' -- Wybierz -- |Wszystkie', '0|391', '', 11206, '0|391', 11205, '303', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(18182, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 391, ' -- Wybierz -- |Wszystkie', '0|391', '', 11206, '0|391', 11205, '303', '', 1),
 (18183, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 392, ' -- Wybierz -- |Wszystkie', '0|392', '', 11206, '0|392', 11205, '304', '', 1),
 (18184, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 393, ' -- Wybierz -- |Wszystkie', '0|393', '', 11206, '0|393', 11205, '305', '', 1),
 (18185, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 394, ' -- Wybierz -- |Wszystkie', '0|394', '', 11206, '0|394', 11205, '306', '', 1),
@@ -40475,7 +40264,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18215, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 427, ' -- Wybierz -- |Wszystkie', '0|427', '', 11206, '0|427', 11205, '336', '', 1),
 (18216, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 428, ' -- Wybierz -- |Wszystkie', '0|428', '', 11206, '0|428', 11205, '337', '', 1),
 (18217, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 429, ' -- Wybierz -- |Wszystkie', '0|429', '', 11206, '0|429', 11205, '338', '', 1),
-(18218, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 430, ' -- Wybierz -- |Wszystkie', '0|430', '', 11206, '0|430', 11205, '339', '', 1),
+(18218, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 430, ' -- Wybierz -- |Wszystkie', '0|430', '', 11206, '0|430', 11205, '339', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (18219, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 431, ' -- Wybierz -- |Wszystkie', '0|431', '', 11206, '0|431', 11205, '340', '', 1),
 (18220, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 432, ' -- Wybierz -- |Wszystkie', '0|432', '', 11206, '0|432', 11205, '341', '', 1),
 (18221, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 433, ' -- Wybierz -- |Wszystkie', '0|433', '', 11206, '0|433', 11205, '342', '', 1),
@@ -40805,8 +40595,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18545, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 886, ' -- Wybierz -- |Wszystkie', '0|886', '', 11206, '0|886', 11205, '666', '', 1),
 (18546, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 887, ' -- Wybierz -- |Wszystkie', '0|887', '', 11206, '0|887', 11205, '667', '', 1),
 (18547, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 890, ' -- Wybierz -- |GC (1992-2001)|GD (2001-2007)|GH (2007-)', '0|888|889|890', '', 11206, '0|888|889|890', 11205, '668', '', 1),
-(18548, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 891, ' -- Wybierz -- |Wszystkie', '0|891', '', 11206, '0|891', 11205, '669', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(18548, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 891, ' -- Wybierz -- |Wszystkie', '0|891', '', 11206, '0|891', 11205, '669', '', 1),
 (18549, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 892, ' -- Wybierz -- |Wszystkie', '0|892', '', 11206, '0|892', 11205, '670', '', 1),
 (18550, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 893, ' -- Wybierz -- |Wszystkie', '0|893', '', 11206, '0|893', 11205, '671', '', 1),
 (18551, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 894, ' -- Wybierz -- |Wszystkie', '0|894', '', 11206, '0|894', 11205, '672', '', 1),
@@ -40840,7 +40629,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18579, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 934, ' -- Wybierz -- |Wszystkie', '0|934', '', 11206, '0|934', 11205, '700', '', 1),
 (18580, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 935, ' -- Wybierz -- |Wszystkie', '0|935', '', 11206, '0|935', 11205, '701', '', 1),
 (18581, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 936, ' -- Wybierz -- |Wszystkie', '0|936', '', 11206, '0|936', 11205, '702', '', 1),
-(18582, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 937, ' -- Wybierz -- |Wszystkie', '0|937', '', 11206, '0|937', 11205, '703', '', 1),
+(18582, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 937, ' -- Wybierz -- |Wszystkie', '0|937', '', 11206, '0|937', 11205, '703', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (18583, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 938, ' -- Wybierz -- |Wszystkie', '0|938', '', 11206, '0|938', 11205, '704', '', 1),
 (18584, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 939, ' -- Wybierz -- |Wszystkie', '0|939', '', 11206, '0|939', 11205, '705', '', 1),
 (18585, 'Wersja', 623, 4, 2, 0, 8, 3, 3, 0, 940, ' -- Wybierz -- |Wszystkie', '0|940', '', 11206, '0|940', 11205, '706', '', 1),
@@ -41106,8 +40896,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18846, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 176, ' -- Wybierz -- |Wszystkie', '0|176', '', 11206, '0|176', 11205, '136', '', 1),
 (18847, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 178, ' -- Wybierz -- |I (1995-2005)|II (2001-)', '0|177|178', '', 11206, '0|177|178', 11205, '137', '', 1),
 (18848, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 179, ' -- Wybierz -- |Wszystkie', '0|179', '', 11206, '0|179', 11205, '138', '', 1),
-(18849, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 182, ' -- Wybierz -- |I (1984-1995)|II (1995-2000)|III (2001-)', '0|180|181|182', '', 11206, '0|180|181|182', 11205, '139', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(18849, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 182, ' -- Wybierz -- |I (1984-1995)|II (1995-2000)|III (2001-)', '0|180|181|182', '', 11206, '0|180|181|182', 11205, '139', '', 1),
 (18850, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 183, ' -- Wybierz -- |Wszystkie', '0|183', '', 11206, '0|183', 11205, '140', '', 1),
 (18851, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 185, ' -- Wybierz -- |I (1997-2002)|II (2002- )', '0|184|185', '', 11206, '0|184|185', 11205, '141', '', 1),
 (18852, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 186, ' -- Wybierz -- |Wszystkie', '0|186', '', 11206, '0|186', 11205, '142', '', 1),
@@ -41142,7 +40931,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (18881, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 218, ' -- Wybierz -- |Wszystkie', '0|218', '', 11206, '0|218', 11205, '171', '', 1),
 (18882, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 219, ' -- Wybierz -- |Wszystkie', '0|219', '', 11206, '0|219', 11205, '172', '', 1),
 (18883, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 220, ' -- Wybierz -- |Wszystkie', '0|220', '', 11206, '0|220', 11205, '173', '', 1),
-(18884, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 221, ' -- Wybierz -- |Wszystkie', '0|221', '', 11206, '0|221', 11205, '174', '', 1),
+(18884, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 221, ' -- Wybierz -- |Wszystkie', '0|221', '', 11206, '0|221', 11205, '174', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (18885, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 222, ' -- Wybierz -- |Wszystkie', '0|222', '', 11206, '0|222', 11205, '175', '', 1),
 (18886, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 223, ' -- Wybierz -- |Wszystkie', '0|223', '', 11206, '0|223', 11205, '176', '', 1),
 (18887, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 224, ' -- Wybierz -- |Wszystkie', '0|224', '', 11206, '0|224', 11205, '177', '', 1),
@@ -41470,8 +41260,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19209, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 673, ' -- Wybierz -- |Wszystkie', '0|673', '', 11206, '0|673', 11205, '499', '', 1),
 (19210, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 676, ' -- Wybierz -- |B11 (1982-1987)|B12/N13 (1986-1991)|B13/N14 (1990-1995)', '0|674|675|676', '', 11206, '0|674|675|676', 11205, '500', '', 1),
 (19211, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 678, ' -- Wybierz -- |I (1987-1995)|II (1995-)', '0|677|678', '', 11206, '0|677|678', 11205, '501', '', 1),
-(19212, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 679, ' -- Wybierz -- |Wszystkie', '0|679', '', 11206, '0|679', 11205, '502', '', 1);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(19212, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 679, ' -- Wybierz -- |Wszystkie', '0|679', '', 11206, '0|679', 11205, '502', '', 1),
 (19213, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 680, ' -- Wybierz -- |Wszystkie', '0|680', '', 11206, '0|680', 11205, '503', '', 1),
 (19214, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 681, ' -- Wybierz -- |Wszystkie', '0|681', '', 11206, '0|681', 11205, '504', '', 1),
 (19215, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 682, ' -- Wybierz -- |Wszystkie', '0|682', '', 11206, '0|682', 11205, '505', '', 1),
@@ -41504,7 +41293,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19242, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 725, ' -- Wybierz -- |Wszystkie', '0|725', '', 11206, '0|725', 11205, '532', '', 1),
 (19243, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 726, ' -- Wybierz -- |Wszystkie', '0|726', '', 11206, '0|726', 11205, '533', '', 1),
 (19244, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 727, ' -- Wybierz -- |Wszystkie', '0|727', '', 11206, '0|727', 11205, '534', '', 1),
-(19245, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 728, ' -- Wybierz -- |Wszystkie', '0|728', '', 11206, '0|728', 11205, '535', '', 1),
+(19245, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 728, ' -- Wybierz -- |Wszystkie', '0|728', '', 11206, '0|728', 11205, '535', '', 1);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (19246, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 729, ' -- Wybierz -- |Wszystkie', '0|729', '', 11206, '0|729', 11205, '536', '', 1),
 (19247, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 730, ' -- Wybierz -- |Wszystkie', '0|730', '', 11206, '0|730', 11205, '537', '', 1),
 (19248, 'Wersja', 8695, 4, 2, 0, 8, 0, 3, 0, 732, ' -- Wybierz -- |I (2001-2005)|II (2005-)', '0|731|732', '', 11206, '0|731|732', 11205, '538', '', 1),
@@ -41809,8 +41599,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19559, 'Stan', 14736, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19560, 'Stan', 14737, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19561, 'Stan', 14742, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19562, 'Stan', 14743, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19563, 'Stan', 14744, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19564, 'Stan', 15044, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19565, 'Stan', 15045, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19566, 'Stan', 15047, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -41849,8 +41637,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19624, 'Stan', 8806, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19625, 'Stan', 9061, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19626, 'Stan', 13462, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19627, 'Stan', 14174, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(19627, 'Stan', 14174, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19628, 'Stan', 14202, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19629, 'Stan', 14204, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19630, 'Stan', 14213, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -41889,7 +41676,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19674, 'Stan', 67442, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19675, 'Stan', 67444, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19676, 'Stan', 67448, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19677, 'Stan', 67449, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
+(19677, 'Stan', 67449, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (19678, 'Stan', 67450, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19679, 'Stan', 67451, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19680, 'Stan', 67452, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -41919,9 +41707,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19707, 'Stan', 97918, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19708, 'Stan', 97922, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19710, 'Stan', 98845, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19720, 'Stan', 16057, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19721, 'Stan', 16058, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19722, 'Stan', 16059, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19743, 'Stan', 16083, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19744, 'Stan', 16084, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19752, 'Stan', 16418, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -41942,11 +41727,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19832, 'Stan', 16518, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19833, 'Stan', 16519, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19834, 'Stan', 16520, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19835, 'Stan', 16522, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19836, 'Stan', 16523, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19837, 'Stan', 16524, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19838, 'Stan', 16525, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19839, 'Stan', 16526, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19840, 'Stan', 16528, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19841, 'Stan', 16529, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19842, 'Stan', 16653, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42000,12 +41780,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (19916, 'Stan', 27693, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19917, 'Stan', 27699, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19919, 'Stan', 27940, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19920, 'Stan', 45611, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19921, 'Stan', 45612, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19923, 'Stan', 45614, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19924, 'Stan', 45615, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19925, 'Stan', 45616, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(19926, 'Stan', 45617, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19927, 'Stan', 49143, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19928, 'Stan', 49183, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (19929, 'Stan', 49236, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42253,25 +42027,11 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20200, 'Stan', 13416, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20201, 'Stan', 13417, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20202, 'Stan', 13419, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20203, 'Stan', 13420, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(20203, 'Stan', 13420, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20204, 'Stan', 13421, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20205, 'Stan', 13423, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20206, 'Stan', 13424, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20207, 'Stan', 13425, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20208, 'Stan', 13427, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20209, 'Stan', 13432, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20210, 'Stan', 13433, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20211, 'Stan', 13434, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20212, 'Stan', 13435, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20214, 'Stan', 13437, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20215, 'Stan', 13438, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20216, 'Stan', 13439, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20217, 'Stan', 13440, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20218, 'Stan', 13441, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20219, 'Stan', 13442, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20220, 'Stan', 13443, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20221, 'Stan', 13444, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20222, 'Stan', 13448, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20223, 'Stan', 13456, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20224, 'Stan', 13458, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42320,7 +42080,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20287, 'Stan', 13555, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20288, 'Stan', 13556, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20289, 'Stan', 13557, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20290, 'Stan', 13558, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
+(20290, 'Stan', 13558, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (20291, 'Stan', 13559, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20292, 'Stan', 13561, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20295, 'Stan', 13564, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42358,20 +42119,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20333, 'Stan', 13650, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20336, 'Stan', 13654, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20337, 'Stan', 13655, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20342, 'Stan', 13662, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20343, 'Stan', 13667, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20344, 'Stan', 13669, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20345, 'Stan', 13671, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20346, 'Stan', 13672, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20347, 'Stan', 13673, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20348, 'Stan', 13674, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20357, 'Stan', 13683, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20358, 'Stan', 13684, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20359, 'Stan', 13685, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20360, 'Stan', 13686, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20361, 'Stan', 13687, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20362, 'Stan', 13688, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20363, 'Stan', 13689, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20364, 'Stan', 1520, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20365, 'Stan', 1536, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20366, 'Stan', 16799, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42605,7 +42352,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20594, 'Stan', 79455, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20595, 'Stan', 91459, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20596, 'Stan', 11764, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(20597, 'Stan', 13690, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20619, 'Stan', 14060, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20620, 'Stan', 14061, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20623, 'Stan', 6089, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -42656,8 +42402,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20669, 'Stan', 90032, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20670, 'Stan', 90033, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (20671, 'Opakowanie', 175, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0),
-(20672, 'Opakowanie', 20602, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(20672, 'Opakowanie', 20602, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0),
 (20673, 'Opakowanie', 89054, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0),
 (20674, 'Opakowanie', 98713, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0),
 (20675, 'Opakowanie', 100075, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |w folii|bez folii', '0|1|2', '', 11324, '0|1|2', 0, '0', '', 0),
@@ -42683,7 +42428,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20695, 'Uszkodzony', 64576, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20696, 'Uszkodzony', 64577, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20697, 'Uszkodzony', 64588, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
-(20699, 'Uszkodzony', 1520, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
+(20699, 'Uszkodzony', 1520, 4, 2, 0, 8, 3, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20700, 'Uszkodzony', 1536, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20701, 'Uszkodzony', 16799, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20702, 'Uszkodzony', 16800, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
@@ -42738,7 +42483,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (20751, 'Uszkodzony', 16868, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20752, 'Uszkodzony', 16869, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20753, 'Uszkodzony', 16872, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
-(20754, 'Uszkodzony', 16873, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
+(20754, 'Uszkodzony', 16873, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (20755, 'Uszkodzony', 16874, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20756, 'Uszkodzony', 16875, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
 (20757, 'Uszkodzony', 16876, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Tak|Nie', '0|1|2', '', 11325, '0|1|2', 0, '0', '', 0),
@@ -42990,8 +42736,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21014, 'Okładka', 26109, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
 (21015, 'Okładka', 99927, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
 (21016, 'Okładka', 99928, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
-(21017, 'Okładka', 1067, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(21017, 'Okładka', 1067, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
 (21018, 'Okładka', 26081, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
 (21019, 'Okładka', 26251, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
 (21020, 'Okładka', 26193, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |miękka|twarda|miękka z obwolutą|twarda z obwolutą', '0|1|2|3|4', '', 75, '0|1|2|3|4', 0, '0', '', 0),
@@ -43050,12 +42795,12 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21073, 'Stan', 13454, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21074, 'Stan', 13518, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21075, 'Stan', 13613, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(21076, 'Stan', 16067, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
+(21076, 'Stan', 16067, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (21077, 'Stan', 99178, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21078, 'Stan', 19742, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21079, 'Stan', 13614, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21080, 'Stan', 13449, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(21081, 'Stan', 13670, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21082, 'Stan', 13465, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21083, 'Stan', 99392, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21084, 'Stan', 13451, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -43069,7 +42814,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21092, 'Stan', 13641, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21093, 'Stan', 102858, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21094, 'Stan', 13412, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(21095, 'Stan', 13428, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21096, 'Stan', 27837, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21097, 'Stan', 19738, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21098, 'Stan', 18013, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -43103,7 +42847,6 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21127, 'Stan', 16495, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21128, 'Stan', 27687, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21129, 'Stan', 18007, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
-(21130, 'Stan', 13429, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21131, 'Stan', 13625, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21132, 'Stan', 99482, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21133, 'Stan', 88297, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -43319,8 +43062,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21360, 'Marka', 110146, 4, 2, 0, 8, 0, 3, 0, 171, ' -- Wybierz -- |Body Sculpture|Cybex|DWS Sport|Finnlo|Hammer|Hertz|HES|HMS|Hop-Sport|Kelton|Kettler|Marbo-Sport|Masiv|Olymp|Technogym|Thorn|York Fitness|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|171', '', 9360, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|171', 0, '0', '', 0),
 (21361, 'Marka', 110133, 4, 2, 0, 8, 0, 3, 0, 151, ' -- Wybierz -- |Abarqs|BH Fitness|Body Sculpture|Finnlo|Hertz|HMS|Hop-Sport|inSPORTline|Kettler|Life Fitness|Precor|Reebok|Spokey|Technogym|York Fitness|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', '', 9361, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', 0, '0', '', 0),
 (21362, 'Marka', 110147, 4, 2, 0, 8, 0, 3, 0, 172, ' -- Wybierz -- |Allright|Axer Sport|Body Sculpture|Body-Solid|Everlast|Fitplay|HMS|Hop-Sport|inSPORTline|Kelton|Kettler|Marbo-Sport|Masiv|Meteor|Platinum Fitness|Spokey|Tuff Stuff|Magnus|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|171|172', '', 9362, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|171|172', 0, '0', '', 0),
-(21363, 'Marka', 110153, 4, 2, 0, 8, 0, 3, 0, 212, ' -- Wybierz -- |Adidas|Body Sculpture|Body-Solid|DWS Sport|Fitplay|Hertz|Hop-Sport|inSPORTline|Kelton|Kettler|Magnus|Marbo-Sport|Meteor|Movit|Platinum Fitness|Spokey|Stayer Sport|Thorn|Titan|Tytan Sport|York Fitness|Masiv|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', '', 9363, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', 0, '0', '', 0);
-INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
+(21363, 'Marka', 110153, 4, 2, 0, 8, 0, 3, 0, 212, ' -- Wybierz -- |Adidas|Body Sculpture|Body-Solid|DWS Sport|Fitplay|Hertz|Hop-Sport|inSPORTline|Kelton|Kettler|Magnus|Marbo-Sport|Meteor|Movit|Platinum Fitness|Spokey|Stayer Sport|Thorn|Titan|Tytan Sport|York Fitness|Masiv|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', '', 9363, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', 0, '0', '', 0),
 (21364, 'Marka', 110148, 4, 2, 0, 8, 0, 3, 0, 212, ' -- Wybierz -- |Adidas|Body Sculpture|Body-Solid|DWS Sport|Fitplay|Hertz|Hop-Sport|inSPORTline|Kelton|Kettler|Magnus|Marbo-Sport|Meteor|Movit|Platinum Fitness|Spokey|Stayer Sport|Thorn|Titan|Tytan Sport|York Fitness|Masiv|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', '', 9363, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|160|170|180|190|200|210|211|212', 0, '0', '', 0),
 (21365, 'Marka', 110150, 4, 2, 0, 8, 0, 3, 0, 151, ' -- Wybierz -- |Abarqs|Body Sculpture|HMS|Hop-Sport|Kelton|Kettler|Magnus|Marbo-Sport|Marcy|Masiv|Spokey|Thorn|Tytan Sport|Xtreme|York Fitness|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', '', 9364, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', 0, '0', '', 0),
 (21366, 'Marka', 110138, 4, 2, 0, 8, 0, 3, 0, 151, ' -- Wybierz -- |Axer Sport|BH Fitness|Body Sculpture|Finnlo|Hammer|HMS|Hop-Sport|inSPORTline|Kettler|Life Fitness|Reebok|Spokey|Technogym|Thorn|York Fitness|Inna marka', '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', '', 9365, '0|10|20|30|40|50|60|70|80|90|100|110|120|130|140|150|151', 0, '0', '', 0),
@@ -43360,7 +43102,7 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21400, 'Rodzaj', 110176, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Dziecięce|Damskie|Męskie|Uniwersalne', '0|1|2|3|4', '', 15509, '0|1|2|3|4', 0, '0', '', 0),
 (21401, 'Rodzaj', 110179, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Dziecięce|Damskie|Męskie|Uniwersalne', '0|1|2|3|4', '', 15509, '0|1|2|3|4', 0, '0', '', 0),
 (21402, 'Rodzaj', 102861, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Na czterech kółkach|Na dwóch kółkach|Z wysuwanym uchwytem |Z zamkiem szyfrowym|Z zamkiem TSA', '0|1|2|3|4|5', '', 15528, '0|1|2|3|4|5', 0, '0', '', 0),
-(21403, 'Rodzaj', 110243, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Sortowana|Niesortowana', '0|1|2', '', 15508, '0|1|2', 0, '0', '', 0),
+(21403, 'Rodzaj', 110243, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Sortowana|Niesortowana', '0|1|2', '', 15508, '0|1|2', 0, '0', '', 0),
 (21404, 'Długość spodni', 110259, 6, 2, 0, 8, 0, 1, 0, 7, 'krótkie|długie|3/4', '1|2|4', '', 15589, '1|2|4', 0, '0', '', 6),
 (21405, 'Rodzaj spodni', 110259, 6, 2, 0, 8, 0, 1, 0, 3, 'ogrodniczki|do pasa', '1|2', '', 15590, '1|2', 0, '0', '', 6),
 (21406, 'Przeznaczenie', 110259, 6, 2, 0, 8, 0, 3, 0, 127, 'robocze|kucharskie|medyczne|kelnerskie|antyprzepięciowe (dla pilarza)|trudnopalne (dla spawacza)|inne', '1|2|4|8|16|32|64', '', 15591, '1|2|4|8|16|32|64', 0, '0', '', 6),
@@ -43376,7 +43118,8 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21416, 'Wyposażenie apteczki', 110254, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |z wyposażeniem|bez wyposażenia', '0|1|2', '', 15600, '0|1|2', 0, '0', '', 0),
 (21417, 'Rodzaj ', 110256, 6, 2, 0, 8, 0, 2, 0, 15, 'spawalnicze|przeciwodpryskowe|inne|rozjaśniające', '1|2|4|8', '', 15601, '1|2|4|8', 0, '0', '', 6),
 (21418, 'Rodzaj maski', 110257, 6, 2, 0, 8, 0, 1, 0, 7, 'spawalnicza|przeciwpyłowa|inna', '1|2|4', '', 15602, '1|2|4', 0, '0', '', 6),
-(21420, 'Rodzaj rzęs', 93074, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Do przedłużania|W kępkach|W paskach', '0|1|2|3', '', 15604, '0|1|2|3', 0, '0', '', 0),
+(21420, 'Rodzaj rzęs', 93074, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Do przedłużania|W kępkach|W paskach', '0|1|2|3', '', 15604, '0|1|2|3', 0, '0', '', 0);
+INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-cat`, `sell-form-type`, `sell-form-res-type`, `sell-form-def-value`, `sell-form-opt`, `sell-form-pos`, `sell-form-length`, `sell-min-value`, `sell-max-value`, `sell-form-desc`, `sell-form-opts-values`, `sell-form-field-desc`, `sell-form-param-id`, `sell-form-param-values`, `sell-form-parent-id`, `sell-form-parent-value`, `sell-form-unit`, `sell-form-options`) VALUES
 (21421, 'Płeć', 110260, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |kobiety|mężczyźni|unisex', '0|1|2|3', '', 15605, '0|1|2|3', 0, '0', '', 0),
 (21422, 'Płeć', 110290, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |kobiety|mężczyźni|unisex', '0|1|2|3', '', 15605, '0|1|2|3', 0, '0', '', 0),
 (21423, 'Płeć', 110262, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |kobiety|mężczyźni|unisex', '0|1|2|3', '', 15605, '0|1|2|3', 0, '0', '', 0),
@@ -43437,17 +43180,17 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21479, 'Materiał', 110774, 6, 2, 0, 1, 0, 2, 0, 31, 'Białe złoto|Żółte złoto|Różowe złoto|Srebro|Inny', '1|2|4|8|16', '', 15755, '1|2|4|8|16', 0, '0', '', 6),
 (21480, 'Dodatkowe funkcje', 110698, 6, 2, 0, 8, 20, 3, 0, 127, 'Tryb slave|Blokada siły błysku|Bracketing|Wbudowany dyfuzor|Automatyczny zoom|Manualny zoom|Tryb TTL', '1|2|4|8|16|32|64', '', 15756, '1|8|16|32|64|256|512', 0, '0', '', 0),
 (21481, 'Kamień', 110774, 6, 2, 0, 8, 1, 3, 0, 511, 'Brylant|Cyrkonia|Rubin|Szafir|Bez kamienia|Inny|Szmaragd|Topaz|Perła', '1|2|4|8|16|32|64|128|256', '', 15757, '1|2|4|8|16|32|64|128|256', 0, '0', '', 2),
-(21482, 'Rodzaj', 15963, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Bezprzewodowe|Przewodowe', '0|1|2', '', 15788, '0|1|2', 0, '0', '', 0),
-(21484, 'Zastosowanie', 26815, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Do betonu i kamienia|Do drewna|Do metalu|Pozostałe', '0|1|2|3|4', '', 15790, '0|1|2|3|4', 0, '0', '', 0),
-(21485, 'Zastosowanie', 26816, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Do betonu|Do drewna|Do metalu|Pozostałe', '0|1|2|3|4', '', 15791, '0|1|2|3|4', 0, '0', '', 0),
-(21486, 'Rodzaj', 26831, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Imbusowe|Nasadowe|Oczkowe|Płaskie|Płasko-oczkowe|Zestawy|Pozostałe', '0|1|2|3|4|5|6|7', '', 15792, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21482, 'Rodzaj', 15963, 4, 2, 0, 1, 0, 1, 0, 2, ' -- Wybierz -- |Bezprzewodowe|Przewodowe', '0|1|2', '', 15788, '0|1|2', 0, '0', '', 0),
+(21484, 'Zastosowanie', 26815, 4, 2, 0, 1, 0, 1, 0, 4, ' -- Wybierz -- |Do betonu i kamienia|Do drewna|Do metalu|Pozostałe', '0|1|2|3|4', '', 15790, '0|1|2|3|4', 0, '0', '', 0),
+(21485, 'Zastosowanie', 26816, 4, 2, 0, 1, 0, 1, 0, 4, ' -- Wybierz -- |Do betonu|Do drewna|Do metalu|Pozostałe', '0|1|2|3|4', '', 15791, '0|1|2|3|4', 0, '0', '', 0),
+(21486, 'Rodzaj', 26831, 4, 2, 0, 1, 0, 1, 0, 7, ' -- Wybierz -- |Imbusowe|Nasadowe|Oczkowe|Płaskie|Płasko-oczkowe|Zestawy|Pozostałe', '0|1|2|3|4|5|6|7', '', 15792, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (21487, 'Rozmiar ', 110260, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |XS|S|M|L|XL|XXL|3XL|4XL|5XL|większy niż 5XL|niestandardowy|uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 15793, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (21488, 'Rozmiar ', 110261, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |XS|S|M|L|XL|XXL|3XL|4XL|5XL|większy niż 5XL|niestandardowy|uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 15793, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (21489, 'Rozmiar ', 110265, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |XS|S|M|L|XL|XXL|3XL|4XL|5XL|większy niż 5XL|niestandardowy|uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 15793, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (21490, 'Rozmiar ', 110259, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |XS|S|M|L|XL|XXL|3XL|4XL|5XL|większy niż 5XL|niestandardowy|uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 15793, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (21491, 'Rozmiar ', 110262, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |XS|S|M|L|XL|XXL|3XL|4XL|5XL|większy niż 5XL|niestandardowy|uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 15793, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
 (21492, 'Rozmiar obuwia', 110290, 6, 2, 0, 8, 0, 5, 0, 32767, 'mniejsze niż 39|39|40|41|42|43|44|45|46|47|48|49|50|większe niż 50|uniwersalne', '1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192|16384', '', 15794, '1|2|4|8|16|32|64|128|256|512|1024|2048|4096|8192|16384', 0, '0', '', 6),
-(21493, 'Kształt', 20257, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Owal|Prostokąt|Inny|Koło|Kwadrat', '0|1|2|3|4|5', '', 15795, '0|1|2|3|4|5', 0, '0', '', 0),
+(21493, 'Kształt', 20257, 4, 2, 0, 1, 0, 1, 0, 5, ' -- Wybierz -- |Owal|Prostokąt|Inny|Koło|Kwadrat', '0|1|2|3|4|5', '', 15795, '0|1|2|3|4|5', 0, '0', '', 0),
 (21494, 'Długość [cm]', 20257, 1, 2, 0, 8, 5, 5, 1, 10000, '', '', '', 2977, '', 0, '0', '', 0),
 (21495, 'Szerokość [cm]', 20257, 1, 2, 0, 8, 5, 5, 1, 10000, '', '', '', 2978, '', 0, '0', '', 0),
 (21496, 'Typ', 4077, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |skórzana sportowa|skórzana turystyczna|tekstylna krótka|tekstylna długa|inna', '0|1|2|3|4|5', '', 15749, '0|1|2|3|4|5', 0, '0', '', 0),
@@ -43487,9 +43230,9 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21534, 'Wymiar w talii [cm]', 111634, 1, 2, 0, 8, 4, 0, 0, 200, '', '', '', 11106, '', 0, '0', 'см', 8),
 (21535, 'Wymiar w biodrach [cm]', 111634, 1, 2, 0, 8, 5, 0, 0, 400, '', '', '', 11107, '', 0, '0', 'см', 8),
 (21538, 'Fason', 78019, 4, 2, 0, 8, 8, 1, 0, 4, ' -- Wybierz -- |Figi|Szorty|Stringi', '0|1|2|4', '', 15866, '0|1|2|4', 0, '0', '', 0),
-(21539, 'Rodzaj', 46132, 4, 2, 0, 8, 1, 1, 0, 2, ' -- Wybierz -- |Tradycyjne|Z hydromasażem', '0|1|2', '', 15868, '0|1|2', 0, '0', '', 0),
+(21539, 'Rodzaj wanny', 46132, 4, 2, 0, 1, 1, 1, 0, 2, ' -- Wybierz -- |Tradycyjne|Z hydromasażem', '0|1|2', '', 15868, '0|1|2', 0, '0', '', 0),
 (21540, 'Rodzaj', 13621, 4, 2, 0, 1, 1, 1, 0, 3, ' -- Wybierz -- |Męskie|Damskie|Dziecięce', '0|1|2|3', '', 15869, '0|1|2|3', 0, '0', '', 0),
-(21542, 'Rodzaj bramy', 46144, 4, 2, 0, 8, 1, 1, 0, 4, ' -- Wybierz -- |Garażowe|Przesuwne|Skrzydłowe|Inne', '0|1|2|3|4', '', 15929, '0|1|2|3|4', 0, '0', '', 0),
+(21542, 'Rodzaj bramy', 46144, 4, 2, 0, 1, 1, 1, 0, 4, ' -- Wybierz -- |Garażowe|Przesuwne|Skrzydłowe|Inne', '0|1|2|3|4', '', 15929, '0|1|2|3|4', 0, '0', '', 0),
 (21543, 'Klasa', 111775, 6, 2, 0, 8, 0, 2, 0, 63, '1|2|3|4|5|6', '1|2|4|8|16|32', '', 2877, '1|2|4|8|16|32', 0, '0', '', 0),
 (21544, 'Klasa', 111776, 6, 2, 0, 8, 0, 1, 0, 7, '1|2|3', '1|2|4', '', 2878, '1|2|4', 0, '0', '', 0),
 (21545, 'Klasa', 111777, 6, 2, 0, 8, 1, 2, 0, 15, '1|2|3|4', '1|2|4|8', '', 2879, '1|2|4|8', 0, '0', '', 0),
@@ -43497,14 +43240,15 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21547, 'Seria', 84735, 4, 2, 0, 8, 1, 2, 0, 10, ' -- Wybierz -- |Barbie|Hannah Montana|Hello Kitty|High School Musical|Kubuś Puchatek|Spiderman|Star Wars|The Dog|Inne|Monster High', '0|1|2|3|4|5|6|7|8|9|10', '', 15864, '0|1|2|3|4|5|6|7|8|9|10', 0, '0', '', 0),
 (21548, 'Typ', 4075, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |zamknięty sportowy|zamknięty turystyczny|szczękowy|otwarty|inny', '0|1|2|3|4|5', '', 15865, '0|1|2|3|4|5', 0, '0', '', 0),
 (21549, 'Klasa', 111774, 6, 2, 0, 8, 0, 1, 0, 7, '1|2|3', '1|2|4', '', 15948, '1|2|4', 0, '0', '', 0),
-(21550, 'Rodzaj', 111868, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Elektryczne|Gazowe|Olejowe|Wodne|Pozostałe', '0|1|2|3|4|5', '', 15988, '0|1|2|3|4|5', 0, '0', '', 0),
-(21551, 'Rodzaj', 111876, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Wentylatory kanałowe|Wentylatory łazienkowe|Wentylatory sufitowe i ścienne|Inne', '0|1|2|3|4', '', 15989, '0|1|2|3|4', 0, '0', '', 0),
-(21552, 'Rodzaj wkładu', 111883, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Wkład powietrzny|Wkład wodny|Inny', '0|1|2|3', '', 15990, '0|1|2|3', 0, '0', '', 0),
-(21553, 'Rodzaj napędu', 46146, 4, 2, 0, 8, 1, 1, 0, 4, ' -- Wybierz -- |Do bram garażowych|Do bram przesuwnych|Do bram skrzydłowych|Inny', '0|1|2|3|4', '', 15991, '0|1|2|3|4', 0, '0', '', 0),
+(21550, 'Rodzaj', 111868, 4, 2, 0, 1, 0, 1, 0, 5, ' -- Wybierz -- |Elektryczne|Gazowe|Olejowe|Wodne|Pozostałe', '0|1|2|3|4|5', '', 15988, '0|1|2|3|4|5', 0, '0', '', 0),
+(21551, 'Rodzaj', 111876, 4, 2, 0, 1, 0, 1, 0, 4, ' -- Wybierz -- |Wentylatory kanałowe|Wentylatory łazienkowe|Wentylatory sufitowe i ścienne|Inne', '0|1|2|3|4', '', 15989, '0|1|2|3|4', 0, '0', '', 0),
+(21552, 'Rodzaj wkładu', 111883, 4, 2, 0, 1, 0, 1, 0, 3, ' -- Wybierz -- |Wkład powietrzny|Wkład wodny|Inny', '0|1|2|3', '', 15990, '0|1|2|3', 0, '0', '', 0),
+(21553, 'Rodzaj napędu', 46146, 4, 2, 0, 1, 1, 1, 0, 4, ' -- Wybierz -- |Do bram garażowych|Do bram przesuwnych|Do bram skrzydłowych|Inny', '0|1|2|3|4', '', 15991, '0|1|2|3|4', 0, '0', '', 0),
 (21554, 'Producent', 84735, 4, 2, 0, 1, 1, 1, 0, 6, ' -- Wybierz -- |Diddl|Hama|Herlitz|Nici|Inny', '0|1|2|3|4|6', '', 15992, '0|1|2|3|4|6', 0, '0', '', 0),
 (21555, 'Producent', 50678, 4, 2, 0, 1, 1, 2, 0, 15, ' -- Wybierz -- |Adidas|Diddl|Gabol|Hama|Herlitz|JanSport|Nici|Nike|Paso|Puma|Reebok|Inny|Lego|Campus', '0|1|2|3|4|5|6|7|8|9|10|11|13|14|15', '', 15993, '0|1|2|3|4|5|6|7|8|9|10|11|13|14|15', 0, '0', '', 0),
 (21556, 'Rodzaj', 4077, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |męska|damska|dziecięca', '0|1|2|3', '', 15994, '0|1|2|3', 0, '0', '', 0),
 (21557, 'Rodzaj baterii', 46128, 4, 2, 0, 1, 1, 1, 0, 6, ' -- Wybierz -- |Baterie bidetowe|Baterie natryskowe|Baterie umywalkowe|Baterie wannowe|Komplety baterii|Pozostałe', '0|1|2|3|4|5|6', '', 15996, '0|1|2|3|4|5|6', 0, '0', '', 0),
+(21558, 'Typ biustonosza', 75994, 4, 2, 0, 1, 0, 1, 0, 9, ' -- Wybierz -- |Bardotka|Bezszwowy|Miękki|Modelujący|Push-up|Silikonowy|Sportowy|Usztywniany|Inny typ', '0|1|2|3|4|5|6|7|8|9', '', 15997, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
 (21559, 'Producent', 4075, 4, 2, 0, 8, 0, 2, 0, 28, ' -- Wybierz -- |AGV|Airoh|Arai|Bell|Box|Caberg|Davida|Fox|G-MAC|HJC|KBC|Lazer|MAX|Nitro|Nolan|Oakley|Schuberth|Scorpion|Shark|Shoei|Simpson|Smith|Spada|Suomy|THH|Viper|Wulfsport|Inny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28', '', 15998, '0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28', 0, '0', '', 0),
 (21560, 'Stan', 111636, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
 (21561, 'Stan', 111637, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Nowy|Używany', '0|1|2', '', 11323, '0|1|2', 0, '0', '', 0),
@@ -43514,8 +43258,29 @@ INSERT INTO `ps_allegro_field` (`sell-form-id`, `sell-form-title`, `sell-form-ca
 (21565, 'Rozmiar', 4077, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |XS|S|M|L|XL|XXL|inny', '0|1|2|3|4|5|6|7', '', 16029, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (21566, 'Rozmiar', 19072, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |XS|S|M|L|XL|XXL|inny', '0|1|2|3|4|5|6|7', '', 16029, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
 (21567, 'Rozmiar', 4075, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |XS|S|M|L|XL|XXL|inny', '0|1|2|3|4|5|6|7', '', 16029, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
-(21568, 'Rozmiar', 19073, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |XS|S|M|L|XL|XXL|inny', '0|1|2|3|4|5|6|7', '', 16029, '0|1|2|3|4|5|6|7', 0, '0', '', 0);
-COMMIT;
+(21568, 'Rozmiar', 19073, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |XS|S|M|L|XL|XXL|inny', '0|1|2|3|4|5|6|7', '', 16029, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21569, 'Rozmiar', 112112, 4, 2, 0, 8, 1, 2, 0, 13, ' -- Wybierz -- |XXS|XS|S|M|L|XL|XXL|3XL|4XL|5XL|Większy niż 5XL|Niestandardowy|Uniwersalny', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 54, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
+(21570, 'Rodzaj', 112112, 6, 2, 0, 8, 2, 2, 0, 31, 'Bezszwowe|Koronkowe|Korygujące|Satynowe|Bawełniane', '1|2|4|8|16', '', 1818, '1|2|4|8|16', 0, '0', '', 0),
+(21571, 'Fason', 112112, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Figi|Stringi|Szorty|Inny fason', '0|1|2|3|4', '', 16048, '0|1|2|3|4', 0, '0', '', 0),
+(21572, 'Producent', 82603, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Arti|Baby Mix|Chicco|Inne|Fisher Price', '0|1|2|3|4|5', '', 16049, '0|1|2|3|4|5', 0, '0', '', 0),
+(21573, 'Producent', 82597, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Arti|Baby Mix|Chicco|Inne|Fisher Price', '0|1|2|3|4|5', '', 16049, '0|1|2|3|4|5', 0, '0', '', 0),
+(21574, 'Producent', 82599, 4, 2, 0, 8, 0, 2, 0, 12, ' -- Wybierz -- |4Baby|Arti|Baby Design|BabyOno|Chicco|Coneco|Dippo|Drewex|Fisher Price|Graco|Klupś|Inne', '0|1|2|3|4|5|6|7|8|9|10|11|12', '', 16050, '0|1|2|3|4|5|6|7|8|9|10|11|12', 0, '0', '', 0),
+(21575, 'Producent', 82680, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Arti|Bright Starts|Chicco|Fisher Price|Inne|Graco|Tako', '0|1|2|3|4|5|6|7', '', 16051, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21576, 'Producent', 82596, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Arti|Bright Starts|Chicco|Fisher Price|Inne|Graco|Tako', '0|1|2|3|4|5|6|7', '', 16051, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21577, 'Producent', 82600, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Angelcare|BabyOno|Fisher Price|Philips, Avent|Inne', '0|1|2|3|4|5', '', 16052, '0|1|2|3|4|5', 0, '0', '', 0),
+(21578, 'Producent', 83684, 4, 2, 0, 8, 0, 1, 0, 9, ' -- Wybierz -- |BabyBjorn|Bondolino|Chicco|Infant|Infantino|Mei Tai|Red Castle|Womar|Inne', '0|1|2|3|4|5|6|7|8|9', '', 16053, '0|1|2|3|4|5|6|7|8|9', 0, '0', '', 0),
+(21579, 'Typ', 83685, 4, 2, 0, 8, 0, 1, 0, 6, ' -- Wybierz -- |Kieszonka-pouch|Kołyska|Kółkowa|Wiązana elastyczna|Wiązana tkana|Inne', '0|1|2|3|4|5|6', '', 16054, '0|1|2|3|4|5|6', 0, '0', '', 0),
+(21581, 'Fason', 76005, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Podkolanówki|Skarpetki|Stopki|Zakolanówki', '0|1|2|3|4', '', 16057, '0|1|2|3|4', 0, '0', '', 0),
+(21585, 'Egipt', 63548, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Hurghada i Safaga|Marsa El Alam i El Quseir|Sharm El Shaikh|Taba|Pozostałe', '0|1|2|3|4|5', '', 16064, '0|1|2|3|4|5', 0, '0', '', 0),
+(21586, 'Tunezja', 79531, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Djerba|Hammamet|Mahdia|Monastir|Port El Kantaoui|Sousse|Pozostałe', '0|1|2|3|4|5|6|7', '', 16065, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21587, 'Antyle Holenderskie', 79556, 4, 2, 0, 8, 0, 1, 0, 4, ' -- Wybierz -- |Aruba|Bonaire|Curacao|Pozostałe', '0|1|2|3|4', '', 16066, '0|1|2|3|4', 0, '0', '', 0),
+(21588, 'Dominikana', 79564, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Puerto Plata|Punta Cana|Pozostałe', '0|1|2|3', '', 16067, '0|1|2|3', 0, '0', '', 0),
+(21589, 'Wenezuela - Wyspy', 79578, 4, 2, 0, 8, 0, 1, 0, 2, ' -- Wybierz -- |Margarita i Coche|Pozostałe', '0|1|2', '', 16068, '0|1|2', 0, '0', '', 0),
+(21590, 'Tajlandia', 79600, 4, 2, 0, 8, 0, 1, 0, 5, ' -- Wybierz -- |Bangkok|Pattaya|Phi Phi Island|Phuket|Pozostałe', '0|1|2|3|4|5', '', 16069, '0|1|2|3|4|5', 0, '0', '', 0),
+(21591, 'Turcja', 79606, 4, 2, 0, 8, 0, 2, 0, 13, ' -- Wybierz -- |Alanya|Antalya|Belek|Bodrum|Fethiye|Kemer|Kusadasi|Marmaris|Oludeniz|Riwiera Egejska|Riwiera Turecka|Side|Pozostałe', '0|1|2|3|4|5|6|7|8|9|10|11|12|13', '', 16070, '0|1|2|3|4|5|6|7|8|9|10|11|12|13', 0, '0', '', 0),
+(21592, 'Austria', 79622, 4, 2, 0, 8, 0, 1, 0, 7, ' -- Wybierz -- |Karyntia|Kitzbuhel|Tyrol|Zell am See - Kaprun|Ziemia Salzburska|Zillertal|Pozostałe', '0|1|2|3|4|5|6|7', '', 16071, '0|1|2|3|4|5|6|7', 0, '0', '', 0),
+(21593, 'Bułgaria', 79631, 4, 2, 0, 8, 0, 1, 0, 3, ' -- Wybierz -- |Słoneczny Brzeg|Złote Piaski|Pozostałe', '0|1|2|3', '', 16072, '0|1|2|3', 0, '0', '', 0),
+(21594, 'Włochy', 79673, 4, 2, 0, 8, 0, 2, 0, 10, ' -- Wybierz -- |Kalabria|Livigno|Madonna Di Campiglio|Południowy Tyrol|Sardynia|Sycylia|Val Di Fassa|Val Di Fiemme|Val Di Sole|Pozostałe', '0|1|2|3|4|5|6|7|8|9|10', '', 16073, '0|1|2|3|4|5|6|7|8|9|10', 0, '0', '', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

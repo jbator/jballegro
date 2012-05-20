@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 set_time_limit(36000);
 // TODO: lepsze zarzadzanie sciezkami
 require_once getcwd() . '/../modules/jballegro/Allegrowebapi.class.php';
+require_once getcwd() . '/../modules/jballegro/Jb.class.php';
 
 /**
  * Klasa do obsługi modułu integracji z allegro w sklepie internetowym Prestashop
@@ -185,8 +186,8 @@ class Jballegro extends Module
         $tmp = array();
         foreach ($fields as $fkey => $fval)
         {
-
-            $tmp[$fkey] = $fval;
+            $key = $fval['sell-form-id'];
+            $tmp[$key] = $fval;
             $i++;
             if ($i == 50)
                 break;
@@ -249,7 +250,7 @@ class Jballegro extends Module
         //miejscowosc
         $fid11 = Tools::getValue('fid_11');
         if (!$fid11)
-            $this->errors['fid_11'] = "Podaj miejscowość ()";
+            $this->errors['fid_11'] = "Podaj miejscowość";
 
         //zdjecie 1
         if (isset($_FILES["fid_16"]) && $_FILES["fid_16"]["error"] > 0)
@@ -323,62 +324,63 @@ class Jballegro extends Module
         $f = $field;
         $f['fid'] = 1;
         $f['fvalue-string'] = Tools::getValue('fid_1');
-        $fields[] = $f;
+        $fields[1] = $f;
         $title = Tools::getValue('fid_1');
 
         // kategoria - int
+        $cat_id = Tools::getValue('fid_2');
         $f = $field;
         $f['fid'] = 2;
-        $f['fvalue-int'] = Tools::getValue('fid_2');
-        $fields[] = $f;
+        $f['fvalue-int'] = $cat_id;
+        $fields[2] = $f;
 
         // czas trwania
         $f = $field;
         $f['fid'] = 4;
         $f['fvalue-int'] = Tools::getValue('fid_4');
-        $fields[] = $f;
+        $fields[4] = $f;
 
         // liczba sztuk
         $f = $field;
         $f['fid'] = 5;
         $f['fvalue-int'] = Tools::getValue('fid_5');
-        $fields[] = $f;
+        $fields[5] = $f;
 
         // cena kup teraz
         $f = $field;
         $f['fid'] = 8;
         $f['fvalue-float'] = Tools::getValue('fid_8');
-        $fields[] = $f;
+        $fields[8] = $f;
 
         // kraj
         $f = $field;
         $f['fid'] = 9;
         $f['fvalue-int'] = Tools::getValue('fid_9');
-        $fields[] = $f;
+        $fields[9] = $f;
 
         // woj
         $f = $field;
         $f['fid'] = 10;
         $f['fvalue-int'] = Tools::getValue('fid_10');
-        $fields[] = $f;
+        $fields[10] = $f;
 
         // miejscowosc
         $f = $field;
         $f['fid'] = 11;
         $f['fvalue-string'] = Tools::getValue('fid_11');
-        $fields[] = $f;
+        $fields[11] = $f;
 
         // transport
         $f = $field;
         $f['fid'] = 12;
         $f['fvalue-int'] = Tools::getValue('fid_12');
-        $fields[] = $f;
+        $fields[12] = $f;
 
         // forma platnosci
         $f = $field;
         $f['fid'] = 14;
         $f['fvalue-int'] = Tools::getValue('fid_14');
-        $fields[] = $f;
+        $fields[14] = $f;
 
         // zdjecie
         $di = Tools::getValue('prod_image');
@@ -395,7 +397,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 16;
             $f['fvalue-image'] = $image;
-            $fields[] = $f;
+            $fields[16] = $f;
         }
 
         // opis
@@ -408,34 +410,35 @@ class Jballegro extends Module
 
         $content = $this->parseAuctionContent($content);
 
+        
         $f = $field;
         $f['fid'] = 24;
         $f['fvalue-string'] = $content;
-        $fields[] = $f;
+        $fields[24] = $f;
 
         // sztuki/pary
         $f = $field;
         $f['fid'] = 28;
         $f['fvalue-int'] = Tools::getValue('fid_28');
-        $fields[] = $f;
+        $fields[28] = $f;
 
         // rodzaj aukcji
         $f = $field;
         $f['fid'] = 29;
         $f['fvalue-int'] = Tools::getValue('fid_29');
-        $fields[] = $f;
+        $fields[29] = $f;
 
         // kod pocztowy
         $f = $field;
         $f['fid'] = 32;
         $f['fvalue-string'] = Tools::getValue('fid_32');
-        $fields[] = $f;
+        $fields[32] = $f;
 
         // wysylka free
         $f = $field;
         $f['fid'] = 35;
         $f['fvalue-int'] = Tools::getValue('fid_35');
-        $fields[] = $f;
+        $fields[35] = $f;
 
         // wysylka poczta eko
         if (Tools::getValue('fid_36'))
@@ -443,7 +446,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 36;
             $f['fvalue-float'] = Tools::getValue('fid_36');
-            $fields[] = $f;
+            $fields[36] = $f;
         }
 
         if (Tools::getValue('fid_37'))
@@ -451,7 +454,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 37;
             $f['fvalue-float'] = Tools::getValue('fid_37');
-            $fields[] = $f;
+            $fields[37] = $f;
         }
 
         // wysylka poczta prior
@@ -460,7 +463,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 38;
             $f['fvalue-float'] = Tools::getValue('fid_38');
-            $fields[] = $f;
+            $fields[38] = $f;
         }
 
         // wysylka pobranie
@@ -469,7 +472,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 39;
             $f['fvalue-float'] = Tools::getValue('fid_39');
-            $fields[] = $f;
+            $fields[39] = $f;
         }
 
         // kurier
@@ -478,7 +481,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 40;
             $f['fvalue-float'] = Tools::getValue('fid_40');
-            $fields[] = $f;
+            $fields[40] = $f;
         }
 
         if (Tools::getValue('fid_41'))
@@ -486,7 +489,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 41;
             $f['fvalue-float'] = Tools::getValue('fid_41');
-            $fields[] = $f;
+            $fields[41] = $f;
         }
 
         if (Tools::getValue('fid_42'))
@@ -494,7 +497,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 42;
             $f['fvalue-float'] = Tools::getValue('fid_42');
-            $fields[] = $f;
+            $fields[42] = $f;
         }
 
         if (Tools::getValue('fid_43'))
@@ -502,7 +505,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 43;
             $f['fvalue-float'] = Tools::getValue('fid_43');
-            $fields[] = $f;
+            $fields[43] = $f;
         }
 
         if (Tools::getValue('fid_44'))
@@ -510,7 +513,7 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 44;
             $f['fvalue-float'] = Tools::getValue('fid_44');
-            $fields[] = $f;
+            $fields[44] = $f;
         }
 
         if (Tools::getValue('fid_45'))
@@ -518,7 +521,26 @@ class Jballegro extends Module
             $f = $field;
             $f['fid'] = 45;
             $f['fvalue-float'] = Tools::getValue('fid_45');
-            $fields[] = $f;
+            $fields[45] = $f;
+        }
+        
+        // sprawdzenie czy wybrana kategoria wymaga parametru stanu
+        //$cat_query = 'SELECT * FROM ' . _DB_PREFIX_ . 'allegro_field where `sell-form-title` = "Stan" and `sell-form-cat` = ' . $cat_id . ';';
+        //$cat_data = Db::getInstance()->ExecuteS($cat_query);
+        
+        $jb = new Jb();
+        $cat_data = $jb->getStateSelectForCategory($cat_id);
+        
+        if ($cat_data)
+        {
+            $state = $cat_data;
+            $state_fid = $state['sell-form-id'];
+            $state_val = Tools::getValue('fid_'.$state_fid);
+            
+            $f = $field;
+            $f['fid'] = $state_fid;
+            $f['fvalue-int'] = $state_val;
+            $fields['stan'] = $f;
         }
 
         try
@@ -1015,9 +1037,9 @@ class Jballegro extends Module
 
         // pobranie danych produktu z bazy Prestashop
         $id_product = Tools::getValue('id_product') ? Tools::getValue('id_product') : (is_array($startProduct) ? $startProduct['id_product'] : null);
-        $price = Tools::getValue('fid_' . $this->aFields[7]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[7]['sell-form-id']) : ($id_product ? $startProduct['price'] : '');
-        $title = Tools::getValue('fid_' . $this->aFields[0]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[0]['sell-form-id']) : ($id_product ? $startProduct['name'] : '');
-        $desc = Tools::getValue('fid_' . $this->aFields[23]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[23]['sell-form-id']) : ($id_product ? $startProduct['desc'] : '');
+        $price = Tools::getValue('fid_' . $this->aFields[8]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[8]['sell-form-id']) : ($id_product ? $startProduct['price'] : '');
+        $title = Tools::getValue('fid_' . $this->aFields[1]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[1]['sell-form-id']) : ($id_product ? $startProduct['name'] : '');
+        $desc = Tools::getValue('fid_' . $this->aFields[24]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[24]['sell-form-id']) : ($id_product ? $startProduct['desc'] : '');
         $form = '
       <form action="' . $_SERVER['REQUEST_URI'] . '" method="post" enctype="multipart/form-data">
         <table id="loadProduct">
@@ -1053,13 +1075,13 @@ class Jballegro extends Module
       
       <table id="allegro-form" style="' . ($this->error ? '' : ($id_product ? '' : 'display:none;')) . '">
         <tr>
-          <th>' . $this->aFields[0]['sell-form-title'] . '</th>
-          <td><input class="inputForm" id="atitle" maxlength="' . $this->aFields[0]['sell-form-length'] . '" type="text" name="fid_' . $this->aFields[0]['sell-form-id'] . '" value="' . $title . '"></input></td>
+          <th>' . $this->aFields[1]['sell-form-title'] . '</th>
+          <td><input class="inputForm" id="atitle" maxlength="' . $this->aFields[1]['sell-form-length'] . '" type="text" name="fid_' . $this->aFields[1]['sell-form-id'] . '" value="' . $title . '"></input></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[1]['sell-form-title'] . '</th>
+          <th>' . $this->aFields[2]['sell-form-title'] . '</th>
           <td id="categories_select">
-            <input id="category" type="hidden" name="fid_' . $this->aFields[1]['sell-form-id'] . '" value="" />
+            <input id="category" type="hidden" name="fid_' . $this->aFields[2]['sell-form-id'] . '" value="" />
             <span class="level_0" level="0">
             <select id="select_category">
             ' . $this->buildCategoriesHtml($this->aCategories) . '
@@ -1070,6 +1092,7 @@ class Jballegro extends Module
                  if ($(this).val() != "")
                  {
                    $("#category").val($(this).val());
+                   loadProductStateSelect($(this).val());
                    $.ajax({
                       url: \'/modules/jballegro/ajax.php\',
                       data: \'&level=0&getsubcategory=\' + $(this).val(),
@@ -1087,12 +1110,12 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[3]['sell-form-title'] . '</th>
+          <th>' . $this->aFields[4]['sell-form-title'] . '</th>
           <td>
-            <select name="fid_' . $this->aFields[3]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[3]['sell-form-desc']);
-        $values = explode('|', $this->aFields[3]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[3]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[3]['sell-form-id']) : $this->aFields[3]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[4]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[4]['sell-form-desc']);
+        $values = explode('|', $this->aFields[4]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[4]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[4]['sell-form-id']) : $this->aFields[4]['sell-form-def-value'];
         foreach ($options as $k => $o)
         {
             $form .= '<option value="' . $values[$k] . '" ' . ($def == $values[$k] ? 'selected="selected"' : '') . '>' . $o . ' dni</option>';
@@ -1101,17 +1124,17 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[4]['sell-form-title'] . '<!-- liczba sztuk --></th>
+          <th>' . $this->aFields[5]['sell-form-title'] . '<!-- liczba sztuk --></th>
           ';
 
-        $def = Tools::getValue('fid_' . $this->aFields[4]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[4]['sell-form-id']) : 1;
+        $def = Tools::getValue('fid_' . $this->aFields[5]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[5]['sell-form-id']) : 1;
 
         $form .= '
-          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[4]['sell-form-id'] . '" value="' . $def . '"></input></td>
+          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[5]['sell-form-id'] . '" value="' . $def . '"></input></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[7]['sell-form-title'] . '<!-- cena kup teraz --></th>
-          <td><input id="allegroPrice" class="inputForm" type="text" name="fid_' . $this->aFields[7]['sell-form-id'] . '" value="' . $price . '"></input></td>
+          <th>' . $this->aFields[8]['sell-form-title'] . '<!-- cena kup teraz --></th>
+          <td><input id="allegroPrice" class="inputForm" type="text" name="fid_' . $this->aFields[8]['sell-form-id'] . '" value="' . $price . '"></input></td>
         </tr>';
 
         if ($this->provision && is_numeric($this->provision))
@@ -1126,16 +1149,16 @@ class Jballegro extends Module
 
         $form .= '
         <tr style="display: none;">
-          <th>' . $this->aFields[8]['sell-form-title'] . '<!-- kraj --></th>
-          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[8]['sell-form-id'] . '" value="' . $this->acountry . '"></input></td>
+          <th>' . $this->aFields[9]['sell-form-title'] . '<!-- kraj --></th>
+          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[9]['sell-form-id'] . '" value="' . $this->acountry . '"></input></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[9]['sell-form-title'] . '<!-- Województwo --></th>
+          <th>' . $this->aFields[10]['sell-form-title'] . '<!-- Województwo --></th>
           <td>
-          <select name="fid_' . $this->aFields[9]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[9]['sell-form-desc']);
-        $values = explode('|', $this->aFields[9]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[9]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[9]['sell-form-id']) : $this->aFields[9]['sell-form-def-value'];
+          <select name="fid_' . $this->aFields[10]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[10]['sell-form-desc']);
+        $values = explode('|', $this->aFields[10]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[10]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[10]['sell-form-id']) : $this->aFields[10]['sell-form-def-value'];
 
         foreach ($options as $k => $o)
         {
@@ -1146,16 +1169,16 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[10]['sell-form-title'] . '<!-- Miejscowość --></th>
-          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[10]['sell-form-id'] . '" value="' . Configuration::get('PS_SHOP_CITY') . '"></input></td>
+          <th>' . $this->aFields[11]['sell-form-title'] . '<!-- Miejscowość --></th>
+          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[11]['sell-form-id'] . '" value="' . Configuration::get('PS_SHOP_CITY') . '"></input></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[11]['sell-form-title'] . '<!-- transp --></th>
+          <th>' . $this->aFields[12]['sell-form-title'] . '<!-- transp --></th>
           <td>
-            <select name="fid_' . $this->aFields[11]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[11]['sell-form-desc']);
-        $values = explode('|', $this->aFields[11]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[11]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[11]['sell-form-id']) : $this->aFields[11]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[12]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[12]['sell-form-desc']);
+        $values = explode('|', $this->aFields[12]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[12]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[12]['sell-form-id']) : $this->aFields[12]['sell-form-def-value'];
         foreach ($options as $k => $o)
         {
             $form .= '<option value="' . $values[$k] . '" ' . ($def == $values[$k] ? 'selected="selected"' : '') . '>' . $o . '</option>';
@@ -1164,12 +1187,12 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[13]['sell-form-title'] . '<!-- Formy płatności --></th>
+          <th>' . $this->aFields[14]['sell-form-title'] . '<!-- Formy płatności --></th>
           <td>
-            <select name="fid_' . $this->aFields[13]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[13]['sell-form-desc']);
-        $values = explode('|', $this->aFields[13]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[13]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[13]['sell-form-id']) : $this->aFields[13]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[14]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[14]['sell-form-desc']);
+        $values = explode('|', $this->aFields[14]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[14]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[14]['sell-form-id']) : $this->aFields[14]['sell-form-def-value'];
         foreach ($options as $k => $o)
         {
             $form .= '<option value="' . $values[$k] . '" ' . ($values[$k] == $def ? 'selected="selected"' : '') . '>' . $o . '</option>';
@@ -1178,9 +1201,9 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[15]['sell-form-title'] . '<!-- Zdjęcie --></th>
+          <th>' . $this->aFields[16]['sell-form-title'] . '<!-- Zdjęcie --></th>
           <td style="font-size: 10px;">
-            <input id="allegro-send-img" ' . ($image == 1 ? 'disabled="disabled"' : '') . ' type="file" name="fid_' . $this->aFields[15]['sell-form-id'] . '" value=""></input>
+            <input id="allegro-send-img" ' . ($image == 1 ? 'disabled="disabled"' : '') . ' type="file" name="fid_' . $this->aFields[16]['sell-form-id'] . '" value=""></input>
             (Użyj okładki produktu jako zdjęcie aukcji? <input id="use-default-img" type="checkbox" ' . ($image == 1 ? 'checked="checked"' : '') . ' name="prod_image" value="1" />)
             <script type="text/javascript">
              $(document).ready(function(){
@@ -1193,16 +1216,20 @@ class Jballegro extends Module
           </td>  
         </tr>
         <tr>
-          <th>' . $this->aFields[23]['sell-form-title'] . '<!-- Opis --></th>
-          <td><textarea id="allegroDesc" name="fid_' . $this->aFields[23]['sell-form-id'] . '">' . $desc . '</textarea>
+          <th>' . $this->aFields[24]['sell-form-title'] . '<!-- Opis --></th>
+          <td><textarea id="allegroDesc" name="fid_' . $this->aFields[24]['sell-form-id'] . '">' . $desc . '</textarea>
+        </tr>
+        <tr id="state-row" style="display: none;">
+            <th>Stan</th>
+            <td></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[25]['sell-form-title'] . '<!-- Sztuki --></th>
+          <th>' . $this->aFields[28]['sell-form-title'] . '<!-- Sztuki --></th>
           <td>
-            <select name="fid_' . $this->aFields[25]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[25]['sell-form-desc']);
-        $values = explode('|', $this->aFields[25]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[25]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[25]['sell-form-id']) : $this->aFields[25]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[28]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[28]['sell-form-desc']);
+        $values = explode('|', $this->aFields[28]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[28]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[28]['sell-form-id']) : $this->aFields[28]['sell-form-def-value'];
 
         foreach ($options as $k => $o)
         {
@@ -1212,12 +1239,12 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[26]['sell-form-title'] . '<!-- Kup teraz --></th>
+          <th>' . $this->aFields[29]['sell-form-title'] . '<!-- format sprzedazy --></th>
           <td>
-            <select name="fid_' . $this->aFields[26]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[26]['sell-form-desc']);
-        $values = explode('|', $this->aFields[26]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[26]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[26]['sell-form-id']) : $this->aFields[26]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[29]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[29]['sell-form-desc']);
+        $values = explode('|', $this->aFields[29]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[29]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[29]['sell-form-id']) : $this->aFields[29]['sell-form-def-value'];
 
         foreach ($options as $k => $o)
         {
@@ -1227,16 +1254,16 @@ class Jballegro extends Module
           </td>
         </tr>
         <tr>
-          <th>' . $this->aFields[29]['sell-form-title'] . '<!-- kod poczt --></th>
-          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[29]['sell-form-id'] . '" value="' . Configuration::get('PS_SHOP_CODE') . '"></input></td>
+          <th>' . $this->aFields[32]['sell-form-title'] . '<!-- kod pocztowy --></th>
+          <td><input class="inputForm" type="text" name="fid_' . $this->aFields[32]['sell-form-id'] . '" value="' . Configuration::get('PS_SHOP_CODE') . '"></input></td>
         </tr>
         <tr>
-          <th>' . $this->aFields[32]['sell-form-title'] . '<!-- darmowe opcje odbioru --></th>
+          <th>' . $this->aFields[35]['sell-form-title'] . '<!-- darmowe opcje odbioru --></th>
           <td>
-            <select name="fid_' . $this->aFields[32]['sell-form-id'] . '">';
-        $options = explode('|', $this->aFields[32]['sell-form-desc']);
-        $values = explode('|', $this->aFields[32]['sell-form-opts-values']);
-        $def = Tools::getValue('fid_' . $this->aFields[32]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[32]['sell-form-id']) : $this->aFields[32]['sell-form-def-value'];
+            <select name="fid_' . $this->aFields[35]['sell-form-id'] . '">';
+        $options = explode('|', $this->aFields[35]['sell-form-desc']);
+        $values = explode('|', $this->aFields[35]['sell-form-opts-values']);
+        $def = Tools::getValue('fid_' . $this->aFields[35]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[35]['sell-form-id']) : $this->aFields[35]['sell-form-def-value'];
 
         foreach ($options as $k => $o)
         {
@@ -1244,46 +1271,46 @@ class Jballegro extends Module
         }
         $form .= '</select>
           </td>
-        </tr>
-        <tr>
-          <th>' . $this->aFields[33]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[33]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[33]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[33]['sell-form-id']) : $this->aprzes1) . '"></input></td>
-        </tr>
-        <tr>
-          <th>' . $this->aFields[34]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[34]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[34]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[34]['sell-form-id']) : $this->aprzes2) . '"></input></td>
-        </tr>
-        <tr>
-          <th>' . $this->aFields[35]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[35]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[35]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[35]['sell-form-id']) : $this->aprzes3) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[36]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[36]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[36]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[36]['sell-form-id']) : $this->aprzes4) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[36]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[36]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[36]['sell-form-id']) : $this->aprzes1) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[37]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[37]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[37]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[37]['sell-form-id']) : $this->aprzes5) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[37]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[37]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[37]['sell-form-id']) : $this->aprzes2) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[38]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[38]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[38]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[38]['sell-form-id']) : $this->aprzes6) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[38]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[38]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[38]['sell-form-id']) : $this->aprzes3) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[39]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[39]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[39]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[39]['sell-form-id']) : $this->aprzes7) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[39]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[39]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[39]['sell-form-id']) : $this->aprzes4) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[40]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[40]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[40]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[40]['sell-form-id']) : $this->aprzes8) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[40]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[40]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[40]['sell-form-id']) : $this->aprzes5) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[41]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[41]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[41]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[41]['sell-form-id']) : $this->aprzes9) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[41]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[41]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[41]['sell-form-id']) : $this->aprzes6) . '"></input></td>
         </tr>
         <tr>
           <th>' . $this->aFields[42]['sell-form-title'] . '<!-- koszt przesylki --></th>
-          <td><input type="text" name="fid_' . $this->aFields[42]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[42]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[42]['sell-form-id']) : $this->aprzes10) . '"></input></td>
+          <td><input type="text" name="fid_' . $this->aFields[42]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[42]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[42]['sell-form-id']) : $this->aprzes7) . '"></input></td>
+        </tr>
+        <tr>
+          <th>' . $this->aFields[43]['sell-form-title'] . '<!-- koszt przesylki --></th>
+          <td><input type="text" name="fid_' . $this->aFields[43]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[43]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[43]['sell-form-id']) : $this->aprzes8) . '"></input></td>
+        </tr>
+        <tr>
+          <th>' . $this->aFields[44]['sell-form-title'] . '<!-- koszt przesylki --></th>
+          <td><input type="text" name="fid_' . $this->aFields[44]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[44]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[44]['sell-form-id']) : $this->aprzes9) . '"></input></td>
+        </tr>
+        <tr>
+          <th>' . $this->aFields[45]['sell-form-title'] . '<!-- koszt przesylki --></th>
+          <td><input type="text" name="fid_' . $this->aFields[45]['sell-form-id'] . '" value="' . (Tools::getValue('fid_' . $this->aFields[45]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[45]['sell-form-id']) : $this->aprzes10) . '"></input></td>
         </tr>
         <tr>
           <td style="text-align: center;" colspan="2">
