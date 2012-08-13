@@ -16,7 +16,7 @@ Skopiować zawartość folderów na serwer:
 (nadpisać plik AdminProducts.php lub jeśli mamy wprowadzone jakieś zmiany dodać odpowiednie modyfikacje)
 ### b) skopiować folder classes (znajduje się w katalogu lib) do główego katalogu gdzie mamy zainstalowany sklep
 (nadpisać jeden plik AdminTab.php)
-### c) skopiować folder modułu do modułów sklepu
+### c) skopiować folder modułu do modułów sklepu (UWAGA: należy zmienić nazwę folderu z modułem na jballegro, w innym przypadku moduł będzie niewidoczny na liście modułów)
 
 Kroki a i b są opcjonalne - dodają ikonkę allegro na liście produktów w katalogu i pozwalają na 
 tworzenie aukcji bezpośrednio z listy produktów (Działa tylko w przypadku Prestashop 1.4!!!).
