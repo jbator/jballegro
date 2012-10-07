@@ -21,14 +21,16 @@ Skopiować zawartość folderów na serwer:
 Kroki a i b są opcjonalne - dodają ikonkę allegro na liście produktów w katalogu i pozwalają na 
 tworzenie aukcji bezpośrednio z listy produktów (Działa tylko w przypadku Prestashop 1.4!!!).
 
-Instalacja polega na standardowej instalacji modułu w Prestashop (moduł znajduje się w zakładce Inne moduły). 
+Instalacja polega na standardowej instalacji modułu w Prestashop (moduł znajduje się w zakładce Inne moduły)
+oraz ręcznym dodadniu danych z api allegro do bazy danych poprzez phpMyAdmin (patrz dalej).
 
 !!! WAŻNE: !!!
-Mogą być problemy z pobraniem danych z allegro na hostingach, które limitują znacznie działanie
+Dużo osób miało problemy z instalacją z automatycznym pobraniem danych z allegro na hostingach, które limitują znacznie działanie
 skryptów PHP to znaczy ograniczają użycie pamięci do 64MB i czas maksymalnego wykonania skryptu (do 30 sekund) - np: nazwa.pl.
+Dlatego ta opcja została wyłączona.
 
-Moduł po instalacji podczas pierwszego uruchomienia z poprawną konfiguracją próbuje pobrać z Api Allegro dostępne kategorie i dane dotyczące 
-formularzy - jendakże na przykład w przypadku nazwa.pl nie jest w stanie tego zrobić w 30 sekund ponieważ danych jest zbyt dużo.
+~~Moduł po instalacji podczas pierwszego uruchomienia z poprawną konfiguracją próbuje pobrać z Api Allegro dostępne kategorie i dane dotyczące 
+formularzy - jendakże na przykład w przypadku nazwa.pl nie jest w stanie tego zrobić w 30 sekund ponieważ danych jest zbyt dużo.~~
 Dlatego trzeba te dane ręcznie zaimportować poprzez PhpMyAdmin bezpośrednio do bazy sklepu z przygotowanego pliku sql "jballegro.sql" (znajduje się w folderze data).
 Sama instalacja modułu bez wpisywania danych konfiguracyjnych powinna przejść bezproblemowo (dodaje się struktura tabel ale bez zawartości).
 

@@ -93,7 +93,7 @@ class Jballegro extends Module
     public function initAllegro()
     {
         
-        if ($this->aid != '' && $this->alogin && $this->apass && $this->akey && $this->acountry)
+        if ($this->aid && $this->alogin && $this->apass && $this->akey && $this->acountry)
         {
             try
             {
@@ -101,8 +101,16 @@ class Jballegro extends Module
 
                 $this->allegro->login(true);
 
-                $this->buildAllegroData();
+                /*
+                 * Odkomentuj jesli chesz aby dane allegro zaciagnely sie automatycznie z api
+                 */
+                //$this->buildAllegroData();
+                
                 $this->aCategories = $this->getCategories();
+                
+                // pola formularza
+                $this->aFields = $this->getFields();
+                
                 return true;
             }
             catch (SoapFault $fault)
@@ -124,7 +132,34 @@ class Jballegro extends Module
     public function getCategories($idParent = 0)
     {
         $cats = Db::getInstance()->ExecuteS('SELECT * FROM ' . _DB_PREFIX_ . 'allegro_cat where parent=' . $idParent . ' ORDER BY position;');
+        
+        if (count($cats) == 0) throw new Exception("Bark danych o kategoriach");
+
         return $cats;
+    }
+
+    /**
+     * Przydzielenie pól formularza allegro do tymczasowej tablicy w celu obsługi formularza 
+     */
+    public function getFields()
+    {
+        $i = 0;
+
+        $fields = Db::getInstance()->ExecuteS('SELECT * FROM ' . _DB_PREFIX_ . 'allegro_field LIMIT 50;');
+
+        if (count($fields) == 0) throw new Exception("Brak danych formularza.");
+        
+        $data = array();
+        foreach ($fields as $fkey => $fval)
+        {
+            $key = $fval['sell-form-id'];
+            $data[$key] = $fval;
+            $i++;
+            if ($i == 50)
+                break;
+        }
+
+        return $data;
     }
 
     /**
@@ -177,23 +212,6 @@ class Jballegro extends Module
                 Db::getInstance()->Execute($query);
             }
         }
-
-        // przydzielenie pól formularza allegro do tymczasowej tablicy w celu obsługi formularza
-        $i = 0;
-
-        $fields = Db::getInstance()->ExecuteS('SELECT * FROM ' . _DB_PREFIX_ . 'allegro_field LIMIT 50;');
-
-        $tmp = array();
-        foreach ($fields as $fkey => $fval)
-        {
-            $key = $fval['sell-form-id'];
-            $tmp[$key] = $fval;
-            $i++;
-            if ($i == 50)
-                break;
-        }
-
-        $this->aFields = $tmp;
     }
 
     /**
