@@ -92,8 +92,7 @@ class Jballegro extends Module
      */
     public function initAllegro()
     {
-        
-        if ($this->aid && $this->alogin && $this->apass && $this->akey && $this->acountry)
+        if ($this->aid != '' && $this->alogin != '' && $this->apass != '' && $this->akey != '' && $this->acountry != '')
         {
             try
             {
@@ -115,7 +114,6 @@ class Jballegro extends Module
             }
             catch (SoapFault $fault)
             {
-                die($fault->faultstring);
                 $this->webapierror = $fault->faultstring;
                 return false;
             }
