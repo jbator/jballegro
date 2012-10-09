@@ -3,6 +3,7 @@
 error_reporting(E_ALL);
 
 set_time_limit(36000);
+
 // TODO: lepsze zarzadzanie sciezkami
 require_once getcwd() . '/../modules/jballegro/Allegrowebapi.class.php';
 require_once getcwd() . '/../modules/jballegro/Jb.class.php';
@@ -51,7 +52,7 @@ class Jballegro extends Module
 
         $this->name = 'jballegro';
         $this->tab = '';
-        $this->version = 0.6;
+        $this->version = '0.6.1';
         $this->author = 'jbator.pl';
         $this->need_instance = 0;
         $this->error = false;
@@ -963,6 +964,9 @@ class Jballegro extends Module
     public function getContent()
     {
         global $protocol_content;
+        
+        // jesli jest jakiś błąd z api allegro to zwróc tylko opis błędu
+        if (count($this->errors) > 0 || $this->webapierror) return $this->getErrorHtmlList();
 
         $output = '';
 

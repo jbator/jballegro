@@ -1,12 +1,22 @@
-Jballegro 0.6 dla Prestashop 1.4
+Jballegro 0.6.1 dla Prestashop 1.4
 ================================
 
 Moduł integracji Prestashop z api allegro
 
 Strona domowa autora: www.jbator.pl
 
-Instrukcja obsługi modułu:
+I) Informacje ogólne:
+---------------------
 
+Moduł powstał w celu umożliwienia użwania API allegro poprzez sklep Prestashop.
+Obecnie jest to wersja rozwojowa i mogą występować błędy w działaniu.
+Nie odpowiadam za możliwe szkody powstałe w wyniku instalacji i używania modułu (w szczególności utrata danych
+lub problem z działaniem sklepu).
+
+Używasz tego modułu na własną odpowiedzialność.
+
+II) Instrukcja obsługi modułu:
+------------------------------
 
 1) Instalacja:
 --------------
