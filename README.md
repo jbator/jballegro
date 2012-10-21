@@ -1,4 +1,4 @@
-Jballegro 0.6.1 dla Prestashop 1.4
+Jballegro 0.6.2 dla Prestashop 1.4
 ================================
 
 Moduł integracji Prestashop z api allegro

@@ -52,7 +52,7 @@ class Jballegro extends Module
 
         $this->name = 'jballegro';
         $this->tab = '';
-        $this->version = '0.6.1';
+        $this->version = '0.6.2';
         $this->author = 'jbator.pl';
         $this->need_instance = 0;
         $this->error = false;
@@ -145,7 +145,8 @@ class Jballegro extends Module
         $i = 0;
 
         $fields = Db::getInstance()->ExecuteS('SELECT * FROM ' . _DB_PREFIX_ . 'allegro_field LIMIT 50;');
-
+        $fields2 = Db::getInstance()->ExecuteS('SELECT * FROM ' . _DB_PREFIX_ . 'allegro_field WHERE `sell-form-id` = 340;');
+        
         if (count($fields) == 0) throw new Exception("Brak danych formularza.");
         
         $data = array();
@@ -158,6 +159,12 @@ class Jballegro extends Module
                 break;
         }
 
+        foreach ($fields2 as $fkey => $fval)
+        {
+            $key = $fval['sell-form-id'];
+            $data[$key] = $fval;
+        }
+        
         return $data;
     }
 
@@ -279,7 +286,7 @@ class Jballegro extends Module
         $fid32 = Tools::getValue('fid_32');
         if (!$fid32 || !preg_match('/^[0-9]{2}-[0-9]{3}$/', $fid32))
             $this->errors['fid_32'] = "Podaj kod pocztowy w odpowiednim formacie np: 22-101";
-
+        
         //ceny dostaw
         for ($i = 36; $i < 46; $i++)
         {
@@ -450,6 +457,18 @@ class Jballegro extends Module
         $f['fid'] = 32;
         $f['fvalue-string'] = Tools::getValue('fid_32');
         $fields[32] = $f;
+
+        // auto wznawianie
+        $f = $field;
+        $f['fid'] = 30;
+        $f['fvalue-string'] = Tools::getValue('fid_30');
+        $fields[30] = $f;
+        
+        // wysylka w ciagu
+        $f = $field;
+        $f['fid'] = 340;
+        $f['fvalue-string'] = Tools::getValue('fid_340');
+        $fields[340] = $f;
 
         // wysylka free
         $f = $field;
@@ -1277,6 +1296,46 @@ class Jballegro extends Module
           <th>' . $this->aFields[32]['sell-form-title'] . '<!-- kod pocztowy --></th>
           <td><input class="inputForm" type="text" name="fid_' . $this->aFields[32]['sell-form-id'] . '" value="' . Configuration::get('PS_SHOP_CODE') . '"></input></td>
         </tr>
+        <tr>
+          <th>' . $this->aFields[30]['sell-form-title'] . '<!-- auto wznawianie --></th>
+          <td style="text-align: left;">
+          <select name="fid_' . $this->aFields[30]['sell-form-id'] . '">';
+            $options = explode('|', $this->aFields[30]['sell-form-desc']);
+            $values = explode('|', $this->aFields[30]['sell-form-opts-values']);
+            $def = Tools::getValue('fid_' . $this->aFields[30]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[30]['sell-form-id']) : $this->aFields[30]['sell-form-def-value'];
+
+            foreach ($options as $k => $o)
+            {
+                $form .= '<option value="' . $values[$k] . '" ' . ($def == $values[$k] ? 'selected="selected"' : '') . '>' . $o . '</option>';
+            }
+            $form .= '</select>
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th>' . $this->aFields[340]['sell-form-title'] . '<!-- czas wysylki --></th>
+          <td style="text-align: left;">
+          <select name="fid_' . $this->aFields[340]['sell-form-id'] . '">';
+            $options = explode('|', $this->aFields[340]['sell-form-desc']);
+            $values = explode('|', $this->aFields[340]['sell-form-opts-values']);
+            $def = Tools::getValue('fid_' . $this->aFields[340]['sell-form-id']) ? Tools::getValue('fid_' . $this->aFields[340]['sell-form-id']) : $this->aFields[340]['sell-form-def-value'];
+
+            $onames = array(
+                '-- Wybierz --' => '-- Wybierz --',
+                0 => 'natychmiast',
+                24 => '1 dzień'
+            );
+            
+            foreach ($options as $k => $o)
+            {
+                $form .= '<option value="' . $values[$k] . '" ' . ($def == $values[$k] ? 'selected="selected"' : '') . '>' . (array_key_exists($o, $onames) ? $onames[$o] : ($o / 24) . ' dni') . '</option>';
+            }
+            $form .= '</select>
+
+          </td>
+        </tr>
+
         <tr>
           <th>' . $this->aFields[35]['sell-form-title'] . '<!-- darmowe opcje odbioru --></th>
           <td>
